@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>echarts</title>
+</head>
+<body> 
+    <div id="chart1"></div>
+    <div id="chart2"></div>
+    <div id="chart3"></div>
+    <div id="chart4"></div>
+    <div id="chart5"></div>
+    <div id="chart6"></div>
+    <div id="chart7"></div>
+    <div id="chart8"></div>
+    <div id="chart9"></div>
+    <div id="chart10"></div>
+    <div id="chart11"></div>
+    <div id="chart12"></div>
+    <div id="chart13"></div>
+    <div id="chart14"></div>
+    <div id="chart15"></div>
+    <div id="chart16"></div>
+    <div id="chart17"></div>
+    <div id="chart18"></div>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script>
+        var chartDom = document.getElementById('chart1');
+        var myChart = echarts.init(chartDom, {} , {
+            width: 600,
+            height: 400,
+            
+        });
+
+        console.log(myChart);
+       
+    myChart.on('mouseover', function (params) {
+        console.log(params);
+    });
+
+        option = {
+            toolbox: {
+                feature: {
+                    dataZoom: {
+                        yAxisIndex: 'none'
+                    },
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [{
+                data: [150, 230, 224, 218, 135, 147, 260],
+                type: 'line'
+            }]
+         
+            
+        };
+
+        // myChart.dispatchAction({
+        //     type: 'takeGlobalCursor',
+        //     key: 'dataZoomSelect',
+        //     // Activate or inactivate.
+        //     dataZoomSelectActive: true
+        // });
+
+        myChart.setOption(option);
+    </script>
+    <script>
+        var chartDom = document.getElementById('chart2');
+        var myChart = echarts.init(chartDom, {}, {
+            height:400,
+            width: 500
+        });
+        var option;
+
+        var colors = ['#5470C6', '#EE6666'];
+
+        option = {
+            color: colors,
+            toolbox: {
+                feature: {
+                    dataZoom: {
+                        yAxisIndex: 'none'
+                    },
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            tooltip: {
+                trigger: 'none',
+                axisPointer: {
+                    type: 'cross'
+                }
+            },
+            legend: {
+                data:['2015 降水量', '2016 降水量']
+            },
+            grid: {
+                top: 70,
+                bottom: 50
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    axisTick: {
+                        alignWithLabel: true
+                    },
+                    axisLine: {
+                        onZero: false,
+                        lineStyle: {
+                            color: colors[1]
+                        }
+                    },
+                    axisPointer: {
+                        label: {
+                            formatter: function (params) {
+                                return '降水量  ' + params.value
+                                    + (params.seriesData.length ? '：' + params.seriesData[0].data : '');
+                            }
+                        }
+                    },
+                    data: ['2016-1', '2016-2', '2016-3', '2016-4', '2016-5', '2016-6', '2016-7', '2016-8', '2016-9', '2016-10', '2016-11', '2016-12']
+                },
+                {
+                    type: 'category',
+                    axisTick: {
+                        alignWithLabel: true
+                    },
+                    axisLine: {
+                        onZero: false,
+                        lineStyle: {
+                            color: colors[0]
+                        }
+                    },
+                    axisPointer: {
+                        label: {
+                            formatter: function (params) {
+                                return '降水量  ' + params.value
+                                    + (params.seriesData.length ? '：' + params.seriesData[0].data : '');
+                            }
+                        }
+                    },
+                    data: ['2015-1', '2015-2', '2015-3', '2015-4', '2015-5', '2015-6', '2015-7', '2015-8', '2015-9', '2015-10', '2015-11', '2015-12']
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value'
+                }
+            ],
+            series: [
+                {
+                    name: '2015 降水量',
+                    type: 'line',
+                    xAxisIndex: 1,
+                    smooth: true,
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+                },
+                {
+                    name: '2016 降水量',
+                    type: 'line',
+                    smooth: true,
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: [3.9, 5.9, 11.1, 18.7, 48.3, 69.2, 231.6, 46.6, 55.4, 18.4, 10.3, 0.7]
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+
+    </script>
+    <script>
+        var chartDom = document.getElementById('chart3');
+        var myChart = echarts.init(chartDom, {}, {
+            height: 400,
+            width: 500,
+        });
+        var option;
+
+        option = {
+            title: {
+                text: '堆叠区域图'
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    label: {
+                        backgroundColor: '#6a7985'
+                    }
+                }
+            },
+
+            legend: {
+                data: ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎'],
+                top: 30
+            },
+            toolbox: {
+                feature: {
+                    dataZoom: {
+                        yAxisIndex: 'none'
+                    },
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value'
+                }
+            ],
+            series: [
+                {
+                    name: '邮件营销',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {},
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: [120, 132, 101, 134, 90, 230, 210]
+                },
+                {
+                    name: '联盟广告',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {},
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: [220, 182, 191, 234, 290, 330, 310]
+                },
+                {
+                    name: '视频广告',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {},
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: [150, 232, 201, 154, 190, 330, 410]
+                },
+                {
+                    name: '直接访问',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {},
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: [320, 332, 301, 334, 390, 330, 320]
+                },
+                {
+                    name: '搜索引擎',
+                    type: 'line',
+                    stack: '总量',
+                    label: {
+                        show: true,
+                        position: 'top'
+                    },
+                    areaStyle: {},
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: [820, 932, 901, 934, 1290, 1330, 1320]
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+    </script>
+    <script>
+        var chartDom = document.getElementById('chart4');
+        var myChart = echarts.init(chartDom, {}, {
+            height: 400,
+            width: 500
+        });
+
+        myChart.on('click', function(params){
+            var chartDom = document.getElementById('chart4');
+            var myChart = echarts.init(chartDom, {}, {
+            height: 400,
+            width: 500
+        });
+            var option;
+
+            option = {
+                angleAxis: {
+                },
+                radiusAxis: {
+                    type: 'category',
+                    data: ['Monday','Tuesday','Wednesday','Thursday'],
+                    z: 10
+                },
+                polar: {
+                    radius: "55%"
+                },
+                series: [{
+                    type: 'bar',
+                    data: [1, 2, 3, 4],
+                    coordinateSystem: 'polar',
+                    name: 'A',
+                    stack: 'a',
+                    emphasis: {
+                        focus: 'series'
+                    }
+                }, {
+                    type: 'bar',
+                    data: [2, 4, 6, 8],
+                    coordinateSystem: 'polar',
+                    name: 'B',
+                    stack: 'a',
+                    emphasis: {
+                        focus: 'series'
+                    }
+                }, {
+                    type: 'bar',
+                    data: [1, 2, 3, 4],
+                    coordinateSystem: 'polar',
+                    name: 'C',
+                    stack: 'a',
+                    emphasis: {
+                        focus: 'series'
+                    }
+                }],
+                legend: {
+                    show: true,
+                    data: ['A', 'B', 'C']
+                }
+            };
+
+            option && myChart.setOption(option);
+
+        })
+        var option;
+
+        option = {
+            xAxis: {
+                type: 'category',
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [{
+                data: [120, 200, 150, 80, 70, 110, 130],
+                type: 'bar'
+            }]
+        };
+
+        option && myChart.setOption(option);
+
+    </script>
+    <script>
+        var chartDom = document.getElementById('chart5');
+        var myChart = echarts.init(chartDom, {}, {
+            height: 400,
+            width: 500,
+        });
+        var option;
+
+        option = {
+            legend: {},
+            tooltip: {},
+            dataset: {
+                source: [
+                    ['product', '2015', '2016', '2017'],
+                    ['Matcha Latte', 43.3, 85.8, 93.7],
+                    ['Milk Tea', 83.1, 73.4, 55.1],
+                    ['Cheese Cocoa', 86.4, 65.2, 82.5],
+                    ['Walnut Brownie', 72.4, 53.9, 39.1]
+                ]
+            },
+            xAxis: {type: 'category'},
+            yAxis: {},
+            // Declare several bar series, each will be mapped
+            // to a column of dataset.source by default.
+            series: [
+                {type: 'bar'},
+                {type: 'bar'},
+                {type: 'bar'}
+            ]
+        };
+
+        option && myChart.setOption(option);
+    </script>
+    <script>
+        var chartDom = document.getElementById('chart6');
+        var myChart = echarts.init(chartDom, {}, {
+            height: 400,
+            width: 500
+        });
+        var option;
+
+        option = {
+            title: {
+                text: 'Sample Pie',
+                subtext: 'Testing',
+                left: 'center'
+            },
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'left',
+            },
+            series: [
+                {
+                    name: 'Source of access',
+                    type: 'pie',
+                    radius: '50%',
+                    data: [
+                        {value: 1048, name: 'search engine'},
+                        {value: 735, name: 'direct interview'},
+                        {value: 580, name: 'Email marketing'},
+                        {value: 484, name: 'Affiliate advertising'},
+                        {value: 300, name: 'Video ad'}
+                    ],
+                    emphasis: {
+                        itemStyle: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+    </script>
+    <script>
+        
+        var chartDom = document.getElementById('chart7');
+        var myChart = echarts.init(chartDom, {}, {
+            height: 400,
+            width: 500,
+        });
+var option;
+
+option = {
+    series: {
+        type: 'sankey',
+        layout: 'none',
+        emphasis: {
+            focus: 'adjacency'
+        },
+        data: [{
+            name: 'a'
+        }, {
+            name: 'b'
+        }, {
+            name: 'a1'
+        }, {
+            name: 'a2'
+        }, {
+            name: 'b1'
+        }, {
+            name: 'c'
+        }],
+        links: [{
+            source: 'a',
+            target: 'a1',
+            value: 5
+        }, {
+            source: 'a',
+            target: 'a2',
+            value: 3
+        }, {
+            source: 'b',
+            target: 'b1',
+            value: 8
+        }, {
+            source: 'a',
+            target: 'b1',
+            value: 3
+        }, {
+            source: 'b1',
+            target: 'a1',
+            value: 1
+        }, {
+            source: 'b1',
+            target: 'c',
+            value: 2
+        }]
+    }
+};
+
+option && myChart.setOption(option);
+
+
+    </script>
+    <script>
+        var chartDom = document.getElementById('chart8');
+        var myChart = echarts.init(chartDom, {}, {
+            height: 400,
+            width: 500,
+        });
+        var option;
+
+        option = {
+            series: [{
+                    type: 'gauge',
+                    center: ["50%", "60%"],
+                    startAngle: 200,
+                    endAngle: -20,
+                    min: 0,
+                    max: 60,
+                    splitNumber: 12,
+                    itemStyle: {
+                        color: '#FFAB91'
+                    },
+                    progress: {
+                        show: true,
+                        width: 30
+                    },
+
+                    pointer: {
+                        show: false,
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            width: 30
+                        }
+                    },
+                    axisTick: {
+                        distance: -45,
+                        splitNumber: 5,
+                        lineStyle: {
+                            width: 2,
+                            color: '#999'
+                        }
+                    },
+                    splitLine: {
+                        distance: -52,
+                        length: 14,
+                        lineStyle: {
+                            width: 3,
+                            color: '#999'
+                        }
+                    },
+                    axisLabel: {
+                        distance: -20,
+                        color: '#999',
+                        fontSize: 20
+                    },
+                    anchor: {
+                        show: false
+                    },
+                    title: {
+                        show: false
+                    },
+                    detail: {
+                        valueAnimation: true,
+                        width: '60%',
+                        lineHeight: 40,
+                        height: '15%',
+                        borderRadius: 8,
+                        offsetCenter: [0, '-15%'],
+                        fontSize: 60,
+                        fontWeight: 'bolder',
+                        formatter: '{value} °C',
+                        color: 'auto'
+                    },
+                    data: [{
+                        value: 20
+                    }]
+                },
+
+                {
+                    type: 'gauge',
+                    center: ["50%", "60%"],
+                    startAngle: 200,
+                    endAngle: -20,
+                    min: 0,
+                    max: 60,
+                    itemStyle: {
+                        color: '#FD7347',
+                    },
+                    progress: {
+                        show: true,
+                        width: 8
+                    },
+
+                    pointer: {
+                        show: false
+                    },
+                    axisLine: {
+                        show: false
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    splitLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        show: false
+                    },
+                    detail: {
+                        show: false
+                    },
+                    data: [{
+                        value: 20,
+                    }]
+
+                }
+            ],
+        };
+
+        setInterval(function() {
+            let random = (Math.random() * 60).toFixed(2) - 0;
+            option.series[0].data[0].value = random;
+            option.series[1].data[0].value = random;
+            myChart.setOption(option, true);
+        }, 2000);
+
+        option && myChart.setOption(option);
+
+    </script>
+    <script>
+       
+        var chartDom = document.getElementById('chart9');
+        var myChart = echarts.init(chartDom,{}, {
+            height: 400,
+            width: 500,
+        });
+        var option;
+
+        option = {
+            dataset: [{
+                dimensions: ['name', 'age', 'profession', 'score', 'date'],
+                source: [
+                    [' Hannah Krause ', 41, 'Engineer', 314, '2011-02-12'],
+                    ['Zhao Qian ', 20, 'Teacher', 351, '2011-03-01'],
+                    [' Jasmin Krause ', 52, 'Musician', 287, '2011-02-14'],
+                    ['Li Lei', 37, 'Teacher', 219, '2011-02-18'],
+                    [' Karle Neumann ', 25, 'Engineer', 253, '2011-04-02'],
+                    [' Adrian Groß', 19, 'Teacher', null, '2011-01-16'],
+                    ['Mia Neumann', 71, 'Engineer', 165, '2011-03-19'],
+                    [' Böhm Fuchs', 36, 'Musician', 318, '2011-02-24'],
+                    ['Han Meimei ', 67, 'Engineer', 366, '2011-03-12'],
+                ]
+            }, {
+                transform: {
+                    type: 'sort',
+                    config: { dimension: 'score', order: 'desc' }
+                }
+            }],
+            xAxis: {
+                type: 'category',
+                axisLabel: { interval: 0, rotate: 30 },
+            },
+            yAxis: {},
+            series: {
+                type: 'bar',
+                encode: { x: 'name', y: 'score' },
+                datasetIndex: 1
+            }
+        };
+
+        option && myChart.setOption(option);
+
+    </script>
+    <script>
+        var chartDom = document.getElementById('chart10');
+        var myChart = echarts.init(chartDom,{},{
+            width: 500,
+            height: 400
+        });
+        var option;
+
+        option = {
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [{
+                data: [820, 932, 901, 934, 1290, 1330, 1320],
+                type: 'line',
+                areaStyle: {}
+            }]
+        };
+        option && myChart.setOption(option);
+    </script>
+    <script>
+        
+        var chartDom = document.getElementById('chart11');
+        var myChart = echarts.init(chartDom, {}, {
+            height: 400,
+            width: 500,
+        });
+        var option;
+
+        option = {
+            xAxis: {
+                type: 'category',
+                boundaryGap: false
+            },
+            yAxis: {
+                type: 'value',
+                boundaryGap: [0, '30%']
+            },
+            visualMap: {
+                type: 'piecewise',
+                show: false,
+                dimension: 0,
+                seriesIndex: 0,
+                pieces: [{
+                    gt: 1,
+                    lt: 3,
+                    color: 'rgba(0, 0, 180, 0.4)'
+                }, {
+                    gt: 5,
+                    lt: 7,
+                    color: 'rgba(0, 0, 180, 0.4)'
+                }]
+            },
+            series: [
+                {
+                    type: 'line',
+                    smooth: 0.6,
+                    symbol: 'none',
+                    lineStyle: {
+                        color: '#5470C6',
+                        width: 5
+                    },
+                    markLine: {
+                        symbol: ['none', 'none'],
+                        label: {show: false},
+                        data: [
+                            {xAxis: 1},
+                            {xAxis: 3},
+                            {xAxis: 5},
+                            {xAxis: 7}
+                        ]
+                    },
+                    areaStyle: {},
+                    data: [
+                        ['2019-10-10', 200],
+                        ['2019-10-11', 560],
+                        ['2019-10-12', 750],
+                        ['2019-10-13', 580],
+                        ['2019-10-14', 250],
+                        ['2019-10-15', 300],
+                        ['2019-10-16', 450],
+                        ['2019-10-17', 300],
+                        ['2019-10-18', 100]
+                    ]
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+
+    </script>
+    <script>
+        var chartDom = document.getElementById('chart12');
+        var myChart = echarts.init(chartDom,{}, {
+            height: 400,
+            width: 500
+        });
+        var option;
+
+        option = {
+            title: {
+                text: 'Distribution of electricity consumption in a day',
+                subtext: 'Purely fictitious'
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross'
+                }
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['00:00', '01:15', '02:30', '03:45', '05:00', '06:15', '07:30', '08:45', '10:00', '11:15', '12:30', '13:45', '15:00', '16:15', '17:30', '18:45', '20:00', '21:15', '22:30', '23:45']
+            },
+            yAxis: {
+                type: 'value',
+                axisLabel: {
+                    formatter: '{value} W'
+                },
+                axisPointer: {
+                    snap: true
+                }
+            },
+            visualMap: {
+                show: false,
+                dimension: 0,
+                pieces: [{
+                    lte: 6,
+                    color: 'green'
+                }, {
+                    gt: 6,
+                    lte: 8,
+                    color: 'red'
+                }, {
+                    gt: 8,
+                    lte: 14,
+                    color: 'green'
+                }, {
+                    gt: 14,
+                    lte: 17,
+                    color: 'red'
+                }, {
+                    gt: 17,
+                    color: 'green'
+                }]
+            },
+            series: [
+                {
+                    name: 'energy used',
+                    type: 'line',
+                    smooth: true,
+                    data: [300, 280, 250, 260, 270, 300, 550, 500, 400, 390, 380, 390, 400, 500, 600, 750, 800, 700, 600, 400],
+                    markArea: {
+                        itemStyle: {
+                            color: 'rgba(255, 173, 177, 0.4)'
+                        },
+                        data: [ [{
+                            name: 'Morning peak',
+                            xAxis: '07:30'
+                        }, {
+                            xAxis: '10:00'
+                        }], [{
+                            name: 'Evening peak',
+                            xAxis: '17:30'
+                        }, {
+                            xAxis: '21:15'
+                        }] ]
+                    }
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+
+    </script>
+    <script>
+        var chartDom = document.getElementById('chart13');
+        var myChart = echarts.init(chartDom, {}, {
+            height: 400, width: 500
+        });
+        var option;
+
+        option = {
+            title: {
+                text: '世界人口总量',
+                subtext: '数据来自网络'
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                }
+            },
+            legend: {
+                data: ['2011年', '2012年']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'value',
+                boundaryGap: [0, 0.01]
+            },
+            yAxis: {
+                type: 'category',
+                data: ['巴西', '印尼', '美国', '印度', '中国', '世界人口(万)']
+            },
+            series: [
+                {
+                    name: '2011年',
+                    type: 'bar',
+                    data: [18203, 23489, 29034, 104970, 131744, 630230]
+                },
+                {
+                    name: '2012年',
+                    type: 'bar',
+                    data: [19325, 23438, 31000, 121594, 134141, 681807]
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+
+    </script>
+    <script>
+        var chartDom = document.getElementById('chart14');
+        var myChart = echarts.init(chartDom, {}, {
+            height: 400,
+            width: 500
+        });
+        var option;
+
+        option = {
+            backgroundColor: '#2c343c',
+
+            title: {
+                text: 'Customized Pie',
+                left: 'center',
+                top: 20,
+                textStyle: {
+                    color: '#ccc'
+                }
+            },
+
+            tooltip: {
+                trigger: 'item'
+            },
+
+            visualMap: {
+                show: false,
+                min: 80,
+                max: 600,
+                inRange: {
+                    colorLightness: [0, 1]
+                }
+            },
+            series: [
+                {
+                    name: 'Source of access',
+                    type: 'pie',
+                    radius: '55%',
+                    center: ['50%', '50%'],
+                    data: [
+                        {value: 335, name: 'direct interview'},
+                        {value: 310, name: 'Email marketing'},
+                        {value: 274, name: 'Affiliate advertising'},
+                        {value: 235, name: 'Video ad'},
+                        {value: 400, name: 'Search engine'}
+                    ].sort(function (a, b) { return a.value - b.value; }),
+                    roseType: 'radius',
+                    label: {
+                        color: 'rgba(255, 255, 255, 0.3)'
+                    },
+                    labelLine: {
+                        lineStyle: {
+                            color: 'rgba(255, 255, 255, 0.3)'
+                        },
+                        smooth: 0.2,
+                        length: 10,
+                        length2: 20
+                    },
+                    itemStyle: {
+                        color: '#c23531',
+                        shadowBlur: 200,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    },
+
+                    animationType: 'scale',
+                    animationEasing: 'elasticOut',
+                    animationDelay: function (idx) {
+                        return Math.random() * 200;
+                    }
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+
+    </script>  
+    <script>
+        
+        var chartDom = document.getElementById('chart15');
+        var myChart = echarts.init(chartDom,{},{
+            height: 400,
+            width: 500,
+        });
+        var option;
+
+        option = {
+            series: [{
+                type: 'treemap',
+                data: [{
+                    name: 'nodeA',            // First tree
+                    value: 10,
+                    children: [{
+                        name: 'nodeAa',       // First leaf of first tree
+                        value: 4
+                    }, {
+                        name: 'nodeAb',       // Second leaf of first tree
+                        value: 6
+                    }]
+                }, {
+                    name: 'nodeB',            // Second tree
+                    value: 20,
+                    children: [{
+                        name: 'nodeBa',       // Son of first tree
+                        value: 20,
+                        children: [{
+                            name: 'nodeBa1',  // Granson of first tree
+                            value: 20
+                        }]
+                    }]
+                }]
+            }]
+        };
+
+        option && myChart.setOption(option);
+
+    </script>
+    <script>
+        
+        var chartDom = document.getElementById('chart16');
+        var myChart = echarts.init(chartDom, {}, {
+            height: 400,
+            width: 500
+        });
+        var option;
+
+        option = {
+            title: {
+                text: 'Funnel chart',
+                subtext: 'Purely fictitious'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c}%"
+            },
+            toolbox: {
+                feature: {
+                    dataView: {readOnly: false},
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            legend: {
+                data: ['Show','click','visit','inquiry','order']
+            },
+
+            series: [
+                {
+                    name:'Funnel chart',
+                    type:'funnel',
+                    left: '10%',
+                    top: 60,
+                    //x2: 80,
+                    bottom: 60,
+                    width: '80%',
+                    // height: {totalHeight} - y - y2,
+                    min: 0,
+                    max: 100,
+                    minSize: '0%',
+                    maxSize: '100%',
+                    sort: 'descending',
+                    gap: 2,
+                    label: {
+                        show: true,
+                        position: 'inside'
+                    },
+                    labelLine: {
+                        length: 10,
+                        lineStyle: {
+                            width: 1,
+                            type: 'solid'
+                        }
+                    },
+                    itemStyle: {
+                        borderColor: '#fff',
+                        borderWidth: 1
+                    },
+                    emphasis: {
+                        label: {
+                            fontSize: 20
+                        }
+                    },
+                    data: [
+                        {value: 60, name:'Access'},
+                        {value: 40, name:'Consulting'},
+                        {value: 20, name:'Order'},
+                        {value: 80, name:'click'},
+                        {value: 100, name:'show'}
+                    ]
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+
+    </script>
+    <script>
+        var chartDom = document.getElementById('chart17');
+        var myChart = echarts.init(chartDom, {}, {
+            height: 400, width:500
+        });
+        var option;
+
+        option = {
+            xAxis: {},
+            yAxis: {},
+            toolbox: {
+                feature: {
+                    dataZoom: {
+                        yAxisIndex: 'none'
+                    },
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            series: [{
+                symbolSize: 20,
+                data: [
+                    [10.0, 8.04],
+                    [8.07, 6.95],
+                    [13.0, 7.58],
+                    [9.05, 8.81],
+                    [11.0, 8.33],
+                    [14.0, 7.66],
+                    [13.4, 6.81],
+                    [10.0, 6.33],
+                    [14.0, 8.96],
+                    [12.5, 6.82],
+                    [9.15, 7.20],
+                    [11.5, 7.20],
+                    [3.03, 4.23],
+                    [12.2, 7.83],
+                    [2.02, 4.47],
+                    [1.05, 3.33],
+                    [4.05, 4.96],
+                    [6.03, 7.24],
+                    [12.0, 6.26],
+                    [12.0, 8.84],
+                    [7.08, 5.82],
+                    [5.02, 5.68]
+                ],
+                type: 'scatter'
+            }]
+        };
+
+        option && myChart.setOption(option);
+
+    </script>
+    <script>
+        
+        var chartDom = document.getElementById('chart18');
+        var myChart = echarts.init(chartDom, {}, {
+            height: 400, width: 500,
+        });
+        var option;
+
+        option = {
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                top: '0%',
+                left: 'center'
+            },
+            series: [
+                {
+                    name: 'Source of access',
+                    type: 'pie',
+                    radius: ['40%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                        borderRadius: 10,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                    },
+                    label: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        label: {
+                            show: true,
+                            fontSize: '40',
+                            fontWeight: 'bold'
+                        }
+                    },
+                    labelLine: {
+                        show: false
+                    },
+                    data: [
+                        {value: 1048, name:'Search Engine'},
+                        {value: 735, name:'Direct access'},
+                        {value: 580, name:'Email marketing'},
+                        {value: 484, name:'Affiliate Advertising'},
+                        {value: 300, name:'Video ad'}
+                    ]
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+
+    </script>
+</body>
+</html>

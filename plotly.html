@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plotly</title>
+    
+</head>
+<body>
+    <div id='myDiv1'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv2'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv3'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv4'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv5'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv6'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv7'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv8'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv9'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv10'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv11'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv12'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv13'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv14'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv15'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv16'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv17'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv18'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv19'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv20'><!-- Plotly chart will be drawn inside this DIV --></div>
+    
+    <script src='https://cdn.plot.ly/plotly-2.1.0.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+    <script>
+
+  var myPlot = document.getElementById('myDiv1');
+  
+  myPlot.on('plotly_click', function(data){
+             console.log("HELLO");
+        
+    });
+            var trace1 = {
+            x: [52698, 43117],
+            y: [53, 31],
+            mode: 'markers',
+            name: 'North America',
+            text: ['United States', 'Canada'],
+            marker: {
+                color: 'rgb(164, 194, 244)',
+                size: 12,
+                line: {
+                color: 'white',
+                width: 0.5
+                }
+            },
+            type: 'scatter'
+            };
+
+            var trace2 = {
+            x: [39317, 37236, 35650, 30066, 29570, 27159, 23557, 21046, 18007],
+            y: [33, 20, 13, 19, 27, 19, 49, 44, 38],
+            mode: 'markers',
+            name: 'Europe',
+            text: ['Germany', 'Britain', 'France', 'Spain', 'Italy', 'Czech Rep.', 'Greece', 'Poland'],
+            marker: {
+                color: 'rgb(255, 217, 102)',
+                size: 12
+            },
+            type: 'scatter'
+            };
+
+            var trace3 = {
+            x: [42952, 37037, 33106, 17478, 9813, 5253, 4692, 3899],
+            y: [23, 42, 54, 89, 14, 99, 93, 70],
+            mode: 'markers',
+            name: 'Asia/Pacific',
+            text: ['Australia', 'Japan', 'South Korea', 'Malaysia', 'China', 'Indonesia', 'Philippines', 'India'],
+            marker: {
+                color: 'rgb(234, 153, 153)',
+                size: 12
+            },
+            type: 'scatter'
+            };
+
+            var trace4 = {
+            x: [19097, 18601, 15595, 13546, 12026, 7434, 5419],
+            y: [43, 47, 56, 80, 86, 93, 80],
+            mode: 'markers',
+            name: 'Latin America',
+            text: ['Chile', 'Argentina', 'Mexico', 'Venezuela', 'Venezuela', 'El Salvador', 'Bolivia'],
+            marker: {
+                color: 'rgb(142, 124, 195)',
+                size: 12
+            },
+            type: 'scatter'
+            };
+
+            var data = [trace1, trace2, trace3, trace4];
+
+            var layout = {
+            title: 'Quarter 1 Growth',
+            xaxis: {
+                title: 'GDP per Capita',
+                showgrid: false,
+                zeroline: false
+            },
+            yaxis: {
+                title: 'Percent',
+                showline: false
+            }
+            };
+
+            
+          Plotly.newPlot('myDiv1', data, layout);
+          
+
+    </script>
+    <script>
+              trace1 = {
+        type: 'scatter',
+        x: [1, 2, 3, 4],
+        y: [10, 15, 13, 17],
+        mode: 'lines',
+        name: 'Red',
+        line: {
+          color: 'rgb(219, 64, 82)',
+          width: 3
+        }
+      };
+
+      trace2 = {
+        type: 'scatter',
+        x: [1, 2, 3, 4],
+        y: [12, 9, 15, 12],
+        mode: 'lines',
+        name: 'Blue',
+        line: {
+          color: 'rgb(55, 128, 191)',
+          width: 1
+        }
+      };
+
+      var layout = {
+              height: 400,
+              width: 1200
+            };
+
+      var data = [trace1, trace2];
+
+      Plotly.newPlot('myDiv2', data, layout);
+
+    </script>
+    <script>
+      var data = [{
+      values: [19, 26, 55],
+      labels: ['Residential', 'Non-Residential', 'Utility'],
+      type: 'pie'
+      }];
+      var layout = {
+        height: 400,
+        width: 500
+      };
+
+      Plotly.newPlot('myDiv3', data, layout);
+    </script>
+    <script>
+      var data = [
+        {
+          x: ['giraffes', 'orangutans', 'monkeys'],
+          y: [20, 14, 23],
+          type: 'bar'
+        }
+      ];
+      Plotly.newPlot('myDiv4', data);
+    </script>
+    <script>
+      var trace1 = {
+        x: ['giraffes', 'orangutans', 'monkeys'],
+        y: [20, 14, 23],
+        name: 'SF Zoo',
+        type: 'bar'
+      };
+
+      var trace2 = {
+        x: ['giraffes', 'orangutans', 'monkeys'],
+        y: [12, 18, 29],
+        name: 'LA Zoo',
+        type: 'bar'
+      };
+
+      var data = [trace1, trace2];
+      var layout = {barmode: 'group'};
+      Plotly.newPlot('myDiv5', data, layout);
+    </script>
+    <script>
+      var trace1 = {
+        x: ['giraffes', 'orangutans', 'monkeys'],
+        y: [20, 14, 23],
+        name: 'SF Zoo',
+        type: 'bar'
+      };
+      var trace2 = {
+        x: ['giraffes', 'orangutans', 'monkeys'],
+        y: [12, 18, 29],
+        name: 'LA Zoo',
+        type: 'bar'
+      };
+      var data = [trace1, trace2];
+      var layout = {barmode: 'stack'};
+      Plotly.newPlot('myDiv18', data, layout);
+    </script>
+    <script>
+      var trace1 = {
+        x: [1, 2, 3, 4],
+        y: [0, 2, 3, 5],
+        fill: 'tozeroy',
+        type: 'scatter',
+        mode: 'none'
+      };
+      var trace2 = {
+        x: [1, 2, 3, 4],
+        y: [3, 5, 1, 7],
+        fill: 'tonexty',
+        type: 'scatter',
+        mode: 'none'
+      };
+      var layout = {
+        title: 'Overlaid Chart Without Boundary Lines'
+      };
+      var data = [trace1, trace2];
+      Plotly.newPlot('myDiv6', data, layout);
+    </script>
+    <script>
+      var plotDiv = document.getElementById('plot');
+      var traces = [
+        {x: [1,2,3], y: [2,1,4], stackgroup: 'one'},
+        {x: [1,2,3], y: [1,1,2], stackgroup: 'one'},
+        {x: [1,2,3], y: [3,0,2], stackgroup: 'one'}
+      ];
+      Plotly.newPlot('myDiv7', traces, {title: 'stacked and filled line chart'});
+    </script>
+    <script>
+      var trace1 = {
+        x: [20, 14, 23],
+        y: ['giraffes', 'orangutans', 'monkeys'],
+        name: 'SF Zoo',
+        orientation: 'h',
+        marker: {
+          color: 'red',
+          width: 1
+        },
+        type: 'bar'
+      };
+
+      var trace2 = {
+        x: [12, 18, 29],
+        y: ['giraffes', 'orangutans', 'monkeys'],
+        name: 'LA Zoo',
+        orientation: 'h',
+        type: 'bar',
+        marker: {
+          color: 'green',
+          width: 1
+        }
+      };
+
+      var data = [trace1, trace2];
+
+      var layout = {
+        title: 'Colored Bar Chart',
+        barmode: 'stack'
+      };
+
+      Plotly.newPlot('myDiv9', data, layout);
+    </script>
+    <script>
+      var trace1 = {
+        x: [0, 1, 2, 3, 4, 5],
+        y: [1.5, 1, 1.3, 0.7, 0.8, 0.9],
+        type: 'scatter',
+        marker: {
+          color: 'red'
+        }
+      };
+
+      var trace2 = {
+        x: [0, 1, 2, 3, 4, 5],
+        marker: {
+          color: 'blue'
+        },
+        y: [1, 0.5, 0.7, -1.2, 0.3, 0.4],
+        type: 'bar'
+      };
+
+      var data = [trace1, trace2];
+
+      Plotly.newPlot('myDiv10', data);
+    </script>
+    <script>
+      var data = {
+        type: "sankey",
+        orientation: "h",
+        node: {
+          pad: 15,
+          thickness: 30,
+          line: {
+            color: "black",
+            width: 0.5
+          },
+        label: ["A1", "A2", "B1", "B2", "C1", "C2"],
+        color: ["red", "blue", "green", "yellow", "black", "pink"]
+            },
+
+        link: {
+          source: [0,1,0,2,3,3],
+          target: [2,3,3,4,4,5],
+          value:  [8,4,2,8,4,2]
+        }
+      }
+
+      var data = [data]
+
+      var layout = {
+        title: "Basic Sankey",
+        font: {
+          size: 10
+        }
+      }
+
+      Plotly.react('myDiv11', data, layout)
+    </script>
+    <script>
+      var data = [
+        {
+          type: "indicator",
+          value: 200,
+          delta: { reference: 160 },
+          gauge: { axis: { visible: false, range: [0, 250] } },
+          domain: { row: 0, column: 0 }
+        },
+        {
+          type: "indicator",
+          value: 120,
+          gauge: {
+            shape: "bullet",
+            axis: {
+              visible: false,
+              range: [-200, 200]
+            }
+          },
+          domain: { x: [0.1, 0.5], y: [0.15, 0.35] }
+        },
+        {
+          type: "indicator",
+          mode: "number+delta",
+          value: 300,
+          domain: { row: 0, column: 1 }
+        },
+        { type: "indicator", mode: "delta", value: 40, domain: { row: 1, column: 1 } }
+      ];
+
+      var layout = {
+        width: 600,
+        height: 400,
+        margin: { t: 25, b: 25, l: 25, r: 25 },
+        grid: { rows: 2, columns: 2, pattern: "independent" },
+        template: {
+          data: {
+            indicator: [
+              {
+                title: { text: "Speed" },
+                mode: "number+delta+gauge",
+                delta: { reference: 90 }
+              }
+            ]
+          }
+        }
+      };
+
+      Plotly.newPlot('myDiv12', data, layout);
+    </script>
+    <script>
+      var gd = document.getElementById('myDiv13');
+      var data = [{type: 'funnel', y: ["Website visit", "Downloads", "Potential customers", "Invoice sent", "Closed delas"], x: [13873, 10533, 5443, 2703, 908], hoverinfo: 'x+percent previous+percent initial'}];
+
+      var layout = {margin: {l: 150}, width:600, height: 500}
+
+      Plotly.newPlot('myDiv13', data, layout);
+    </script>
+    <script>
+      var values = [
+      ['Salaries', 'Office', 'Merchandise', 'Legal', '<b>TOTAL</b>'],
+      [1200000, 20000, 80000, 2000, 12120000],
+      [1300000, 20000, 70000, 2000, 130902000],
+      [1300000, 20000, 120000, 2000, 131222000],
+      [1400000, 20000, 90000, 2000, 14102000]]
+
+        var data = [{
+          type: 'table',
+          header: {
+            values: [["<b>EXPENSES</b>"], ["<b>Q1</b>"],
+                ["<b>Q2</b>"], ["<b>Q3</b>"], ["<b>Q4</b>"]],
+            align: "center",
+            line: {width: 1, color: 'black'},
+            fill: {color: "grey"},
+            font: {family: "Arial", size: 12, color: "white"}
+          },
+          cells: {
+            values: values,
+            align: "center",
+            line: {color: "black", width: 1},
+            font: {family: "Arial", size: 11, color: ["black"]}
+          }
+        }]
+
+        Plotly.newPlot('myDiv14', data);
+    </script>
+    <script>
+      var data = [
+        {
+            name: "2018",
+            type: "waterfall",
+            orientation: "v",
+            measure: [
+                "relative",
+                "relative",
+                "total",
+                "relative",
+                "relative",
+                "total"
+            ],
+            x: [
+                "Sales",
+                "Consulting",
+                "Net revenue",
+                "Purchases",
+                "Other expenses",
+                "Profit before tax"
+            ],
+            textposition: "outside",
+            text: [
+                "+60",
+                "+80",
+                "",
+                "-40",
+                "-20",
+                "Total"
+            ],          
+            y: [
+                60,
+                80,
+                0,
+                -40,
+                -20,
+                0
+            ],
+            connector: {
+              line: {
+                color: "rgb(63, 63, 63)"
+              }
+            },
+        }
+        ];
+    layout = {
+            title: {
+                text: "Profit and loss statement 2018"
+            },
+            xaxis: {
+                type: "category"
+            },
+            yaxis: {
+                type: "linear"
+            },
+            autosize: true,
+            showlegend: true
+        };
+    Plotly.newPlot('myDiv15', data, layout);
+    </script>
+    <script>
+      d3.csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv", function(err, rows){
+
+      function unpack(rows, key) {
+      return rows.map(function(row) { return row[key]; });
+      }
+
+
+      var trace1 = {
+      type: "scatter",
+      mode: "lines",
+      name: 'AAPL High',
+      x: unpack(rows, 'Date'),
+      y: unpack(rows, 'AAPL.High'),
+      line: {color: '#17BECF'}
+      }
+
+      var trace2 = {
+      type: "scatter",
+      mode: "lines",
+      name: 'AAPL Low',
+      x: unpack(rows, 'Date'),
+      y: unpack(rows, 'AAPL.Low'),
+      line: {color: '#7F7F7F'}
+      }
+
+      var data = [trace1,trace2];
+
+      var layout = {
+      title: 'Basic Time Series',
+      };
+
+      Plotly.newPlot('myDiv16', data, layout);
+      })
+    </script>
+    <script>
+      var gd = document.getElementById('myDiv17');
+      var data = [{type: 'funnelarea', values: [5, 4, 3, 2, 1], text: ["The 1st", "The 2nd", "The 3rd", "The 4th", "The 5th"],
+            marker: {colors: ["59D4E8", "DDB6C6", "A696C8", "67EACA", "94D2E6"],
+                      line: {color: ["3E4E88", "606470", "3E4E88", "606470", "3E4E88"], width: [2, 1, 5, 0, 3]}},
+            textfont: {family: "Old Standard TT", size: 13, color: "black"}, opacity: 0.65}];
+
+      var layout = {margin: {l: 200 , r: 200}, funnelmode: "stack", showlegend: 'True'}
+
+      Plotly.newPlot('myDiv17', data, layout);
+    </script>
+    <script>
+      var myPlot = document.getElementById('myDiv19'),
+    N = 100,
+    x = d3.range(N),
+    y1 = d3.range(N).map( d3.random.normal() ),
+    y2 = d3.range(N).map( d3.random.normal(-2) ),
+    y3 = d3.range(N).map( d3.random.normal(2) ),
+    trace1 = { x:x, y:y1, type:'scatter', mode:'lines', name:'Jeff' },
+    trace2 = { x:x, y:y2, type:'scatter', mode:'lines', name:'Terren' },
+    trace3 = { x:x, y:y3, type:'scatter', mode:'lines', name:'Arthur' },
+    data = [ trace1, trace2, trace3 ],
+    layout = {
+        hovermode:'closest',
+        title:'Click on Points to add an Annotation on it'
+     };
+
+      Plotly.newPlot('myDiv19', data, layout);
+
+      myPlot.on('plotly_click', function(data){
+          var pts = '';
+          for(var i=0; i < data.points.length; i++){
+              annotate_text = 'x = '+data.points[i].x +
+                            'y = '+data.points[i].y.toPrecision(4);
+
+              annotation = {
+                text: annotate_text,
+                x: data.points[i].x,
+                y: parseFloat(data.points[i].y.toPrecision(4))
+              }
+
+              annotations = self.layout.annotations || [];
+              annotations.push(annotation);
+              Plotly.relayout('myDiv19',{annotations: annotations})
+          }
+      });
+    </script>
+</body>
+</html>

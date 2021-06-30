@@ -1,0 +1,4329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zing Charts</title>
+</head>
+<style>
+    .zc-body {
+      background-color: #fff;
+    }
+
+    .chart--container {
+      height: 100%;
+      width: 100%;
+      min-height: 530px;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+  </style>
+<body>
+    <div id="myChart1"></div>
+    <div id="myChart2" class="chart--container"></div> 
+    <div id="myChart3" class="chart--container"></div>
+    <div id="myChart4" class="chart--container"></div> 
+    <div id="myChart5" class="chart--container"></div>
+    <div id="myChart6" class="chart--container"></div>
+    <div id="myChart7" class="chart--container"></div>
+    <div id="myChart8" class="chart--container"></div>  
+    <div id="myChart9" class="chart--container"></div>
+    <div id="myChart10" class="chart--container"></div>
+    <div id="myChart11" class="chart--container"></div>
+    <div id="myChart12" class="chart--container"></div>
+    <div id="myChart13" class="chart--container"></div>
+    <div id="myChart14" class="chart--container"></div>
+    <div id="myChart15" class="chart--container"></div>
+    <div id="myChart16" class="chart--container"></div>
+    <div id="myChart17" class="chart--container"></div>
+    <div id="myChart18" class="chart--container"></div>
+    <div id="myChart19" class="chart--container"></div>
+    <div id="myChart20" class="chart--container"></div>
+
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script src="https://cdn.zingchart.com/modules/zingchart-rankflow.min.js?v2.9.5"></script>
+    <script src="https://cdn.zingchart.com/modules/zingchart-treemap.min.js?v2.9.5"></script>
+    <script src="https://cdn.zingchart.com/modules/zingchart-pareto.min.js?v2.9.5"></script>
+    <script src="https://cdn.zingchart.com/modules/zingchart-grid.min.js?v2.9.5"></script>
+    <script src="https://cdn.zingchart.com/modules/zingchart-waterfall.min.js?v2.9.5"></script>
+    <script src="https://cdn.zingchart.com/modules/zingchart-maps.min.js?v2.9.5"></script>
+    <script src="https://cdn.zingchart.com/modules/zingchart-maps-usa.min.js?v2.9.5"></script>
+    <script src="https://cdn.zingchart.com/modules/zingchart-tree.min.js?v2.9.5"></script>
+    <script>
+
+        zingchart.bind('myChart1', 'click', function(e) {
+          // Do something for ALL charts on page
+          console.log(e);
+          // switch(e.id) {
+          //   case 'chartId1':
+          //     // Do something
+          //     break;
+          //   case 'chartId2':
+          //     // Do something else
+          //     break;
+          //   case 'chartId3':
+          //     // Reticulate splines
+          //     break;
+          // }
+        });
+        zingchart.render({
+          id: 'myChart1',
+          zooming: true,
+          data: {
+            type: 'line',
+            'scale-x': {
+            zooming: true,
+            },
+            'scale-y': {
+            zooming: true,
+            },
+            series: [
+              { values: [54,23,34,23,43] },
+              { values: [10,15,16,20,40] }
+            ]
+          }
+        });
+    </script>
+    <script>
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"]; // CHART CONFIG
+    // -----------------------------
+    let chartConfig1 = {
+        type: 'area',
+        globals: {
+        fontFamily: 'Helvetica',
+        shadow: false
+        },
+        backgroundColor: '#fff',
+        title: {
+        text: 'Bandwidth for All Sites',
+        padding: '15px 15px',
+        backgroundColor: 'transparent',
+        fontColor: '#5f5f5f',
+        fontSize: '20px',
+        textAlign: 'left'
+        },
+        legend: {
+        marginTop: '30px',
+        backgroundColor: 'transparent',
+        borderColor: 'transparent',
+        item: {
+            fontColor: '#5f5f5f'
+        },
+        layout: 'float',
+        marker: {
+            borderColor: 'transparent',
+            borderRadius: '50px'
+        }
+        },
+        plot: {
+        alphaArea: 1,
+        animation: {
+            delay: 500,
+            effect: 'ANIMATION_SLIDE_TOP',
+            method: 'ANIMATION_LINEAR',
+            sequence: 'ANIMATION_BY_PLOT',
+            speed: 700,
+            delay: 500,
+        },
+        aspect: 'spline',
+        contourOnTop: false,
+        lineWidth: '2px',
+        marker: {
+            visible: false
+        }
+        },
+        scaleX: {
+        values: [1563778800000, 1563782400000, 1563786000000, 1563789600000, 1563793200000, 1563796800000, 1563800400000, 1563804000000, 1563807600000, 1563811200000, 1563814800000, 1563818400000, 1563822000000],
+        guide: {
+            visible: false
+        },
+        item: {
+            fontColor: '#5f5f5f'
+        },
+        lineColor: '#5f5f5f',
+        lineWidth: '1px',
+        maxItems: 8,
+        tick: {
+            lineColor: '#5f5f5f',
+            lineWidth: '1px'
+        },
+        transform: {
+            type: 'date'
+        },
+        zooming: true
+        },
+        scaleY: {
+        guide: {
+            lineColor: '#626262',
+            lineStyle: 'solid'
+        },
+        item: {
+            fontColor: '#5f5f5f'
+        },
+        lineColor: '#5f5f5f',
+        lineWidth: '1px',
+        tick: {
+            lineColor: '#5f5f5f',
+            lineWidth: '1px'
+        }
+        },
+        crosshairX: {
+        plotLabel: {
+            backgroundColor: '#434343',
+            fontColor: '#FFF'
+        },
+        scaleLabel: {
+            backgroundColor: '#fff',
+            borderColor: '#333',
+            borderRadius: '3px',
+            borderWidth: '1px',
+            fontColor: 'black'
+        }
+        },
+        tooltip: {
+        visible: false
+        },
+        series: [{
+            text: 'All Sites',
+            values: [2596, 2626, 4480, 6394, 7488, 14510, 7012, 3389, 20281, 48597, 53309, 52385, 47097, 50813, 13510],
+            backgroundColor1: '#E84F28',
+            backgroundColor2: '#E84F28',
+            lineColor: '#E84F28'
+        },
+        {
+            text: 'www.zingchart.com',
+            values: [479, 199, 583, 1624, 2772, 7899, 3467, 2227, 12885, 27873, 34420, 32569, 27721, 31569, 7362],
+            backgroundColor1: '#45C392',
+            backgroundColor2: '#45C392',
+            lineColor: '#45C392'
+        },
+        {
+            text: 'blog.zingchart.com',
+            values: [408, 343, 410, 840, 1614, 3274, 2092, 914, 5709, 15317, 15633, 16720, 15504, 15821, 4565],
+            backgroundColor1: '#28C2D1',
+            backgroundColor2: '#28C2D1',
+            lineColor: '#28C2D1'
+        },
+        {
+            text: 'help.zingchart.com',
+            values: [989, 1364, 2161, 2644, 1754, 2015, 818, 77, 1260, 3912, 1671, 1836, 2589, 1706, 1161],
+            backgroundColor1: '#FBA645',
+            backgroundColor2: '#FBA645',
+            lineColor: '#FBA645'
+        }
+        ]
+    };
+
+    // RENDER CHARTS
+    // -----------------------------
+    zingchart.render({
+        id: 'myChart2',
+        data: chartConfig1,
+        height: '100%',
+        width: '100%',
+    });
+    </script>
+    <script>
+        
+        let chartConfig = {
+type: 'area',
+stacked: true,
+title: {
+text: 'Analytics Comparison',
+fontColor: '#4caee7'
+},
+subtitle: {
+text: 'Referral Web Traffic ',
+fontColor: '#cb8670'
+},
+plot: {
+activeArea: true,
+animation: {
+    delay: 50,
+    effect: 'ANIMATION_SLIDE_LEFT',
+    method: 'ANIMATION_REGULAR_EASE_OUT',
+    sequence: 'ANIMATION_NO_SEQUENCE',
+    speed: 1500
+},
+hoverMarker: {
+    size: '8px'
+}
+},
+plotarea: {
+backgroundColor: '#fff'
+},
+scaleX: {
+lineColor: '#333',
+maxItems: 6,
+minValue: 1274313600000,
+zooming: true,
+step: 600000,
+tick: {
+    lineColor: '#333'
+},
+transform: {
+    type: 'date',
+    all: '%D, %d %M<br>%h:%i %A',
+    item: {
+    visible: false
+    }
+}
+
+},
+scaleY: {
+    zooming: true,
+item: {
+    padding: '4px'
+},
+lineColor: '#333',
+tick: {
+    lineColor: '#333'
+}
+},
+series: [
+{
+    values: [11, 36, 7, 44, 11, 28, 42, 26, 13, 32, 12, 24, 16, 11, 43, 39],
+    backgroundColor: '#cb8670',
+    lineColor: '#cb8670',
+    marker: {
+    backgroundColor: '#cb8670',
+    borderColor: '#fff',
+    borderWidth: '2px'
+    }
+},
+{
+    values: [21, 29, 14, 16, 28, 35, 21, 18, 11, 7, 4, 9, 25, 15, 33, 13],
+    backgroundColor: '#4caee7',
+    lineColor: '#4caee7',
+    marker: {
+    backgroundColor: '#4caee7',
+    borderColor: '#fff',
+    borderWidth: '2px'
+    }
+}
+]
+};
+
+zingchart.render({
+id: 'myChart3',
+data: chartConfig,
+height: '100%',
+width: '100%'
+});
+
+    </script>
+    <script>
+        zingchart.defineModule('toolbar-zoom', 'plugin', function(chartJson){
+        /*
+        * If the 'labels' array of objects already exists, do nothing.
+        * If it does not exist, initialize it as an empty array.
+        * We do this to avoid obliteration of any existing labels.
+        */
+        chartJson.labels = chartJson.labels ? chartJson.labels : [];
+
+        /* Push the toolbar label objects */
+        chartJson.labels.push({
+        "type": "rectangle",
+        "id": "zoomin",
+        "width": 30,
+        "height": 30,
+        "background-color": "#ddd",
+        "background-image": "https://cdn4.iconfinder.com/data/icons/miu/22/editor_zoom-in_-20.png",
+        "background-repeat": "no-repeat",
+        "cursor": "hand",
+        "margin-top":10,
+        "margin-left":50,
+        "margin-right":"auto",
+        "border-width": 1,
+        "border-color": "#aaa",
+        "border-radius-top-left": 5,
+        "border-radius-bottom-left": 5,
+        "z-index": 1
+        },
+        {
+        "type": "rectangle",
+        "id": "zoomout",
+        "width": 30,
+        "height": 30,
+        "background-color": "#ddd",
+        "background-image": "https://cdn4.iconfinder.com/data/icons/miu/22/editor_zoom-out_-20.png",
+        "background-repeat": "no-repeat",
+        "cursor": "hand",
+        "margin-top":10,
+        "margin-left":80,
+        "margin-right":"auto",
+        "border-width": 1,
+        "border-color": "#aaa",
+        "z-index": 1
+        },
+        {
+        "type": "rectangle",
+        "id": "viewall",
+        "width": 30,
+        "height": 30,
+        "background-color": "#ddd",
+        "background-image": "https://cdn1.iconfinder.com/data/icons/freeline/32/eye_preview_see_seen_view-20.png",
+        "background-repeat": "no-repeat",
+        "cursor": "hand",
+        "margin-top":10,
+        "margin-left":110,
+        "margin-right":"auto",
+        "border-width": 1,
+        "border-color": "#aaa",
+        "border-radius-top-right": 5,
+        "border-radius-bottom-right": 5,
+        "z-index": 1
+        });
+
+        /*
+        * Add label_click event listener, use the clicked label's
+        * id in a switch
+        */
+        zingchart.label_click = function (p) {
+        switch (p.labelid) {
+        case "zoomin":
+        zingchart.exec(p.id, "zoomin");
+        break;
+        case "zoomout":
+        zingchart.exec(p.id, "zoomout");
+        break;
+        case "viewall":
+        zingchart.exec(p.id, "viewall");
+        break;
+        }
+        };
+
+        /* Create a reference to the "toolbar-zoom" object */
+        var optionsObj = chartJson["toolbar-zoom"];
+        /*
+        * If the "background-color" attr exists, loop over each label and
+        * modify the background-color on those with certain "id" values.
+        */
+        if (optionsObj["background-color"]){
+        for (var n in chartJson["labels"]){
+        var labelObj = chartJson["labels"][n];
+        if ( (labelObj["id"] == "zoomin") || (labelObj["id"] == "zoomout") || (labelObj["id"] == "viewall") ){
+        labelObj["background-color"] = optionsObj["background-color"];
+        }
+        }
+        }
+        /* Same thing as above, but for border-color.  */
+        if (optionsObj["border-color"]){
+        for (var n in chartJson["labels"]){
+        var labelObj = chartJson["labels"][n];
+        if ( (labelObj["id"] == "zoomin") || (labelObj["id"] == "zoomout") || (labelObj["id"] == "viewall") ){
+        labelObj["border-color"] = optionsObj["border-color"];
+        }
+        }
+        }
+        return chartJson;
+        });
+
+        var myConfigbar = {
+        "type": "bar",
+        "title":{
+        "text": "Zoom-Module"
+        },
+        "toolbar-zoom":{ // Add the toolbar
+        "background-color":"#FFFFFF #D0D7E1",
+        "border-color":"#ACAFB6"
+        },
+        "scale-x":{
+        "zooming":true
+        },
+        "scrollX":{},
+        "series" : [
+        {
+        "values" : [35,42,67,89,25,34,67,85]
+        }
+        ]
+        };
+
+        zingchart.render({
+        id : 'myChart4',
+        data : myConfigbar,
+        height: 400,
+        width: '100%',
+        modules: "toolbar-zoom" // Load the toolbar
+        });
+    </script>
+    <script>
+        let initState = null; // Used later to store the chart state before changing the data
+let store = { // Data store
+  mathworks: [['matlab', 1.71], ['matlab plot', 0.33], ['matlab download', 0.25], ['plot matlab', 0.22], ['matlab online', 0.2]],
+  ansys: [['ansys', 12.06], ['ansys student', 3], ['ansys fluent', 2.79], ['fluent', 2.66], ['ansys customer portal', 1.73]],
+  arenasimulation: [['arena software', 20.01], ['arena simulation', 15.43], ['arena', 6.88], ['rockwell arena', 3.38], ['arena download', 2.55]],
+  omnetpp: [['omnet', 19.29], ['inet', 11.04], ['omnet tutorial', 5.3], ['omnet download', 3.64], ['omnet tutorial for beginners ...', 2.69]],
+  promodel: [['promodel', 12.63], ['gsa ebuy', 9.83], ['process simulator', 4.9], ['promodel corporation', 4.47, ['promodel download', 2.54]]]
+};
+let bgColors = ['#1976d2', '#424242', '#388e3c', '#ffa000', '#7b1fa2']; // mathworks, ansys, arenasimulation, omnetpp, promodel
+let chartConfigDrilldown = {
+  type: 'bar',
+  theme: 'classic',
+  globals: {
+    fontFamily: 'Helvetica'
+  },
+  backgroundColor: 'white',
+  title: {
+    text: 'Alexa: Top Software Sites - Traffic from Search, 7/23/19',
+    backgroundColor: 'white',
+    color: '#606060'
+  },
+  subtitle: {
+    text: 'Click the columns to view top search keywords. Source: alexa.com.',
+    color: '#606060'
+  },
+  plot: {
+    hoverState: {
+      border: "2px solid #ffff00"
+    },
+    tooltip: {
+      visible: false
+    },
+    valueBox: {
+      text: '%v%',
+      color: '#606060',
+      textDecoration: 'underline'
+    },
+    animation: {
+      effect: 'ANIMATION_EXPAND_HORIZONTAL'
+    },
+    cursor: 'hand',
+    dataBrowser: [
+      '<span style=\'font-weight:bold;color:#1976d2;\'>Mathworks.com</span>',
+      '<span style=\'font-weight:bold;color:#424242;\'>Ansys.com</span>',
+      '<span style=\'font-weight:bold;color:#388e3c;\'>Arenasimulation.com</span>',
+      '<span style=\'font-weight:bold;color:#ffa000;\'>Omnetpp.org</span>',
+      '<span style=\'font-weight:bold;color:#7b1fa2;\'>Promodel.com</span>'
+    ],
+    rules: [
+      {
+        backgroundColor: '#1976d2',
+        rule: '%i==0'
+      },
+      {
+        backgroundColor: '#424242',
+        rule: '%i==1'
+      },
+      {
+        backgroundColor: '#388e3c',
+        rule: '%i==2'
+      },
+      {
+        backgroundColor: '#ffa000',
+        rule: '%i==3'
+      },
+      {
+        backgroundColor: '#7b1fa2',
+        rule: '%i==4'
+      },
+      {
+        backgroundColor: '#c2185b',
+        rule: '%i==5'
+      }
+    ]
+  },
+  scaleX: {
+      zooming:true,
+    values: ['Mathworks.com', 'Ansys.com', 'Arenasimulation.com', 'Omnetpp.org', 'Promodel.com'],
+    guide: {
+      visible: false
+    },
+    item: {
+      color: '#606060'
+    },
+    lineColor: '#C0D0E0',
+    lineWidth: '1px',
+    tick: {
+      lineColor: '#C0D0E0',
+      lineWidth: '1px'
+    }
+  },
+  scaleY: {
+      zooming: true,
+    guide: {
+      lineStyle: 'solid'
+    },
+    item: {
+      color: '#606060'
+    },
+    lineColor: 'none',
+    tick: {
+      lineColor: 'none'
+    }
+  },
+  crosshairX: {
+    lineColor: 'none',
+    lineWidth: '0px',
+    marker: {
+      visible: false
+    },
+    plotLabel: {
+      text: '%data-browser: %v% of total',
+      padding: '8px',
+      alpha: 0.9,
+      backgroundColor: 'white',
+      borderRadius: '4px',
+      borderWidth: '3px',
+      callout: true,
+      calloutPosition: 'bottom',
+      color: '#606060',
+      fontSize: '12px',
+      multiple: true,
+      offsetY: '-20px',
+      placement: 'node-top',
+      rules: [
+        {
+          borderColor: '#1976d2',
+          rule: '%i==0'
+        },
+        {
+          borderColor: '#424242',
+          rule: '%i==1'
+        },
+        {
+          borderColor: '#388e3c',
+          rule: '%i==2'
+        },
+        {
+          borderColor: '#ffa000',
+          rule: '%i==3'
+        },
+        {
+          borderColor: '#7b1fa2',
+          rule: '%i==4'
+        },
+        {
+          borderColor: '#c2185b',
+          rule: '%i==5'
+        }
+      ],
+      shadow: false
+    },
+    scaleLabel: {
+      visible: false
+    }
+  },
+  series: [
+    {
+      values: [59.90, 41.30, 51.20, 48.40, 23.50]
+    }
+  ]
+};
+
+let updateChart = (p) => {
+  initState = zingchart.exec(p.id, 'getdata'); // Gets the state of the chart when the node was clicked
+  let newValues = null;
+  let update = null;
+  switch (p.nodeindex) {
+  case 0:
+    newValues = store['mathworks'];
+    update = true;
+    break;
+  case 1:
+    newValues = store['ansys'];
+    update = true;
+    break;
+  case 2:
+    newValues = store['arenasimulation'];
+    update = true;
+    break;
+  case 3:
+    newValues = store['omnetpp'];
+    update = true;
+    break;
+  case 4:
+    newValues = store['promodel'];
+    update = true;
+    break;
+  case 5:
+    update = false; // We don't want to allow drilldown for unknown
+    break;
+  }
+
+  if (update) {
+    zingchart.unbind(p.id, 'node_click'); // Disable node_click for second level
+    zingchart.exec(p.id, 'modify', {
+      update: false, // Making multiple changes, queue these changes
+      data: {
+        crosshairX: {
+          plotLabel: {
+            text: '%v% of total',
+            borderColor: bgColors[p.nodeindex],
+            rules: []
+          }
+        },
+        plot: {
+          backgroundColor: bgColors[p.nodeindex],
+          cursor: null,
+          rules: []
+        },
+        scaleX: {
+          values: []
+        }
+      }
+    });
+    zingchart.exec(p.id, 'setseriesvalues', {// Replaces all values at plotindex 0
+      update: false, // Queue these, too
+      plotindex: 0,
+      values: newValues
+    });
+    zingchart.exec(p.id, 'update'); // Push queued changes
+    zingchart.bind(p.id, 'animation_end', () => { // When the animation ends...
+      zingchart.exec(p.id, 'addobject', {// ...add a back button
+        type: 'shape',
+        data: {
+          type: 'rectangle',
+          id: 'back_btn',
+          backgroundColor: '#ffffff #f6f6f6',
+          borderColor: '#888',
+          borderWidth: '1px',
+          cursor: 'hand',
+          hoverState: {
+            backgroundColor: '#1976D2 #ffffff',
+            borderColor: '#57a2ff',
+            fillAngle: -180
+          },
+          label: {
+            text: '< Back',
+            color: '#606060'
+          },
+          width: '70px',
+          height: '20px',
+          x: '80%',
+          y: '16%'
+        }
+      });
+    });
+  }
+};
+
+zingchart.render({
+  id: 'myChart5',
+  data: chartConfigDrilldown,
+  height: '100%',
+  width: '100%',
+});
+
+zingchart.bind('myChart5', 'node_click', updateChart);
+
+// Listen for back button click
+zingchart.bind('myChart5', 'shape_click', (p) => {
+  zingchart.unbind(p.id, 'animation_end');
+  if (p.shapeid == 'back_btn') {
+    // Set the data back to the state it was in when the node was clicked
+    zingchart.exec(p.id, 'setdata', {
+      data: initState
+    });
+    zingchart.bind(p.id, 'node_click', updateChart);
+  }
+});
+    </script>
+    <script>
+let graphConfig = (margin, scaleY, range1, range2, range3, scaleXValues, values, goals) => {
+  let config = {
+    type: 'vbullet',
+    backgroundColor: 'none',
+    plot: {
+      tooltip: {
+        text: 'Actual Value: %v%<br>Goal Value: %g%',
+        padding: '5px 10px',
+        backgroundColor: '#36373c',
+        borderRadius: '6px',
+        fontColor: '#ffffff',
+        shadow: false
+      },
+      alpha: 0.8,
+      animation: {
+        delay: 0,
+        effect: 'ANIMATION_EXPAND_BOTTOM',
+        method: 'ANIMATION_LINEAR',
+        sequence: 'ANIMATION_NO_SEQUENCE',
+        speed: '1600'
+      },
+      backgroundColor: '#000000',
+      fillAngle: 0,
+      goal: {
+        alpha: 0.8,
+        backgroundColor: '#ffffff',
+        borderColor: '#000000',
+        borderRadius: '5px',
+        borderWidth: '1px'
+      }
+    },
+    plotarea: {
+      margin: margin
+    },
+    scaleX: {
+      values: scaleXValues,
+      guide: {
+        visible: false
+      },
+      item: {
+        bold: true,
+        fontColor: '#000',
+        fontFamily: 'Dosis',
+        fontSize: '14px'
+      },
+      lineColor: '#6b6f7a',
+      tick: {
+        visible: false
+      }
+    },
+    scaleY: {
+      values: scaleY,
+      format: '%v%',
+      guide: {
+        alpha: 0.1,
+        lineColor: '#000000'
+      },
+      item: {
+        fontColor: '#8d939f',
+        fontFamily: 'Dosis',
+        fontSize: '12px'
+      },
+      lineColor: 'none',
+      markers: [
+        {
+          type: 'area',
+          alpha: 0.7,
+          gradientColors: '#008c2f #d4eedc #009933 #35ae5d #007c29',
+          gradientStops: '0.05 0.1 0.2 0.85 0.95',
+          fillAngle: 0,
+          range: range1
+        },
+        {
+          type: 'area',
+          alpha: 0.7,
+          gradientColors: '#bc9626 #fff6dc #ffcc33 #ffd75d #b28e24',
+          gradientStops: '0.06 0.13 0.2 0.85 0.95',
+          fillAngle: 0,
+          range: range2
+        },
+        {
+          type: 'area',
+          alpha: 0.7,
+          gradientColors: '#a20000 #f6d4d4 #cc0000 #e16a6a #9a0000',
+          gradientStops: '0.06 0.15 0.2 0.86 0.95',
+          fillAngle: 0,
+          range: range3
+        }
+      ],
+      tick: {
+        visible: false
+      }
+    },
+    series: [
+      {
+        values: values,
+        goals: goals
+      }
+    ]
+  };
+
+  // Add title to third graph
+  if (margin === '75px 25px 75px 40px') {
+    config['title'] = {
+      text: 'Client Stats',
+      marginTop: '15px',
+      backgroundColor: 'none',
+      fontColor: '#000000',
+      fontSize: '30px'
+    };
+  }
+
+  return config;
+}
+
+// CHART CONFIG
+// -----------------------------
+let chartConfigBox = {
+  backgroundColor: '#fff',
+  layout: 'x5',
+  graphset: [
+    graphConfig('75px 5px 75px 60px', '0:50:10', [0, 25], [25, 40], [40, 50], ['Attrition<br>Rate'], [20], [17]),
+    graphConfig('75px 15px 75px 50px', '0:50:10', [0, 15], [15, 30], [30, 50], ['Wage<br>Increase'], [45], [20]),
+    graphConfig('75px 25px 75px 40px', '0:100:20', [0, 35], [35, 60], [60, 100], ['Cost Per<br>Sale'], [75], [62]),
+    graphConfig('75px 35px 75px 30px', '0:50:10', [0, 25], [25, 45], [45, 50], ['Cost Per<br>Prospectus'], [38], [30]),
+    graphConfig('75px 40px 75px 25px', '0:150:25', [0, 55], [55, 110], [110, 150], ['Cost Per<br>Lead'], [98], [90])
+  ]
+};
+
+// RENDER CHARTS
+// -----------------------------
+zingchart.render({
+  id: 'myChart6',
+  data: chartConfigBox
+});
+    </script>
+    <script>
+        let chartConfigPie = {
+  graphset: [
+    {
+      type: 'pie',
+      title: {
+        text: 'Earnings Insights<br>Corporate Overview',
+        align: 'right',
+        fontColor: '#616161'
+      },
+      legend: {
+        text: '%t<br>',
+        borderWidth: '0px',
+        header: {
+          text: 'Business Units',
+          align: 'right',
+          bold: true,
+          fontColor: '#616161',
+          fontSize: '13px'
+        },
+        item: {
+          align: 'right',
+          padding: '10px',
+          borderRadius: '3px',
+          fontColor: '#fff',
+          width: '115px'
+        },
+        itemOff: {
+          alpha: 0.7,
+          fontColor: '#616161',
+          lineWidth: '2px',
+          textAlpha: 1,
+          textDecoration: 'line-through'
+        },
+        markerOff: {
+          alpha: 0.2
+        },
+        toggleAction: 'remove',
+        verticalAlign: 'middle',
+        width: '140px'
+      },
+      plot: {
+        valueBox: {
+          decimals: 2
+        },
+        animation: {
+          effect: 'ANIMATION_EXPAND_VERTICAL',
+          method: 'ANIMATION_BACK_EASE_OUT',
+          onLegendToggle: false,
+          sequence: 'ANIMATION_BY_PLOT'
+        },
+        decimals: 0,
+        detach: false,
+        refAngle: 270,
+        thousandsSeparator: ','
+      },
+      scale: {
+        sizeFactor: 0.75
+      },
+      tooltip: {
+        text: '%t<br>$%v',
+        align: 'right',
+        bold: true,
+        borderRadius: '3px',
+        fontColor: '#fff',
+        offsetR: 10,
+        placement: 'node:out',
+        width: '110px'
+      },
+      series: [
+        {
+          text: 'Operating System',
+          values: [119968796],
+          url: 'https://cdn.zingchart.com/resources/XUWNNU55_pie_level2_purp.txt',
+          target: 'graph',
+          tooltip: {
+            backgroundColor: '#4527A0'
+          },
+          backgroundColor: '#4527A0',
+          legendItem: {
+            backgroundColor: '#4527A0'
+          },
+          legendMarker: {
+            type: 'circle',
+            backgroundColor: '#fff',
+            borderColor: '#4527A0',
+            borderWidth: '4px',
+            size: '7px'
+          },
+          legendText: '%t<br><b>$%v</b>'
+        },
+        {
+          text: 'Network and Tools',
+          values: [97503958],
+          url: 'https://cdn.zingchart.com/resources/XUWNNU55_pie_level2_blue.txt',
+          target: 'graph',
+          backgroundColor: '#1565C0',
+          legendItem: {
+            backgroundColor: '#1565C0'
+          },
+          legendMarker: {
+            type: 'circle',
+            backgroundColor: '#fff',
+            borderColor: '#1565C0',
+            borderWidth: '4px',
+            size: '7px'
+          },
+          legendText: '%t<br><b>$%v</b>'
+        },
+        {
+          text: 'Business Division',
+          values: [85948575],
+          url: 'https://cdn.zingchart.com/resources/XUWNNU55_pie_level2_red.txt',
+          target: 'graph',
+          backgroundColor: '#AD1457',
+          legendItem: {
+            backgroundColor: '#AD1457'
+          },
+          legendMarker: {
+            type: 'circle',
+            backgroundColor: '#fff',
+            borderColor: '#AD1457',
+            borderWidth: '4px',
+            size: '7px'
+          },
+          legendText: '%t<br><b>$%v</b>'
+        },
+        {
+          text: 'Online Services',
+          values: [62096876],
+          url: 'https://cdn.zingchart.com/resources/XUWNNU55_pie_level2_green.txt',
+          target: 'graph',
+          backgroundColor: '#00695C',
+          legendItem: {
+            backgroundColor: '#00695C'
+          },
+          legendMarker: {
+            type: 'circle',
+            backgroundColor: '#fff',
+            borderColor: '#00695C',
+            borderWidth: '4px',
+            size: '7px'
+          },
+          legendText: '%t<br><b>$%v</b>'
+        },
+        {
+          text: 'Entertainment',
+          values: [40467564],
+          url: 'https://cdn.zingchart.com/resources/XUWNNU55_pie_level2_orange.txt',
+          target: 'graph',
+          backgroundColor: '#EF6C00',
+          legendItem: {
+            backgroundColor: '#EF6C00'
+          },
+          legendMarker: {
+            type: 'circle',
+            backgroundColor: '#fff',
+            borderColor: '#EF6C00',
+            borderWidth: '4px',
+            size: '7px'
+          },
+          legendText: '%t<br><b>$%v</b>'
+        }
+      ]
+    }
+  ],
+  history: {
+    borderColor: '#616161',
+    borderRadius: '2px',
+    borderWidth: '3px',
+    item: {
+      text: 'Some Text',
+      backgroundColor: '#616161',
+      borderColor: '#616161',
+      fontColor: 'red',
+      fontSize: '10px'
+    },
+    itemOff: {
+      backgroundColor: '#dcdcdc',
+      borderColor: '#6161663',
+      size: '3px',
+      width: '3px',
+      height: '3px'
+    },
+    width: '45px',
+    height: '30px',
+    y: '20px'
+  }
+};
+
+zingchart.render({
+  id: 'myChart7',
+  data: chartConfigPie,
+  cacheControl: '',
+  height: '100%',
+  width: '100%',
+});
+    </script>
+    <script>
+        let feed = (callback) => {
+  let tick = {};
+  tick.plot0 = Math.ceil(350 + (Math.random() * 500));
+  callback(JSON.stringify(tick));
+};
+
+let chartConfigGuage = {
+  type: 'gauge',
+  globals: {
+    fontSize: '25px'
+  },
+  plot: {
+    valueBox: {
+      text: '%v', // default
+      fontSize: '35px',
+      placement: 'center',
+      rules: [
+        {
+          text: '%v<br>EXCELLENT',
+          rule: '%v >= 700'
+        },
+        {
+          text: '%v<br>Good',
+          rule: '%v < 700 && %v > 640'
+        },
+        {
+          text: '%v<br>Fair',
+          rule: '%v < 640 && %v > 580'
+        },
+        {
+          text: '%v<br>Bad',
+          rule: '%v <  580'
+        }
+      ]
+    },
+    size: '100%'
+  },
+  plotarea: {
+    marginTop: '80px'
+  },
+  scaleR: {
+    aperture: 180,
+    center: {
+      visible: false
+    },
+    item: {
+      offsetR: 0,
+      rules: [
+        {
+          offsetX: '15px',
+          rule: '%i == 9'
+        }
+      ]
+    },
+    labels: ['300', '', '', '', '', '', '580', '640', '700', '750', '', '850'],
+    maxValue: 850,
+    minValue: 300,
+    ring: {
+      rules: [
+        {
+          backgroundColor: '#E53935',
+          rule: '%v <= 580'
+        },
+        {
+          backgroundColor: '#EF5350',
+          rule: '%v > 580 && %v < 640'
+        },
+        {
+          backgroundColor: '#FFA726',
+          rule: '%v >= 640 && %v < 700'
+        },
+        {
+          backgroundColor: '#29B6F6',
+          rule: '%v >= 700'
+        }
+      ],
+      size: '50px'
+    },
+    step: 50,
+    tick: {
+      visible: false
+    }
+  },
+  tooltip: {
+    borderRadius: '5px'
+  },
+  refresh: {
+    type: 'feed',
+    url: 'feed()',
+    interval: 1500,
+    resetTimeout: 1000,
+    transport: 'js'
+  },
+  series: [
+    {
+      values: [755], // starting value
+      backgroundColor: 'black',
+      indicator: [10, 10, 10, 10, 0.75],
+      animation: {
+        effect: 'ANIMATION_EXPAND_VERTICAL',
+        method: 'ANIMATION_BACK_EASE_OUT',
+        sequence: 'null',
+        speed: 900
+      }
+    }
+  ]
+};
+
+zingchart.render({
+  id: 'myChart8',
+  data: chartConfigGuage,
+  height: '100%',
+  width: '100%',
+});
+    </script>
+    <script>
+            let chartConfigMixed = {
+            type: 'mixed',
+            title: {
+            text: 'Projected Cash Flow',
+            align: 'center'
+            },
+            plot: {
+            tooltip: {
+            visible: false
+            },
+            aspect: 'spline',
+            marker: {
+            visible: false
+            }
+            },
+            plotarea: {
+            },
+            scaleX: {
+            values: ['1/31/19', '2/10/19', '2/11/19', '2/12/19', '2/13/19', '2/19/19', '2/18/19', '2/19/19', '2/20/19', '2/21/19', '2/24/19', '2/25/19', '2/26/19', '2/27/19', '2/28/19', '2/3/19', '2/4/19', '2/5/19', '2/6/19', '2/7/19', '3/10/19', '3/11/19', '3/12/19', '3/13/19', '3/14/19', '3/17/19', '3/18/19', '3/19/19', '3/20/19', '3/21/19', '3/24/19', '3/25/19', '3/26/19', '3/27/19', '3/28/19', '3/3/19', '3/31/19', '3/4/19', '3/5/19', '3/6/19', '3/7/19', '4/1/19', '4/10/19', '4/11/19', '4/14/19', '4/15/19', '4/16/19', '4/17/19', '4/2/19', '4/21/19', '4/22/19', '4/23/19', '4/24/19', '4/25/19', '4/28/19', '4/29/19', '4/3/19', '4/30/19', '4/4/19', '4/7/19', '4/8/19', '4/9/19', '5/1/19', '5/12/19', '5/13/19', '5/14/19', '5/15/19', '5/16/19', '5/19/19', '5/20/19', '5/21/19', '5/22/19', '5/23/19', '5/27/19', '5/28/19', '5/29/19', '5/30/19', '5/5/19', '5/6/19', '5/7/19', '5/8/19', '5/9/19', '6/10/19', '6/11/19', '6/12/19', '6/13/19', '6/16/19', '6/17/19'],
+            itemsOverlap: true,
+            lineWidth: '0px',
+            tick: {
+            alpha: 1,
+            lineColor: '#2196F3',
+            lineWidth: '2px'
+            },
+            zooming: true,
+            zoomTo: [0, 30]
+            },
+            scaleY: {
+            values: '0:20000:1000',
+            guide: {
+            visible: false
+            }
+            },
+            scaleY2: {},
+            crosshairX: {
+            lineColor: '#2196F3',
+            lineStyle: 'dashed',
+            lineWidth: '2px',
+            marker: {
+            type: 'triangle',
+            size: '5px',
+            visible: true
+            },
+            plotLabel: {
+            visible: false
+            }
+            },
+            preview: {
+            live: true
+            },
+            series: [
+            {
+            type: 'bar',
+            values: [4000, 10000, 5000, 2000, 6000, 10000, 15000, 8000, 3000, 7000, 13000, 4000, 10000, 5000, 2000, 6000, 10000, 15000, 8000, 3000, 7000, 13000, 4000, 10000, 5000, 2000, 6000, 10000, 15000, 8000, 3000, 7000, 13000, 4000, 10000, 5000, 2000, 6000, 10000, 15000, 8000, 3000, 7000, 13000, 4000, 10000, 5000, 2000, 6000, 10000, 15000, 8000, 3000, 7000, 13000, 4000, 10000, 5000, 2000, 6000, 10000, 15000, 8000, 3000, 7000, 13000, 4000, 10000, 5000, 2000, 6000, 10000, 15000, 8000, 3000, 7000, 13000, 4000, 10000, 5000, 2000, 6000, 10000, 15000, 8000, 3000, 7000, 13000, 8000, 0, 5000],
+            backgroundColor: '#FFEB3B',
+            scales: 'scale-x, scale-y-2'
+            },
+            {
+            type: 'line',
+            values: [6000, 7000, 3000, 4000, 10000, 13000, 5000, 0, 9000, 16000, 9000, 6000, 7000, 3000, 4000, 10000, 13000, 5000, 0, 9000, 16000, 9000, 6000, 7000, 3000, 4000, 10000, 13000, 5000, 0, 9000, 16000, 9000, 6000, 7000, 3000, 4000, 10000, 13000, 5000, 0, 9000, 16000, 9000, 6000, 7000, 3000, 4000, 10000, 13000, 5000, 0, 9000, 16000, 9000, 6000, 7000, 3000, 4000, 10000, 13000, 5000, 0, 9000, 16000, 9000, 6000, 7000, 3000, 4000, 10000, 13000, 5000, 0, 9000, 16000, 9000, 6000, 7000, 3000, 4000, 10000, 13000, 5000, 0, 9000, 16000, 9000, 6000, 7000, 15000],
+            lineColor: '#2196F3',
+            scales: 'scale-x, scale-y-2'
+            }
+            ]
+            };
+
+            zingchart.render({
+            id: 'myChart9',
+            data: chartConfigMixed,
+            width: '100%',
+            });
+
+
+            /**
+             * As we are moving the guide, we want to update the items outside
+             * of the chart. We could do this inside the chart, but since JS
+             * is single threaded we don't want to block UI with a chart
+             * update. A chart update is more expensive than a node update.
+             * You may see no performance gains on a dataset this size, but
+             * with some increase its possible to see a discrepancy for the
+             * user. This is why I chose to contstruct the items outside
+             * of the graph.
+             */
+            // zingchart.guide_mousemove = (e) => {
+            // document.getElementById('day').innerHTML = 'Day: ' + e['scale-label']['scale-x'];
+            // }
+
+            /*********** Functions ***********/
+
+            /**
+             * ZingChart defined event listener. Will capture ZoomEvent and related
+             * Zooming Information.
+             */
+            zingchart.zoom = (e) => {
+            displayZoomValues(e.kmin, e.kmax);
+            }
+
+
+            /**
+             * Apply dates to display current zoomed dates
+             */
+            let displayZoomValues = (sFrom, sTo) => {
+            let dateFrom = document.getElementById('date-from');
+            let dateTo = document.getElementById('date-to');
+
+            // If viewall is clicked show the default dates
+            if (!sFrom) {
+            sFrom = '1/31/19';
+            }
+            if (!sTo) {
+            sTo = '6/17/19';
+            }
+
+            // dateFrom.innerHTML = sFrom;
+            // dateTo.innerHTML = sTo;
+            }
+
+            /**
+             * Apply zoom to graph.
+             */
+            let zoomToIndex = (max) => {
+
+            // ZingChart api automated zoom. Have to be careful
+            // not to zoom past the end of the graph
+            zingchart.exec('myChart9', 'zoomto', {
+            xmax: max,
+            xmin: 0
+            });
+            }
+
+            /**
+             * Capture the spans clicks with data-period attribute.
+             */
+            // document.getElementById('date-picker-container').addEventListener('click', (e) => {
+            // let target = e.target;
+
+            // // Only capture spans with data-period attribute
+            // if (target.dataset['period']) {
+            // // Toggle classes
+            // removeActiveClass();
+            // e.target.classList.toggle('active');
+
+            // switch (target.dataset['period']) {
+            // case '1':
+            // zoomToIndex(30);
+            // break;
+            // case '2':
+            // zoomToIndex(60);
+            // break;
+            // default:
+            // zingchart.exec('myChart9', 'viewall');
+            // break;
+            // }
+            // }
+            // });
+
+            let removeActiveClass = () => {
+            let activeElement = document.querySelector('[data-period].active');
+            activeElement.classList.toggle('active');
+            }
+    </script>
+    <script>
+        ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+        let chartConfigSankey = {
+          type: 'rankflow',
+          title: {
+            text: 'Tech Rankings According to Stack Overflow Developers Survey and Payscale.com',
+            fontFamily: 'Tahoma',
+            fontSize: '17px'
+          },
+          options: {
+            colorType: 'palette',
+            palette: ['#40beeb', '#305f74', '#4492a8', '#8e8e8e', '#dddddd', '#83deff', '#086893', '#85bdcd']
+          },
+          plotarea: {
+            margin: '40 20 20 20'
+          },
+          scaleX: {
+            values: ['Trending on Stack Overflow', 'Salary'],
+            item: {
+              color: 'black',
+              fontFamily: 'Tahoma'
+            }
+          },
+          labels: [{
+              text: 'OVERALL RANK',
+              bold: true,
+              color: 'black',
+              flat: true,
+              fontFamily: 'Tahoma',
+              generated: true,
+              width: 96.96875,
+              x: '15px',
+              y: '40px'
+            },
+            {
+              text: 'Top Tech on Stack Overflow',
+              bold: true,
+              color: 'black',
+              flat: true,
+              fontFamily: 'Tahoma',
+              generated: true,
+              width: 60.96875,
+              x: '350px',
+              y: '40px'
+            },
+            {
+              text: 'Salary',
+              bold: true,
+              color: 'black',
+              flat: true,
+              fontFamily: 'Tahoma',
+              generated: true,
+              width: 60.96875,
+              x: '620px',
+              y: '40px'
+            },
+            {
+              id: 'rank_1_l',
+              text: 1,
+              backgroundColor: '#999',
+              bold: true,
+              color: '#000',
+              flat: true,
+              generated: true,
+              width: '18px',
+              height: '18px',
+              x: 190.515625,
+              y: '75px'
+            },
+            {
+              id: 'rank_1_r',
+              text: 1,
+              backgroundColor: '#999',
+              bold: true,
+              color: '#000',
+              flat: true,
+              generated: true,
+              width: '18px',
+              height: '18px',
+              x: '422px',
+              y: '75px'
+            },
+            {
+              id: 'rank_1_g',
+              text: 1,
+              backgroundColor: '#333',
+              bold: true,
+              color: '#fff',
+              flat: true,
+              generated: true,
+              width: '36px',
+              height: '18px',
+              x: '20px',
+              y: '75px'
+            },
+            {
+              id: 'rank_2_l',
+              text: 2,
+              backgroundColor: '#999',
+              bold: true,
+              color: '#000',
+              flat: true,
+              generated: true,
+              width: '18px',
+              height: '18px',
+              x: 190.515625,
+              y: '96px'
+            },
+            {
+              id: 'rank_2_r',
+              text: 2,
+              backgroundColor: '#999',
+              bold: true,
+              color: '#000',
+              flat: true,
+              generated: true,
+              width: '18px',
+              height: '18px',
+              x: '422px',
+              y: '96px'
+            },
+            {
+              id: 'rank_2_g',
+              text: 2,
+              backgroundColor: '#333',
+              bold: true,
+              color: '#fff',
+              flat: true,
+              generated: true,
+              width: '36px',
+              height: '18px',
+              x: '20px',
+              y: '96px'
+            },
+            {
+              id: 'rank_3_l',
+              text: 3,
+              backgroundColor: '#999',
+              bold: true,
+              color: '#000',
+              flat: true,
+              generated: true,
+              width: '18px',
+              height: '18px',
+              x: 190.515625,
+              y: '117px'
+            },
+            {
+              id: 'rank_3_r',
+              text: 3,
+              backgroundColor: '#999',
+              bold: true,
+              color: '#000',
+              flat: true,
+              generated: true,
+              width: '18px',
+              height: '18px',
+              x: '422px',
+              y: '117px'
+            },
+            {
+              id: 'rank_3_g',
+              text: 3,
+              backgroundColor: '#333',
+              bold: true,
+              color: '#fff',
+              flat: true,
+              generated: true,
+              width: '36px',
+              height: '18px',
+              x: '20px',
+              y: '117px'
+            },
+            {
+              id: 'rank_4_l',
+              text: 4,
+              backgroundColor: '#999',
+              bold: true,
+              color: '#000',
+              flat: true,
+              generated: true,
+              width: '18px',
+              height: '18px',
+              x: 190.515625,
+              y: '138px'
+            },
+            {
+              id: 'rank_4_r',
+              text: 4,
+              backgroundColor: '#999',
+              bold: true,
+              color: '#000',
+              flat: true,
+              generated: true,
+              width: '18px',
+              height: '18px',
+              x: '422px',
+              y: '138px'
+            },
+            {
+              id: 'rank_4_g',
+              text: 4,
+              backgroundColor: '#333',
+              bold: true,
+              color: '#fff',
+              flat: true,
+              generated: true,
+              width: '36px',
+              height: '18px',
+              x: '20px',
+              y: '138px'
+            },
+            {
+              id: 'rank_5_l',
+              text: 5,
+              backgroundColor: '#999',
+              bold: true,
+              color: '#000',
+              flat: true,
+              generated: true,
+              width: '18px',
+              height: '18px',
+              x: 190.515625,
+              y: '159px'
+            },
+            {
+              id: 'rank_5_r',
+              text: 5,
+              backgroundColor: '#999',
+              bold: true,
+              color: '#000',
+              flat: true,
+              generated: true,
+              width: '18px',
+              height: '18px',
+              x: '422px',
+              y: '159px'
+            },
+            {
+              id: 'rank_5_g',
+              text: 5,
+              backgroundColor: '#333',
+              bold: true,
+              color: '#fff',
+              flat: true,
+              generated: true,
+              width: '36px',
+              height: '18px',
+              x: '20px',
+              y: '159px'
+            },
+            {
+              id: 'rank_6_l',
+              text: 6,
+              backgroundColor: '#999',
+              bold: true,
+              color: '#000',
+              flat: true,
+              generated: true,
+              width: '18px',
+              height: '18px',
+              x: 190.515625,
+              y: '180px'
+            },
+            {
+              id: 'rank_6_r',
+              text: 6,
+              backgroundColor: '#999',
+              bold: true,
+              color: '#000',
+              flat: true,
+              generated: true,
+              width: '18px',
+              height: '18px',
+              x: '422px',
+              y: '180px'
+            },
+            {
+              id: 'rank_6_g',
+              text: 6,
+              backgroundColor: '#333',
+              bold: true,
+              color: '#fff',
+              flat: true,
+              generated: true,
+              width: '36px',
+              height: '18px',
+              x: '20px',
+              y: '180px'
+            },
+            {
+              id: 'rank_7_l',
+              text: 7,
+              backgroundColor: '#999',
+              bold: true,
+              color: '#000',
+              flat: true,
+              generated: true,
+              width: '18px',
+              height: '18px',
+              x: 190.515625,
+              y: '201px'
+            },
+            {
+              id: 'rank_7_r',
+              text: 7,
+              backgroundColor: '#999',
+              bold: true,
+              color: '#000',
+              flat: true,
+              generated: true,
+              width: '18px',
+              height: '18px',
+              x: '422px',
+              y: '201px'
+            },
+            {
+              id: 'rank_7_g',
+              text: 7,
+              backgroundColor: '#333',
+              bold: true,
+              color: '#fff',
+              flat: true,
+              generated: true,
+              width: '36px',
+              height: '18px',
+              x: '20px',
+              y: '201px'
+            },
+            {
+              id: 'rank_8_l',
+              text: 8,
+              backgroundColor: '#999',
+              bold: true,
+              color: '#000',
+              flat: true,
+              generated: true,
+              width: '18px',
+              height: '18px',
+              x: 190.515625,
+              y: '222px'
+            },
+            {
+              id: 'rank_8_r',
+              text: 8,
+              backgroundColor: '#999',
+              bold: true,
+              color: '#000',
+              flat: true,
+              generated: true,
+              width: '18px',
+              height: '18px',
+              x: '422px',
+              y: '222px'
+            },
+            {
+              id: 'rank_8_g',
+              text: 8,
+              backgroundColor: '#333',
+              bold: true,
+              color: '#fff',
+              flat: true,
+              generated: true,
+              width: '36px',
+              height: '18px',
+              x: '20px',
+              y: '222px'
+            },
+            {
+              id: 'box_overall_0',
+              text: 'Air West',
+              backgroundColor: '#40beeb',
+              color: '#fff',
+              flat: false,
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: '56px',
+              y: '75px'
+            },
+            {
+              id: 'box_0_0',
+              text: 'Air West',
+              tooltip: {
+                text: 'Air West ranked on 3 at ON-TIME',
+                padding: '10px',
+                backgroundColor: '#fff',
+                borderColor: '#999',
+                borderWidth: '1px',
+                color: '#333'
+              },
+              color: '#fff',
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: 217.515625,
+              y: '117px'
+            },
+            {
+              id: 'box_0_1',
+              text: 'Air West',
+              tooltip: {
+                text: 'Air West ranked on 4 at CANCELED FLIGHTS',
+                padding: '10px',
+                backgroundColor: '#fff',
+                borderColor: '#999',
+                borderWidth: '1px',
+                color: '#333'
+              },
+              color: '#fff',
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: 352.03125,
+              y: '138px'
+            },
+            {
+              id: 'box_overall_1',
+              text: 'Braniff',
+              backgroundColor: '#305f74',
+              color: '#fff',
+              flat: false,
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: '56px',
+              y: '96px'
+            },
+            {
+              id: 'box_1_0',
+              text: 'Braniff',
+              tooltip: {
+                text: 'Braniff ranked on 1 at ON-TIME',
+                padding: '10px',
+                backgroundColor: '#fff',
+                borderColor: '#999',
+                borderWidth: '1px',
+                color: '#333'
+              },
+              color: '#fff',
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: 217.515625,
+              y: '75px'
+            },
+            {
+              id: 'box_1_1',
+              text: 'Braniff',
+              tooltip: {
+                text: 'Braniff ranked on 1 at CANCELED FLIGHTS',
+                padding: '10px',
+                backgroundColor: '#fff',
+                borderColor: '#999',
+                borderWidth: '1px',
+                color: '#333'
+              },
+              color: '#fff',
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: 352.03125,
+              y: '75px'
+            },
+            {
+              id: 'box_overall_2',
+              text: 'Capital',
+              backgroundColor: '#4492a8',
+              color: '#fff',
+              flat: false,
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: '56px',
+              y: '117px'
+            },
+            {
+              id: 'box_2_0',
+              text: 'Capital',
+              tooltip: {
+                text: 'Capital ranked on 6 at ON-TIME',
+                padding: '10px',
+                backgroundColor: '#fff',
+                borderColor: '#999',
+                borderWidth: '1px',
+                color: '#333'
+              },
+              color: '#fff',
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: 217.515625,
+              y: '180px'
+            },
+            {
+              id: 'box_2_1',
+              text: 'Capital',
+              tooltip: {
+                text: 'Capital ranked on 2 at CANCELED FLIGHTS',
+                padding: '10px',
+                backgroundColor: '#fff',
+                borderColor: '#999',
+                borderWidth: '1px',
+                color: '#333'
+              },
+              color: '#fff',
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: 352.03125,
+              y: '96px'
+            },
+            {
+              id: 'box_overall_3',
+              text: 'Eastern',
+              backgroundColor: '#8e8e8e',
+              color: '#fff',
+              flat: false,
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: '56px',
+              y: '138px'
+            },
+            {
+              id: 'box_3_0',
+              text: 'Eastern',
+              tooltip: {
+                text: 'Eastern ranked on 8 at ON-TIME',
+                padding: '10px',
+                backgroundColor: '#fff',
+                borderColor: '#999',
+                borderWidth: '1px',
+                color: '#333'
+              },
+              color: '#fff',
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: 217.515625,
+              y: '222px'
+            },
+            {
+              id: 'box_3_1',
+              text: 'Eastern',
+              tooltip: {
+                text: 'Eastern ranked on 7 at CANCELED FLIGHTS',
+                padding: '10px',
+                backgroundColor: '#fff',
+                borderColor: '#999',
+                borderWidth: '1px',
+                color: '#333'
+              },
+              color: '#fff',
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: 352.03125,
+              y: '201px'
+            },
+            {
+              id: 'box_overall_4',
+              text: 'Galaxy',
+              backgroundColor: '#dddddd',
+              color: '#fff',
+              flat: false,
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: '56px',
+              y: '159px'
+            },
+            {
+              id: 'box_4_0',
+              text: 'Galaxy',
+              tooltip: {
+                text: 'Galaxy ranked on 4 at ON-TIME',
+                padding: '10px',
+                backgroundColor: '#fff',
+                borderColor: '#999',
+                borderWidth: '1px',
+                color: '#333'
+              },
+              color: '#fff',
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: 217.515625,
+              y: '138px'
+            },
+            {
+              id: 'box_4_1',
+              text: 'Galaxy',
+              tooltip: {
+                text: 'Galaxy ranked on 5 at CANCELED FLIGHTS',
+                padding: '10px',
+                backgroundColor: '#fff',
+                borderColor: '#999',
+                borderWidth: '1px',
+                color: '#333'
+              },
+              color: '#fff',
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: 352.03125,
+              y: '159px'
+            },
+            {
+              id: 'box_overall_5',
+              text: 'PSA',
+              backgroundColor: '#83deff',
+              color: '#fff',
+              flat: false,
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: '56px',
+              y: '180px'
+            },
+            {
+              id: 'box_5_0',
+              text: 'PSA',
+              tooltip: {
+                text: 'PSA ranked on 5 at ON-TIME',
+                padding: '10px',
+                backgroundColor: '#fff',
+                borderColor: '#999',
+                borderWidth: '1px',
+                color: '#333'
+              },
+              color: '#fff',
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: 217.515625,
+              y: '159px'
+            },
+            {
+              id: 'box_5_1',
+              text: 'PSA',
+              tooltip: {
+                text: 'PSA ranked on 3 at CANCELED FLIGHTS',
+                padding: '10px',
+                backgroundColor: '#fff',
+                borderColor: '#999',
+                borderWidth: '1px',
+                color: '#333'
+              },
+              color: '#fff',
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: 352.03125,
+              y: '117px'
+            },
+            {
+              id: 'box_overall_6',
+              text: 'Pan Am',
+              backgroundColor: '#086893',
+              color: '#fff',
+              flat: false,
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: '56px',
+              y: '201px'
+            },
+            {
+              id: 'box_6_0',
+              text: 'Pan Am',
+              tooltip: {
+                text: 'Pan Am ranked on 2 at ON-TIME',
+                padding: '10px',
+                backgroundColor: '#fff',
+                borderColor: '#999',
+                borderWidth: '1px',
+                color: '#333'
+              },
+              color: '#fff',
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: 217.515625,
+              y: '96px'
+            },
+            {
+              id: 'box_6_1',
+              text: 'Pan Am',
+              tooltip: {
+                text: 'Pan Am ranked on 6 at CANCELED FLIGHTS',
+                padding: '10px',
+                backgroundColor: '#fff',
+                borderColor: '#999',
+                borderWidth: '1px',
+                color: '#333'
+              },
+              color: '#fff',
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: 352.03125,
+              y: '180px'
+            },
+            {
+              id: 'box_overall_7',
+              text: 'Sunbird',
+              backgroundColor: '#85bdcd',
+              color: '#fff',
+              flat: false,
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: '56px',
+              y: '222px'
+            },
+            {
+              id: 'box_7_0',
+              text: 'Sunbird',
+              tooltip: {
+                text: 'Sunbird ranked on 7 at ON-TIME',
+                padding: '10px',
+                backgroundColor: '#fff',
+                borderColor: '#999',
+                borderWidth: '1px',
+                color: '#333'
+              },
+              color: '#fff',
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: 217.515625,
+              y: '201px'
+            },
+            {
+              id: 'box_7_1',
+              text: 'Sunbird',
+              tooltip: {
+                text: 'Sunbird ranked on 8 at CANCELED FLIGHTS',
+                padding: '10px',
+                backgroundColor: '#fff',
+                borderColor: '#999',
+                borderWidth: '1px',
+                color: '#333'
+              },
+              color: '#fff',
+              generated: true,
+              width: 60.96875,
+              height: '18px',
+              x: 352.03125,
+              y: '222px'
+            }
+          ],
+          shapes: [{
+              type: 'poly',
+              id: 'flow_0',
+              text: 'Air West',
+              backgroundColor: '#40beeb',
+              flat: true,
+              generated: true,
+              label: {
+                visible: false
+              },
+              points: [
+                [217.515625, 117],
+                [278.484375, 117],
+                [352.03125, 138],
+                [413, 138],
+                [413, 156],
+                [413, 156],
+                [352.03125, 156],
+                [278.484375, 135],
+                [217.515625, 135],
+                [217.515625, 117]
+              ],
+              rank: 1,
+              ranks: [3, 4],
+              shadow: true
+            },
+            {
+              type: 'poly',
+              id: 'flow_1',
+              text: 'Braniff',
+              backgroundColor: '#305f74',
+              flat: true,
+              generated: true,
+              label: {
+                visible: false
+              },
+              points: [
+                [217.515625, 75],
+                [278.484375, 75],
+                [352.03125, 75],
+                [413, 75],
+                [413, 93],
+                [413, 93],
+                [352.03125, 93],
+                [278.484375, 93],
+                [217.515625, 93],
+                [217.515625, 75]
+              ],
+              rank: 2,
+              ranks: [1, 1],
+              shadow: true
+            },
+            {
+              type: 'poly',
+              id: 'flow_2',
+              text: 'Capital',
+              backgroundColor: '#4492a8',
+              flat: true,
+              generated: true,
+              label: {
+                visible: false
+              },
+              points: [
+                [217.515625, 180],
+                [278.484375, 180],
+                [352.03125, 96],
+                [413, 96],
+                [413, 114],
+                [413, 114],
+                [352.03125, 114],
+                [278.484375, 198],
+                [217.515625, 198],
+                [217.515625, 180]
+              ],
+              rank: 3,
+              ranks: [6, 2],
+              shadow: true
+            },
+            {
+              type: 'poly',
+              id: 'flow_3',
+              text: 'Eastern',
+              backgroundColor: '#8e8e8e',
+              flat: true,
+              generated: true,
+              label: {
+                visible: false
+              },
+              points: [
+                [217.515625, 222],
+                [278.484375, 222],
+                [352.03125, 201],
+                [413, 201],
+                [413, 219],
+                [413, 219],
+                [352.03125, 219],
+                [278.484375, 240],
+                [217.515625, 240],
+                [217.515625, 222]
+              ],
+              rank: 4,
+              ranks: [8, 7],
+              shadow: true
+            },
+            {
+              type: 'poly',
+              id: 'flow_4',
+              text: 'Galaxy',
+              backgroundColor: '#dddddd',
+              flat: true,
+              generated: true,
+              label: {
+                visible: false
+              },
+              points: [
+                [217.515625, 138],
+                [278.484375, 138],
+                [352.03125, 159],
+                [413, 159],
+                [413, 177],
+                [413, 177],
+                [352.03125, 177],
+                [278.484375, 156],
+                [217.515625, 156],
+                [217.515625, 138]
+              ],
+              rank: 5,
+              ranks: [4, 5],
+              shadow: true
+            },
+            {
+              type: 'poly',
+              id: 'flow_5',
+              text: 'PSA',
+              backgroundColor: '#83deff',
+              flat: true,
+              generated: true,
+              label: {
+                visible: false
+              },
+              points: [
+                [217.515625, 159],
+                [278.484375, 159],
+                [352.03125, 117],
+                [413, 117],
+                [413, 135],
+                [413, 135],
+                [352.03125, 135],
+                [278.484375, 177],
+                [217.515625, 177],
+                [217.515625, 159]
+              ],
+              rank: 6,
+              ranks: [5, 3],
+              shadow: true
+            },
+            {
+              type: 'poly',
+              id: 'flow_6',
+              text: 'Pan Am',
+              backgroundColor: '#086893',
+              flat: true,
+              generated: true,
+              label: {
+                visible: false
+              },
+              points: [
+                [217.515625, 96],
+                [278.484375, 96],
+                [352.03125, 180],
+                [413, 180],
+                [413, 198],
+                [413, 198],
+                [352.03125, 198],
+                [278.484375, 114],
+                [217.515625, 114],
+                [217.515625, 96]
+              ],
+              rank: 7,
+              ranks: [2, 6],
+              shadow: true
+            },
+            {
+              type: 'poly',
+              id: 'flow_7',
+              text: 'Sunbird',
+              backgroundColor: '#85bdcd',
+              flat: true,
+              generated: true,
+              label: {
+                visible: false
+              },
+              points: [
+                [217.515625, 201],
+                [278.484375, 201],
+                [352.03125, 222],
+                [413, 222],
+                [413, 240],
+                [413, 240],
+                [352.03125, 240],
+                [278.484375, 219],
+                [217.515625, 219],
+                [217.515625, 201]
+              ],
+              rank: 8,
+              ranks: [7, 8],
+              shadow: true
+            }
+          ],
+          tooltip: {
+            borderRadius: '5px',
+            fontFamily: 'Tahoma',
+            fontSize: '10px'
+          },
+          series: [{
+              text: 'Java',
+              backgroundColor: '#40beeb',
+              palette: 0,
+              rank: 1,
+              ranks: [2, 2]
+            },
+            {
+              text: 'Javascript',
+              backgroundColor: '#305f74',
+              palette: 1,
+              rank: 2,
+              ranks: [1, 3]
+            },
+            {
+              text: 'Python',
+              backgroundColor: '#8e8e8e',
+              palette: 3,
+              rank: 3,
+              ranks: [4, 1]
+            },
+            {
+              text: 'Android',
+              backgroundColor: '#4492a8',
+              palette: 2,
+              rank: 4,
+              ranks: [3, 6]
+            },
+            {
+              text: 'C#',
+              backgroundColor: '#dddddd',
+              palette: 4,
+              rank: 5,
+              ranks: [5, 7]
+            },
+            {
+              text: 'C++',
+              backgroundColor: '#85bdcd',
+              palette: 7,
+              rank: 6,
+              ranks: [8, 5]
+            },
+            {
+              text: 'IOS',
+              backgroundColor: '#85bdcd',
+              palette: 7,
+              rank: 7,
+              ranks: [10, 4]
+            },
+            {
+              text: 'PHP',
+              backgroundColor: '#83deff',
+              palette: 5,
+              rank: 8,
+              ranks: [6, 8]
+            },
+            {
+              text: 'Jquery',
+              backgroundColor: '#086893',
+              palette: 6,
+              rank: 9,
+              ranks: [7, 9]
+            },
+            {
+              text: 'HTML',
+              backgroundColor: '#85bdcd',
+              palette: 7,
+              rank: 10,
+              ranks: [9, 10]
+            }
+          ]
+        }
+    
+        zingchart.render({
+          id: 'myChart10',
+          data: chartConfigSankey,
+          height: '100%',
+          width: '100%',
+        });
+    </script>
+    <script>
+        var myConfigTreeMap = {
+  type:'treemap',
+  title: {
+    text: 'Drilldown Treemap',
+    fontSize: '36px',
+    align:'center',
+    color: '#5D7D9A',
+    adjustLayout: true
+  },
+  subtitle: {
+    text: 'A great way to display hierarchical data by using nested rectangles.',
+    fontSize: '16px',
+    fontColor: '#687c8c',
+    fontFamily: 'sans-serif',
+    fontWeight: '300',
+    textAlign: 'center',
+    offsetY: '20px',
+  },
+  options:{
+      splitType:'balanced',
+      colorType:'palette',
+      palette:['#02a3f4','#5bd6fa','#295a72','#99d1ee','#156eb0','#43d7c5']
+  },
+  plotarea:{
+    margin: '100 0 0 0'
+  },
+  series:[
+      {
+          text:'North America',
+          children:[
+              {
+                  text:'United States',
+                  children:[
+                      {
+                          text:'Texas',
+                          value: 10
+                      },
+                      {
+                        	text:'New Mexico',
+                        	value: 13
+                      }
+                  ]
+              },
+              {
+                  text: 'Canada',
+                  value: 12
+              }
+          ]
+      },
+      {
+          text: 'Europe',
+          children:[
+              {
+                  text: 'France',
+                  value:5
+              },
+              {
+                  text:'Spain',
+                  value:3
+              }
+          ]
+      },
+      {
+          text:'Africa',
+          children: [
+              {
+                  text:'Egypt',
+                  value:3
+              },
+              {
+                  text:'Congo',
+                  value:4
+              }
+          ]
+      },
+      {
+          text:'Asia',
+          children:[
+              {
+                  text:'India',
+                  value:11
+              },
+              {
+                  text:'China',
+                  value:9
+              }
+          ]
+      },
+      {
+          text:'South America',
+          children:[
+              {
+                  text:'Brazil',
+                  value:8
+              },
+              {
+                  text:'Argentina',
+                  value:2
+              }
+          ]
+      },
+      {
+          text:'Australia (continent)',
+          children:[
+              {
+                  text:'Australia (country)',
+                  value:16
+              },
+              {
+                  text:'New Zealand',
+                  value:4
+              }
+          ]
+      }
+  ]
+};
+
+zingchart.render({
+	id: 'myChart11',
+	data: myConfigTreeMap,
+	height: '100%',
+	width: '100%'
+});
+    </script>
+    <script>
+        let makeRange = (plots, nodes) => {
+  let series = [], values, m1, m2, v, s,
+    linecolor = ['#606075', '#A7A8D7', '#b9f7b4', '#ace0e9'],
+    diffVal = [100, 80, 60, 80];
+
+  for (let p = 0; p < plots; p++) {
+    values = [];
+    m1 = 10 + 20 * Math.random();
+    m2 = 10 + 0 * Math.random();
+    s = 40 + 100 * Math.random();
+    for (let n = 0; n < nodes + 1; n++) {
+      v = s * Math.exp(Math.abs(n - nodes / 2) / nodes) * Math.sin(n / (nodes / (m1))) * Math.cos(n / (nodes / m2));
+      v = parseInt(v.toFixed(2));
+      let diff = diffVal[p];
+      values.push([v, (v - diff)])
+    }
+    series.push({
+      values: values,
+      backgroundColor: linecolor[p],
+      alpha: 0.9,
+      lineWidth: '0px',
+      marker: {
+        visible: false
+      },
+      tooltip: {
+        visible: false
+      },
+      guideLabel: {
+        visible: false
+      }
+    });
+  }
+  return series;
+}
+
+zingchart.THEME = 'classic';
+let chartConfigMix = {
+  type: 'range',
+  globals: {
+    fontFamily: 'Helvetica'
+  },
+  backgroundColor: 'white',
+  plot: {
+    tooltip: {
+      visible: false
+    }
+  },
+  plotarea: {
+    marginRight: '0px'
+  },
+  scaleX: {
+    visible: false,
+    zooming: true,
+  },
+  scaleY: {
+    zooming: true,
+    guide: {
+      lineColor: '#8f8f8f',
+      lineStyle: 'solid'
+    },
+    item: {
+      color: '#2D2D2D'
+    },
+    lineColor: '#2D2D2D',
+    lineWidth: '0px',
+    step: 100,
+    tick: {
+      lineColor: '#2D2D2D',
+      lineWidth: '0px'
+    }
+  },
+  crosshairY: {
+    plotLabel: {
+      backgroundColor: 'white',
+      borderRadius: '3px',
+      multiple: false
+    },
+    scaleLabel: {
+      backgroundColor: '#7CB5EC'
+    }
+  },
+  series: makeRange(4, 250)
+
+};
+
+zingchart.render({
+  id: 'myChart12',
+  data: chartConfigMix,
+  output: 'canvas',
+  height: '100%',
+  width: '100%',
+});
+    </script>
+    <script>
+        // CHART CONFIG
+// -----------------------------
+let chartConfigPareto = {
+  theme: 'classic',
+  globals: {
+    fontFamily: 'arial'
+  },
+  backgroundColor: 'none',
+  graphset: [
+    {
+      type: 'pareto',
+      backgroundColor: '#fff',
+      borderColor: '#ddd',
+      borderRadius: '6px',
+      borderStyle: 'solid',
+      borderWidth: '1px',
+      height: '80%',
+      title: {
+        text: 'Print Defect Frequency',
+        backgroundColor: 'none',
+        fontColor: '#444',
+        height: '12%'
+      },
+      options: {
+        linePlot: {
+          valueBox: {
+            visible: false
+          },
+          lineColor: '#77BDD9',
+          lineWidth: '1px',
+          shadow: false
+        },
+        scaleY2: {
+          decimals: 0,
+          format: '%v%',
+          guide: {
+            visible: false
+          },
+          item: {
+            fontColor: '#444'
+          },
+          lineColor: '#3285A6',
+          lineWidth: '1px',
+          tick: {
+            lineColor: '#3285A6',
+            lineWidth: '1px'
+          }
+        }
+      },
+      plotarea: {
+        margin: '80px 50px 50px 50px'
+      },
+      scaleX: {
+          zooming:true,
+        values: ['Bubbles', 'Creases', 'Curl', 'Dropouts', 'Fade', 'Smear', 'Skew', 'Specks'],
+        guide: {
+          visible: false
+        },
+        item: {
+          fontColor: '#444'
+        },
+        lineColor: '#3285A6',
+        lineWidth: '1px',
+        tick: {
+          lineColor: '#3285A6',
+          lineWidth: '1px'
+        }
+      },
+      scaleY: {
+          zooming: true,
+        guide: {
+          lineStyle: 'dotted',
+          lineWidth: '1px'
+        },
+        item: {
+          fontColor: '#444'
+        },
+        lineColor: '#3285A6',
+        lineWidth: '1px',
+        tick: {
+          lineColor: '#3285A6',
+          lineWidth: '1px'
+        }
+      },
+      crosshairX: {
+        plotLabel: {
+          bold: true
+        }
+      },
+      labels: [
+        {
+          text: 'Cumulative<br>Percentage',
+          fontAngle: 0,
+          fontColor: '#444',
+          x: '91%',
+          y: '9%'
+        },
+        {
+          text: 'Number<br>of Defects',
+          fontAngle: 0,
+          fontColor: '#444',
+          x: '1%',
+          y: '9%'
+        }
+      ],
+      tooltip: {
+        visible: false
+      },
+      series: [
+        {
+          type: 'pareto',
+          text: '# of Defects',
+          values: [67, 22, 14, 8, 6, 4, 4, 2],
+          alpha: 0.7,
+          backgroundColor: 'gray',
+          hoverState: {
+            visible: false
+          }
+        },
+        {
+          type: 'line',
+          text: 'Cumulative %',
+          values: [50.45, 75.2, 83.65, 90.5, 94.2, 96.5, 98.6, 99.5],
+          tooltip: {
+            text: '%v%',
+            fontFamily: 'arial',
+            shadowAlpha: 0.3
+          },
+          hoverState: {
+            visible: false
+          },
+          marker: {
+            type: 'diamond',
+            backgroundColor: '#77BDD9',
+            borderColor: '#3285A6',
+            offsetY: '1px',
+            shadow: false,
+            size: '4px'
+          },
+          scales: 'scale-x,scale-y-2'
+        }
+      ]
+    },
+    {
+      type: 'grid',
+      backgroundColor: 'none',
+      width: '100%',
+      x: '2px',
+      y: '81%',
+      options: {
+        colLabels: ['', 'Bubbles', 'Creases', 'Curl', 'Dropouts', 'Fade', 'Skew', 'Smear', 'Specks', 'Total'],
+        style: {
+          '.th': {
+            align: 'center',
+            backgroundColor: '#a8d5e7',
+            border: '1px solid gray',
+            fontColor: '#000000',
+            fontSize: '10px'
+          },
+          '.tr': {
+            padding: '8px',
+            border: '1px solid gray'
+          },
+          '.tr_last': {
+          	borderBottom: '1px solid #ccc'
+          },
+          '.td_last': {
+            borderRight: '1px solid #ccc'
+          },
+          '.td_first': {
+            borderLeft: '1px solid #ccc'
+          },
+          '.td': {
+            align: 'center',
+            backgroundColor: '#fff',
+            border: '1px solid gray',
+            fontSize: '10px'
+          },
+          '.td_0': {
+            fontWeight: 'bold'
+          }
+        }
+      },
+      series: [
+        {
+          values: ['Defects', 67, 22, 14, 8, 6, 4, 4, 2, 127]
+        },
+        {
+          values: ['%', '53%', '17%', '11%', '6%', '5%', '3%', '3%', '2%', '100%']
+        }
+      ]
+    }
+  ]
+};
+
+// RENDER CHARTS
+// -----------------------------
+zingchart.render({
+  id: 'myChart13',
+  data: chartConfigPareto
+});
+    </script>
+    <script>
+    let myPalette = ['#94DBF9','#2BBEFE','#008ECC','#005479'];
+    let chartConfigStackedArea = {
+  graphset: [
+    {
+      type: 'area',
+      title: {
+        text: 'Stacked Area Chart with Crosshair',
+        color: '#5D7D9A',
+        align: 'left',
+        padding: '30 0 0 35',
+        fontSize: '30px'
+      },
+      subtitle: {
+        text: 'Based on a line chart, but with the area between the line and axis filled in.',
+        color: '#5D7D9A',
+        fontWeight: 300,
+        align: 'left',
+        padding: '35 0 0 35',
+        fontSize: '15px'
+      },
+      tooltip: {
+        visible: false
+      },
+      crosshairX: {
+        plotLabel: {
+          fontColor: '#333',
+          backgroundColor: '#fff',
+          borderRadius: 5,
+          borderColor: '#EEE',
+          padding: 10
+        },
+        'scaleLabel': {
+          alpha: 0,
+          text: '%v',
+          transform: {
+            type: 'date',
+            all: '%M %d, %Y<br>%g:%i %a'
+          },
+          fontFamily: 'Georgia'
+        }
+      },
+      plotarea: {
+        margin: '120 40 60 80'
+      },
+      _legend: {
+        layout: '2x2',
+        align: 'right',
+        'verticalAlign': 'top',
+        margin: '10 40 0 0',
+        padding: '5px',
+        borderRadius: '5px',
+        header: {
+          text: 'Legend',
+          color: '#5D7D9A',
+          padding: '10px'
+        },
+        item: {
+          color: '#5D7D9A'
+        }
+      },
+      scaleX: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        label: {
+          color: '#6C6C6C'
+        },
+        lineColor: '#D8D8D8',
+        tick: {
+          lineColor: '#D8D8D8'
+        },
+        item: {
+          color: '#6C6C6C'
+        },
+        label: {
+          padding: '20 0 0 0',
+          text: 'Month',
+          color: '#6C6C6C'
+        }
+      },
+      plot: {
+        alphaArea: 0.4,
+        stacked: true,
+        marker: {
+          size: 4
+        }
+      },
+      scaleY: {
+        maxItems: 8,
+        lineColor: '#D8D8D8',
+        values: '0:150:50',
+        guide: {
+          'lineStyle': 'solid'
+        },
+        tick: {
+          lineColor: '#D8D8D8'
+        },
+        item: {
+          color: '#6C6C6C'
+        },
+        label: {
+          padding: '20 0 0 0',
+          text: '# of Gallons',
+          color: '#6C6C6C'
+        }
+      },
+      series: [
+        {
+          values: [45,40,46,40,38,45],
+          lineColor: '#94DBF9',
+          backgroundColor: '#94DBF9',
+          marker: {
+            backgroundColor: '#94DBF9',
+            borderColor: '#94DBF9'
+          }
+        },
+        {
+          values: [45,35,38,25,20,51],
+          lineColor: '#2BBEFE',
+          backgroundColor: '#2BBEFE',
+          marker: {
+            backgroundColor: '#2BBEFE',
+            borderColor: '#2BBEFE'
+          }
+        },
+        {
+          values: [30,22,20,20,22,15],
+          lineColor: '#008ECC',
+          backgroundColor: '#008ECC',
+          marker: {
+            backgroundColor: '#008ECC',
+            borderColor: '#008ECC'
+          }
+        },
+        {
+          values: [15,12,12,10,16,9],
+          lineColor: '#005479',
+          backgroundColor: '#005479',
+          marker: {
+            backgroundColor: '#005479',
+            borderColor: '#005479'
+          }
+        }
+      ]
+    }
+  ]
+};
+
+// render chart
+zingchart.render({
+  id: 'myChart15',
+  data: chartConfigStackedArea,
+  height: '100%',
+  width: '100%'
+});
+    </script>
+    <script>
+        let chartConfigwaterfall = {
+  type: 'waterfall',
+  borderColor: '#B9BABC',
+  borderRadius: '3px',
+  borderWidth: '1px',
+  title: {
+    text: 'Company Profits',
+    adjustLayout: true
+  },
+  subtitle: {
+    text: 'Fiscal Year 2017-18',
+    fontSize: '14px'
+  },
+  options: {
+    final: {
+      backgroundColor: '#1c3652'
+    },
+    intermediate: {
+      backgroundColor: '#5381B3'
+    },
+    line: {
+      lineColor: '#666666',
+      lineGapSize: '3px',
+      lineSegmentSize: '4px',
+      lineWidth: '1px'
+    },
+    negative: {
+      backgroundColor: '#c54344'
+    },
+    positive: {
+      backgroundColor: '#3e358d'
+    }
+  },
+  plot: {
+    tooltip: {
+      text: '%kl \n $%v',
+      padding: '5px 10px 7px 10px',
+      backgroundColor: '#000000',
+      borderRadius: '6px',
+      callout: true,
+      fontWeight: 'bold',
+      offsetY: '-5px',
+      placement: 'node:top',
+      short: true
+    },
+    animation: {
+      delay: 100,
+      effect: 'ANIMATION_UNFOLD_VERTICAL',
+      method: 'ELASTIC_EASE_OUT',
+      sequence: 'ANIMATION_BY_NODE',
+      speed: 100
+    },
+    barWidth: '30px',
+    showZero: true
+
+  },
+  plotarea: {
+    adjustLayout: true
+  },
+  scaleX: {
+    fontColor: 'rgb(0,0,0)',
+    labels: [
+      'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Total'
+    ],
+    lineColor: 'rgb(200,200,200)',
+    tick: {
+      lineColor: 'rgb(200,200,200)'
+    }
+  },
+  scaleY: {
+    values: '-2000000000:6000000000:1000000000',
+    format: '$%v',
+    guide: {
+      items: [
+        {
+          backgroundColor: '#FFFFFF'
+        },
+        {
+          backgroundColor: '#EEEEEE'
+        }
+      ],
+      lineColor: '#DDDDDD'
+    },
+    label: {
+      text: 'USD ( in billions )'
+    },
+    lineColor: 'rgb(200,200,200)',
+    negation: 'currency',
+    short: true,
+    shortUnit: 'B',
+    tick: {
+      lineColor: 'rgb(200,200,200)'
+    }
+  },
+  series: [
+    {
+      values: [
+        1000000000,
+        -1680000000,
+        -470000000,
+        4820000000,
+        100000000,
+        -3500000000,
+        2000000000,
+        -2340000000,
+        3560000000,
+        -2000000000,
+        2500000000,
+        1600000000,
+        'SUM'
+      ]
+    }
+  ]
+};
+
+zingchart.render({
+  id: 'myChart14',
+  data: chartConfigwaterfall,
+  height: '100%',
+  width: '100%',
+});
+    </script>
+    <script>
+          function fetchData() {
+    // after initial chart render. Fetch data.
+      fetch('https://cdn.zingchart.com/datasets/gold-stock-data.json')
+        .then(function(res) {
+          return res.json();
+        })
+        .then(function(jsonData) {
+
+        // 3 update series
+        zingchart.exec('myChart16', 'setseriesvalues', {
+          values: [
+            jsonData.highData,
+            jsonData.volumeData
+          ]
+        });
+
+        // update labels after rendering data
+        zingchart.exec('myChart16', 'modify', {
+          data: {
+            scaleX: {
+              labels: jsonData.timeLabels
+            }
+          }
+        });
+      })
+    }
+  
+    // 1
+    zingchart.bind('myChart16', 'label_click', (e) => {
+      zingchart.exec(e.id, 'reload');
+      fetchData();
+    });
+
+    let chartConfigDataSeries = {
+      type: 'mixed',
+      backgroundColor: '#f4f4f4',
+      title: {
+        text: 'Gold from 1975 to 2019',
+        backgroundColor: 'none',
+        color: '#818181',
+        fontFamily: 'Roboto',
+        fontSize: '16px',
+        height: '40px'
+      },
+      subtitle: {
+        text: 'More than 30,000 data points',
+        paddingTop: '20px',
+        color: '#818181',
+        fontFamily: 'Roboto',
+        fontSize: '11px'
+      },
+      legend: {
+        visible: false
+      },
+      plot: {
+        lineColor: '#00baf0',
+        lineWidth: '1px',
+        marker: {
+          backgroundColor: '#fbfbfb',
+          borderColor: '#00baf0',
+          borderWidth: '2px',
+          shadow: false,
+          size: '3px'
+        },
+        maxTrackers: 0,
+        mode: 'fast',
+        shadow: false
+      },
+      plotarea: {
+        marginTop: '45px',
+        marginRight: '55px',
+        marginBottom: '65px',
+        marginLeft: '60px',
+        backgroundColor: '#fbfbfb'
+      },
+      scaleX: {
+        guide: {
+          lineColor: '#c7c9c9',
+          lineStyle: 'solid'
+        },
+        item: {
+          paddingTop: '5px',
+          fontColor: '#818181',
+          fontSize: '10px'
+        },
+        label: {
+          visible: false
+        },
+        labels: [],
+        lineColor: '#c7c9c9',
+        lineWidth: '1px',
+        maxItems: 7,
+        maxLabels: 7,
+        mirrored: true,
+        tick: {
+          lineColor: '#c7c9c9',
+          lineWidth: '1px'
+        },
+        zooming: true
+      },
+      scaleY: {
+        values: '0:2000:500',
+        decimals: 0,
+        format: '$%v',
+        guide: {
+          lineColor: '#c7c9c9',
+          lineStyle: 'solid'
+        },
+        item: {
+          paddingRight: '5px',
+          fontColor: '#818181',
+          fontSize: '10px'
+        },
+        lineColor: '#c7c9c9',
+        lineWidth: '1px',
+        refLine: {
+          alpha: 0.25,
+          lineColor: '#c7c9c9',
+          visible: true
+        },
+        shadow: false,
+        tick: {
+          lineColor: '#c7c9c9',
+          lineWidth: '1px'
+        }
+      },
+      scaleY2: {
+        values: '0:1000000:500000',
+        decimals: 0,
+        guide: {
+          visible: false
+        },
+        item: {
+          paddingRight: '5px',
+          fontColor: '#818181',
+          fontSize: '10px',
+          offsetX: '2px'
+        },
+        lineColor: '#c7c9c9',
+        lineWidth: '1px',
+        multiplier: true,
+        offsetX: '2px',
+        shadow: false,
+        tick: {
+          lineColor: '#c7c9c9',
+          lineWidth: '1px',
+          offsetX: '2px'
+        }
+      },
+      crosshairX: {
+        plotLabel: {
+          text: '%t was %v<br>on %kl',
+          padding: '8px',
+          borderRadius: '5px'
+        }
+      },
+      labels: [
+        {
+          id: 'reload_btn',
+          text: 'Reload',
+          padding: '5px',
+          backgroundColor: '#fff',
+          borderColor: '#777',
+          borderRadius: '5px',
+          borderWidth: '1px',
+          cursor: 'hand',
+          fontColor: '#777',
+          x: '60px',
+          y: '10px'
+        }
+      ],
+      source: {
+        text: 'Source: COMEX Gold Futures via Quandl',
+        fontColor: '#818181',
+        fontFamily: 'Roboto',
+        fontSize: '9px'
+      },
+      scrollX: {
+        bar: {
+          backgroundColor: '#fff'
+        },
+        handle: {
+          alpha: 0.7,
+          backgroundColor: '#ccc',
+          borderWidth: '0px',
+          height: '5px'
+        }
+      },
+      gui: {
+        behaviors: [
+          {
+            id: 'SaveAsImage',
+            enabled: 'none'
+          },
+          {
+            id: 'Print',
+            enabled: 'none'
+          },
+          {
+            id: 'BugReport',
+            enabled: 'none'
+          },
+          {
+            id: 'FullScreen',
+            enabled: 'none'
+          },
+          {
+            id: 'ZoomIn',
+            enabled: 'none'
+          },
+          {
+            id: 'ZoomOut',
+            enabled: 'none'
+          },
+          {
+            id: 'LogScale',
+            enabled: 'none'
+          },
+          {
+            id: 'DownloadPDF',
+            enabled: 'none'
+          },
+          {
+            id: '3D',
+            enabled: 'none'
+          },
+          {
+            id: 'HideGuide',
+            enabled: 'none'
+          }
+        ],
+        contextMenu: {
+          button: {
+            visible: false
+          },
+          gear: {
+            visible: false
+          }
+        }
+      },
+      noData: {
+        text: 'Mining gold data from servers...'
+      },
+      series: [
+        {
+          type: 'area',
+          text: 'Price',
+          values: [],
+          backgroundColor: '#00baf0 #fbfbfb',
+          decimals: 2
+        },
+        {
+          type: 'bar',
+          text: 'Volume',
+          values: [],
+          backgroundColor: '#003849',
+          scales: 'scale-x,scale-y-2'
+        }
+      ]
+    };
+
+   
+
+    zingchart.ASYNC = true;
+
+    // 3
+    zingchart.render({
+      id: 'myChart16',
+      data: chartConfigDataSeries,
+      height: '100%',
+      width: '100%'
+    });
+
+    window.addEventListener('load', function() {
+      fetchData();
+    });
+    </script>
+    <script>
+            // CHART CONFIG
+      // -----------------------------
+      let chartConfigHorizantalBar = {
+        type: 'hbar',
+        title: {
+          text: 'Expenditures in Tech',
+          align: 'left',
+          fontColor: '#555',
+          fontFamily: 'Roboto',
+          fontSize: '30px',
+          fontWeight: 'normal',
+          offsetX: '10px'
+        },
+        subtitle: {
+          text: 'R&D costs from 2017-2019',
+          align: 'left',
+          fontColor: '#777',
+          fontFamily: 'Roboto',
+          fontSize: '16px',
+          offsetX: '10px',
+          offsetY: '10px'
+        },
+        legend: {
+          padding: '10px',
+          backgroundColor: 'transparent',
+          borderWidth: '0px',
+          cursor: 'hand',
+          highlightPlot: true,
+          item: {
+            fontColor: '#333',
+            fontFamily: 'Roboto',
+            fontSize: '18px'
+          },
+          marker: {
+            borderRadius: '10px',
+            borderWidth: '0px'
+          },
+          offsetX: '0px',
+          offsetY: '80px'
+        },
+        plot: {
+          animation: {
+            effect: 'ANIMATION_EXPAND_BOTTOM',
+            method: 'ANIMATION_LINEAR',
+            sequence: 'ANIMATION_BY_PLOT'
+          },
+          borderRadius: '0px 5px 5px 0px',
+          highlightMarker: {
+            backgroundColor: 'red'
+          },
+          highlightState: {
+            backgroundColor: 'red'
+          }
+        },
+        plotarea: {
+          margin: '100px 130px 70px 100px'
+        },
+        scaleX: {
+          item: {
+            fontFamily: 'Roboto',
+            fontSize: '14px'
+          },
+          labels: ['Facebook', 'Apple', 'Microsoft', 'Intel', 'Google', 'Amazon'],
+          lineColor: '#DDD',
+          tick: {
+            visible: false
+          }
+        },
+        scaleY: {
+          values: '0:14:1.5',
+          guide: {
+            lineColor: '#DDD',
+            lineStyle: 'solid'
+          },
+          item: {
+            fontFamily: 'Roboto',
+            fontSize: '14px'
+          },
+          label: {
+            text: 'Investment in Billions (USD)',
+            fontColor: '#777',
+            fontFamily: 'Roboto',
+            fontSize: '14px',
+            offsetY: '5px'
+          },
+          lineWidth: '0px',
+          tick: {
+            visible: false
+          }
+        },
+        source: {
+          text: '',
+          fontColor: '#666',
+          fontFamily: 'Roboto'
+        },
+        tooltip: {
+          text: '$%v billion USD <br>in %t',
+          padding: '10px',
+          backgroundColor: '#fff',
+          borderColor: '#333',
+          borderRadius: '5px',
+          borderWidth: '1px',
+          fontColor: '#444',
+          fontSize: '14px'
+        },
+        series: [
+          {
+            text: '2019',
+            values: [4.8, 8.1, 12, 12.1, 12.3, 12.5],
+            backgroundColor: '#d6d6d6',
+            rules: [
+              {
+                backgroundColor: '#f98377',
+                rule: '%i==0'
+              },
+              {
+                backgroundColor: '#fbd972',
+                rule: '%i==1'
+              },
+              {
+                backgroundColor: '#78e5d2',
+                rule: '%i==2'
+              },
+              {
+                backgroundColor: '#7ad8e5',
+                rule: '%i==3'
+              },
+              {
+                backgroundColor: '#d2f27c',
+                rule: '%i==4'
+              },
+              {
+                backgroundColor: '#e572ec',
+                rule: '%i==5'
+              }
+            ]
+          },
+
+          {
+            text: '2018',
+            values: [2.7, 6, 11.4, 11.5, 9.8, 9.3],
+            backgroundColor: '#8e8e8e',
+            rules: [
+              {
+                backgroundColor: '#F55443',
+                rule: '%i==0'
+              },
+              {
+                backgroundColor: '#FFCC33',
+                rule: '%i==1'
+              },
+              {
+                backgroundColor: '#44b6a2',
+                rule: '%i==2'
+              },
+              {
+                backgroundColor: '#10A5BA',
+                rule: '%i==3'
+              },
+              {
+                backgroundColor: '#96BD2C',
+                rule: '%i==4'
+              },
+              {
+                backgroundColor: '#b42cbd',
+                rule: '%i==5'
+              }
+            ]
+          },
+          {
+            text: '2017',
+            values: [1.4, 4.5, 10.4, 10.6, 7.1, 6.6],
+            backgroundColor: '#494949',
+            rules: [
+              {
+                backgroundColor: '#EB1C12',
+                rule: '%i==0'
+              },
+              {
+                backgroundColor: '#FBA30A',
+                rule: '%i==1'
+              },
+              {
+                backgroundColor: '#1c8976',
+                rule: '%i==2'
+              },
+              {
+                backgroundColor: '#016B88',
+                rule: '%i==3'
+              },
+              {
+                backgroundColor: '#588C08',
+                rule: '%i==4'
+              },
+              {
+                backgroundColor: '#781c7e',
+                rule: '%i==5'
+              }
+            ]
+          }
+        ]
+      };
+
+      // RENDER CHARTS
+      // -----------------------------
+      zingchart.render({
+        id: 'myChart17',
+        data: chartConfigHorizantalBar,
+        height: '100%',
+        width: '100%',
+      });
+    </script>
+    <script>
+      var electionResults = [{
+  "name": "AL",
+  "winningVotes": 7,
+  "totalVotes": 12
+}, {
+  "name": "AK",
+  "winningVotes": 7,
+  "totalVotes": 12
+}, {
+  "name": "AZ",
+  "winningVotes": 8,
+  "totalVotes": 12
+}, {
+  "name": "AR",
+  "winningVotes": 9,
+  "totalVotes": 12
+}, {
+  "name": "CA",
+  "winningVotes": 9,
+  "totalVotes": 12
+}, {
+  "name": "CO",
+  "winningVotes": 10,
+  "totalVotes": 12
+}, {
+  "name": "CT",
+  "winningVotes": 8,
+  "totalVotes": 12
+}, {
+  "name": "DE",
+  "winningVotes": 10,
+  "totalVotes": 12
+}, {
+  "name": "FL",
+  "winningVotes": 11,
+  "totalVotes": 12
+}, {
+  "name": "GA",
+  "winningVotes": 7,
+  "totalVotes": 12
+}, {
+  "name": "HI",
+  "winningVotes": 7,
+  "totalVotes": 12
+}, {
+  "name": "ID",
+  "winningVotes": 7,
+  "totalVotes": 12
+}, {
+  "name": "IL",
+  "winningVotes": 9,
+  "totalVotes": 12
+}, {
+  "name": "IN",
+  "winningVotes": 8,
+  "totalVotes": 12
+}, {
+  "name": "IA",
+  "winningVotes": 9,
+  "totalVotes": 12
+}, {
+  "name": "KS",
+  "winningVotes": 7,
+  "totalVotes": 12
+}, {
+  "name": "KY",
+  "winningVotes": 10,
+  "totalVotes": 12
+}, {
+  "name": "LA",
+  "winningVotes": 9,
+  "totalVotes": 12
+}, {
+  "name": "ME",
+  "winningVotes": 8,
+  "totalVotes": 12
+}, {
+  "name": "MD",
+  "winningVotes": 8,
+  "totalVotes": 12
+}, {
+  "name": "MA",
+  "winningVotes": 7,
+  "totalVotes": 12
+}, {
+  "name": "MI",
+  "winningVotes": 8,
+  "totalVotes": 12
+}, {
+  "name": "MN",
+  "winningVotes": 6,
+  "totalVotes": 12
+}, {
+  "name": "MS",
+  "winningVotes": 7,
+  "totalVotes": 12
+}, {}, {
+  "name": "MO",
+  "winningVotes": 10,
+  "totalVotes": 12
+}, {
+  "name": "MT",
+  "winningVotes": 8,
+  "totalVotes": 12
+}, {
+  "name": "NE",
+  "winningVotes": 7,
+  "totalVotes": 12
+}, {
+  "name": "NV",
+  "winningVotes": 11,
+  "totalVotes": 12
+}, {
+  "name": "NH",
+  "winningVotes": 10,
+  "totalVotes": 12
+}, {
+  "name": "NJ",
+  "winningVotes": 9,
+  "totalVotes": 12
+}, {
+  "name": "NM",
+  "winningVotes": 10,
+  "totalVotes": 12
+}, {
+  "name": "NY",
+  "winningVotes": 8,
+  "totalVotes": 12
+}, {
+  "name": "NC",
+  "winningVotes": 9,
+  "totalVotes": 12
+}, {
+  "name": "ND",
+  "winningVotes": 7,
+  "totalVotes": 12
+}, {
+  "name": "OH",
+  "winningVotes": 12,
+  "totalVotes": 12
+}, {
+  "name": "OK",
+  "winningVotes": 7,
+  "totalVotes": 12
+}, {
+  "name": "OR",
+  "winningVotes": 8,
+  "totalVotes": 12
+}, {
+  "name": "PA",
+  "winningVotes": 9,
+  "totalVotes": 12
+}, {
+  "name": "RI",
+  "winningVotes": 7,
+  "totalVotes": 12
+}, {
+  "name": "SC",
+  "winningVotes": 8,
+  "totalVotes": 12
+}, {
+  "name": "SD",
+  "winningVotes": 7,
+  "totalVotes": 12
+}, {
+  "name": "TN",
+  "winningVotes": 10,
+  "totalVotes": 12
+}, {
+  "name": "TX",
+  "winningVotes": 7,
+  "totalVotes": 12
+}, {
+  "name": "UT",
+  "winningVotes": 7,
+  "totalVotes": 12
+}, {
+  "name": "VT",
+  "winningVotes": 9,
+  "totalVotes": 12
+}, {
+  "name": "VA",
+  "winningVotes": 9,
+  "totalVotes": 12
+}, {
+  "name": "WA",
+  "winningVotes": 7,
+  "totalVotes": 12
+}, {
+  "name": "WV",
+  "winningVotes": 7,
+  "totalVotes": 12
+}, {
+  "name": "WI",
+  "winningVotes": 9,
+  "totalVotes": 12
+}, {
+  "name": "WY",
+  "winningVotes": 7,
+  "totalVotes": 12
+}];
+
+var stateNames = {
+  "AL": "Alabama",
+  "AK": "Alaska",
+  "AS": "American Samoa",
+  "AZ": "Arizona",
+  "AR": "Arkansas",
+  "CA": "California",
+  "CO": "Colorado",
+  "CT": "Connecticut",
+  "DE": "Delaware",
+  "DC": "District Of Columbia",
+  "FM": "Federated States Of Micronesia",
+  "FL": "Florida",
+  "GA": "Georgia",
+  "GU": "Guam",
+  "HI": "Hawaii",
+  "ID": "Idaho",
+  "IL": "Illinois",
+  "IN": "Indiana",
+  "IA": "Iowa",
+  "KS": "Kansas",
+  "KY": "Kentucky",
+  "LA": "Louisiana",
+  "ME": "Maine",
+  "MH": "Marshall Islands",
+  "MD": "Maryland",
+  "MA": "Massachusetts",
+  "MI": "Michigan",
+  "MN": "Minnesota",
+  "MS": "Mississippi",
+  "MO": "Missouri",
+  "MT": "Montana",
+  "NE": "Nebraska",
+  "NV": "Nevada",
+  "NH": "New Hampshire",
+  "NJ": "New Jersey",
+  "NM": "New Mexico",
+  "NY": "New York",
+  "NC": "North Carolina",
+  "ND": "North Dakota",
+  "MP": "Northern Mariana Islands",
+  "OH": "Ohio",
+  "OK": "Oklahoma",
+  "OR": "Oregon",
+  "PW": "Palau",
+  "PA": "Pennsylvania",
+  "PR": "Puerto Rico",
+  "RI": "Rhode Island",
+  "SC": "South Carolina",
+  "SD": "South Dakota",
+  "TN": "Tennessee",
+  "TX": "Texas",
+  "UT": "Utah",
+  "VT": "Vermont",
+  "VI": "Virgin Islands",
+  "VA": "Virginia",
+  "WA": "Washington",
+  "WV": "West Virginia",
+  "WI": "Wisconsin",
+  "WY": "Wyoming"
+}
+
+var colorGradient = ["#feebe2", "#fcc5c0", "#fa9fb5", "#f768a1", "#dd3497", "#ae017e", "#7a0177"];
+
+function setResults() {
+  var stateResults = {};
+
+  electionResults.forEach(function (state) {
+    var stateName = state.name;
+    var colorIndex = state.winningVotes;
+    var styleObject = {
+      "background-color": colorGradient[colorIndex - 6],
+      "group": colorIndex - 5,
+      "label": {
+        "font-size": 14
+      },
+      "tooltip": {
+        "text": stateNames[stateName] + " voted for the elected president in " + Math.floor((state.winningVotes / state.totalVotes) * 100) + "% of the past 12 elections",
+        "width": 200,
+        "wrap-text": true,
+        "text-align": "left",
+        "font-size": 18
+      }
+    };
+    stateResults[stateName] = styleObject;
+  });
+
+  return {
+    "background-color": "#FFF",
+    "gui": {
+      "watermark": {
+        "position": "tr"
+      }
+    },
+    "globals": {
+      "font-family": "Open Sans Condensed",
+      "shadow": false
+    },
+    "title": {
+      "text": "Likelihood of a State Voting for the Elected President",
+      "background-color": "#FFF",
+      "color": "#333",
+      "font-size": 24,
+      "text-align": "left",
+      "x": 10,
+      "y": 10
+    },
+    "subtitle": {
+      "text": "Based off the past 12 elections (1960-2012)*",
+      "font-size": 16,
+      "color": "#333",
+      "text-align": "left",
+      "x": 10,
+      "y": 40
+    },
+    "labels": [{
+      "padding-top": "40px",
+      "text": "* The 1960 presidential election was the first in which Hawaii and Alaska voted.",
+      "font-size": 14,
+      "y": 470,
+      "x": 355
+    }],
+    "legend": {
+      "toggle-action": "none",
+      "offset-y": -10,
+      "border-width": 0,
+      "background-color": "none",
+      "vertical-align": "bottom",
+      "marker": {
+        "type": "rectangle",
+        "width": 20,
+        "height": 10,
+      },
+      "item": {
+        "font-size": 16
+      }
+    },
+    "series": [ // render legend items
+      {
+        "legend-item": {
+          "text": "50%"
+        },
+        "legend-marker": {
+          "background-color": "#feebe2",
+        }
+      },
+      {
+        "legend-item": {
+          "text": "58%"
+        },
+        "legend-marker": {
+          "background-color": "#fcc5c0",
+        }
+      },
+      {
+        "legend-item": {
+          "text": "66%"
+        },
+        "legend-marker": {
+          "background-color": "#fa9fb5",
+        }
+      },
+      {
+        "legend-item": {
+          "text": "75%"
+        },
+        "legend-marker": {
+          "background-color": "#f768a1",
+        }
+      },
+      {
+        "legend-item": {
+          "text": "83%"
+        },
+        "legend-marker": {
+          "background-color": "#dd3497",
+        }
+      },
+      {
+        "legend-item": {
+          "text": "91%"
+        },
+        "legend-marker": {
+          "background-color": "#ae017e",
+        }
+      },
+      {
+        "legend-item": {
+          "text": "100%"
+        },
+        "legend-marker": {
+          "background-color": "#7a0177",
+        }
+      }
+    ],
+    "shapes": [ // render map
+      {
+        "type": "zingchart.maps",
+        "options": {
+          "y": 40,
+          "id": "map",
+          "name": "usa",
+          "scale": true,
+          "style": {
+            "hover-state": {
+              "background-color": "#FFF",
+              "alpha": 0.3,
+              "border-width": 3
+            },
+            "border-color": "#FFF",
+            "items": stateResults
+          }
+        }
+      }
+    ]
+  }
+}
+zingchart.loadModules('maps, maps-usa', function (e) {
+  zingchart.render({
+    id: 'myChart18',
+    data: setResults(),
+    height: '100%',
+    width: '100%'
+  });
+});
+    </script>
+    <script>
+        let chartConfig3d = {
+            type: 'vbar3d',
+            '3dAspect': {
+              depth: 90,
+              true3d: 1
+            },
+            backgroundColor: '#FBFCFE',
+            title: {
+              text: 'Revenue',
+              padding: '15px',
+              fontColor: '#1E5D9E',
+              fontFamily: 'Lato'
+            },
+            legend: {
+              marginTop: '55px',
+              marginRight: '50px',
+              alpha: 1,
+              borderColor: '#CCCCCC',
+              shadow: false,
+              toggleAction: 'remove'
+            },
+            plot: {
+              tooltip: {
+                visible: false
+              },
+              aspect: 'cylinder',
+              backgroundColor: '#FBFCFE',
+              barsOverlap: '100%',
+              borderWidth: '0px',
+              marker: {
+                size: '4px'
+              },
+              mode: 'normal',
+              stacked: true,
+              stackType: '100%'
+            },
+            plotarea: {
+              margin: '70px 30px 50px 90px',
+              backgroundColor: 'transparent'
+            },
+            scaleX: {
+              margin: '20px',
+              padding: '20px',
+              backgroundColor: 'none',
+              guide: {
+                alpha: .25,
+                lineColor: '#1E5D9E',
+                lineGapSize: '4px',
+                lineStyle: 'dotted',
+                rules: [
+                  {
+                    rule: '%i == 0',
+                    visible: false
+                  }
+                ],
+                visible: true
+              },
+              item: {
+                padding: '5px',
+                fontColor: '#1E5D9E',
+                fontFamily: 'Montserrat'
+              },
+              label: {
+                text: 'Years'
+              },
+              labels: [2017, 2018, 2019, 2020],
+              lineWidth: '0px',
+              offsetY: '-20px',
+              tick: {
+                lineColor: '#D1D3D4',
+                rules: [
+                  {
+                    rule: '%i == 0',
+                    visible: false
+                  }
+                ]
+              }
+            },
+            scaleY: {
+              values: '0:180:20',
+              format: '$%v',
+              guide: {
+                alpha: .25,
+                lineColor: '#1E5D9E',
+                lineGapSize: '4px',
+                lineStyle: 'dotted',
+                rules: [
+                  {
+                    rule: '%i == 0',
+                    visible: false
+                  }
+                ],
+                visible: true
+              },
+              item: {
+                padding: '0 10 0 0',
+                fontColor: '#1E5D9E',
+                fontFamily: 'Montserrat'
+              },
+              label: {
+                text: 'Revenue (In Millions)'
+              },
+              lineWidth: '0px',
+              maxValue: 100,
+              tick: {
+                lineColor: '#D1D3D4',
+                rules: [
+                  {
+                    rule: '%i == 0',
+                    visible: false
+                  }
+                ]
+              }
+            },
+            series: [
+              {
+                text: 'Internal',
+                values: [70, 100, 110, 141],
+                backgroundColor: '#00BAF2',
+                lineColor: '#00BAF2',
+                lineWidth: '1px',
+                marker: {
+                  backgroundColor: '#00BAF2'
+                }
+              },
+              {
+                text: 'External',
+                values: [30, 50, 60, 75],
+                backgroundColor: '#E80C60',
+                lineColor: '#E80C60',
+                lineWidth: '1px',
+                marker: {
+                  backgroundColor: '#E80C60'
+                }
+              },
+              {
+                text: 'Outbound',
+                values: [20, 30, 40, 39],
+                backgroundColor: '#9B26AF',
+                lineColor: '#9B26AF',
+                lineWidth: '1px',
+                marker: {
+                  backgroundColor: '#9B26AF'
+                }
+              }
+            ]
+          };
+
+          zingchart.render({
+            id: 'myChart19',
+            data: chartConfig3d,
+            height: '100%',
+    });
+    </script>
+    <script>
+              // full ZingChart schema can be found here:
+        // https://www.zingchart.com/docs/api/json-configuration/
+
+        var data = [
+
+        {id:'execdir', name:'EXECUTIVE<br>DIRECTOR', parent:'', cls:'bblack'},
+
+        {id:'fkn1l', fake:true, parent:'execdir', sibling:'fkn1', name:'1L'},
+        {id:'fkn1', fake:true, name:'1', parent:'execdir'},
+        {id:'deputydir', name:'DEPUTY<br>DIRECTOR', parent:'execdir', sibling:'fkn1', cls:'bblack'},
+
+        {id:'asstdir', name:'ASST to the<br>EXECUTIVE DIRECTOR', parent:'fkn1', sibling:'fkn3', cls:'bblack'},
+        {id:'fkn3', fake:true, name:'3', parent:'fkn1'},
+        {id:'itmanag', name:'IT Manager', parent:'fkn1', cls:'bblack', sibling:'fkn3'},
+
+        // orange
+        {id:'dirtran', name:'Director<br>Transportation<br>& Planning<br>Services', parent:'fkn3', cls:'borange'},
+
+        {id:'adminasst', name:'Administrative<br>Assistant', parent:'dirtran', sibling:'fkn4', cls:'borange'},
+        {id:'fkn4', fake:true, name:'4', parent:'dirtran'},
+        {id:'fkn4d', fake:true, name:'4D', parent:'dirtran', sibling:'fkn4'},
+
+        {id:'progcoo1', name:'Program<br>Coordinator', parent:'fkn4', cls:'borange'},
+        {id:'transplan', name:'Trans-<br>portation<br>Planner', parent:'progcoo1', cls:'borange'},
+        {id:'gistech', name:'GIS<br>Technician', parent:'progcoo1', reference:'transplan', cls:'borange'},
+
+        {id:'progcoo2', name:'Program<br>Coordinator', parent:'fkn4', cls:'borange'},
+        {id:'transplan2', name:'Trans-<br>portation<br>Planner', parent:'progcoo2', cls:'borange'},
+        {id:'intern', name:'Intern', parent:'progcoo2', reference:'transplan2', cls:'borange'},
+
+        {id:'progcoo3', name:'Program<br>Coordinator', parent:'fkn4', cls:'borange'},
+        {id:'transplan3', name:'Trans-<br>portation<br>Planner', parent:'progcoo3', cls:'borange'},
+        {id:'transplan4', name:'Trans-<br>portation<br>Planner', parent:'progcoo3', reference:'transplan3', cls:'borange'},
+
+        // blue
+        {id:'dirfin', name:'Director,<br>Finance', parent:'fkn3', cls:'blightblue'},
+
+        {id:'accasst', name:'Accounting<br>Administrative<br>Assistant', parent:'dirfin', sibling:'fkn6', cls:'blightblue'},
+        {id:'fkn6', fake:true, name:'6', parent:'dirfin'},
+        {id:'fkn6d', fake:true, name:'6D', parent:'dirfin', sibling:'fkn6'},
+
+        {id:'chacc', name:'Chief<br>Accountant', parent:'fkn6', cls:'blightblue'},
+        {id:'payacc', name:'Payroll<br>Accountant', parent:'fkn6', reference:'chacc', cls:'blightblue'},
+
+        // red
+        {id:'dir911', name:'Director,<br>9-1-1 &<br>Public Safety', parent:'fkn3', cls:'bred'},
+
+        {id:'adminasst2', name:'Administrative<br>Assistant', parent:'dir911', sibling:'fkn5', cls:'bred'},
+        {id:'fkn5', fake:true, name:'5', parent:'dir911'},
+        {id:'fkn5d', fake:true, name:'5D', parent:'dir911', sibling:'fkn5'},
+
+        {id:'911sm', name:'9-1-1<br>Support<br>Manager', parent:'fkn5', cls:'bred'},
+        {id:'911ss', name:'9-1-1<br>System<br>Specialist', parent:'911sm', cls:'bred rshifted'},
+        {id:'911acs', name:'9-1-1 ACOG<br>System<br>Specialist I', parent:'911sm', reference:'911ss', cls:'bred rshifted'},
+
+        {id:'911ipm', name:'9-1-1<br>Institute<br>Programs<br>Manager', parent:'fkn5', cls:'bred'},
+
+        {id:'911gism', name:'9-1-1 GIS<br>Manager', parent:'fkn5', cls:'bred'},
+        {id:'911giss', name:'9-1-1 GIS<br>Specialist', parent:'911gism', cls:'bred rshifted'},
+        {id:'911gist', name:'9-1-1 GIS<br>Technician', parent:'911gism', reference:'911giss', cls:'bred rshifted'},
+
+        {id:'facman', name:'Facilities<br>Management', parent:'fkn5', cls:'bred'},
+
+        // dark blue
+        {id:'dirwat', name:'Director,Water<br>Resources', parent:'fkn3', cls:'bblue'},
+
+        {id:'adminasst3', name:'Administrative<br>Assistant', parent:'dirwat', sibling:'fkn7', cls:'bblue'},
+        {id:'fkn7', fake:true, name:'7', parent:'dirwat'},
+        {id:'fkn7d', fake:true, name:'7D', parent:'dirwat', sibling:'fkn7'},
+        {id:'cip', name:'CIP', parent:'fkn7', cls:'bblue'},
+
+        // green
+        {id:'dirpr', name:'Director, PR<br>and Comm.<br>Development', parent:'fkn3', cls:'bgreen'},
+        {id:'cdbg', name:'CDBG,REAP', parent:'dirpr', cls:'bgreen rshifted'},
+        {id:'clci', name:'CLEAN CITIES', parent:'dirpr', reference:'cdbg', cls:'bgreen rshifted'},
+        {id:'edd', name:'EDD', parent:'dirpr', reference:'cdbg', cls:'bgreen rshifted'},
+        {id:'grde', name:'GRAPHIC<br>DESIGN', parent:'dirpr', reference:'cdbg', cls:'bgreen rshifted'}
+        ];
+
+        var chartConfigTree = {
+        type : 'tree',
+        backgroundColor : '#f9f9f9',
+        plotarea : {
+          margin : '20 20 20 0'
+        },
+        options : {
+          aspect : 'tree-down',
+          orgChart : true,
+          packingFactor : 1,
+          link : {
+            lineColor : '#000'
+          },
+          node : {
+            height : 65,
+            borderColor : '#333333',
+            borderWidth : 1,
+            hoverState : {
+              visible : false
+            },
+            shadow : true,
+            shadowDistance : 2,
+            shadowAlpha : 0.5,
+            label : {
+              color : '#fff',
+              fontSize : 10
+            },
+            tooltip : {
+              text : '<b>%text</b><br>%data-title'
+            }
+          },
+          'node[cls-rshifted]' : {
+            offsetX : 25
+          },
+          'node[cls-lshifted]' : {
+            offsetX : -25
+          },
+          'link[parent-911sm]' : {
+            aspect : 'side-before'
+          },
+          'link[parent-911gism]' : {
+            aspect : 'side-before'
+          },
+          'link[parent-dirpr]' : {
+            aspect : 'side-before'
+          },
+          'node[cls-bblack]' : {
+            type : 'box',
+            width : 120,
+            backgroundColor : '#000'
+          },
+          'node[cls-borange]' : {
+            type : 'box',
+            width : 80,
+            backgroundColor : '#F6931D'
+          },
+          'node[cls-bred]' : {
+            type : 'box',
+            width : 80,
+            backgroundColor : '#C00000'
+          },
+          'node[cls-blightblue]' : {
+            type : 'box',
+            width : 80,
+            backgroundColor : '#00B9C2'
+          },
+          'node[cls-bblue]' : {
+            type : 'box',
+            width : 80,
+            backgroundColor : '#00408F'
+          },
+          'node[cls-bgreen]' : {
+            type : 'box',
+            width : 80,
+            backgroundColor : '#70AD47'
+          }
+        },
+        series : data
+        };
+        zingchart.render({
+        id : 'myChart20',
+        width : '100%',
+        height : '100%',
+        data : chartConfigTree
+        });
+    </script>
+</body>
+</html>

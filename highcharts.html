@@ -1,0 +1,2720 @@
+<html>
+    <head>
+        <title>HighCharts</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h1>Hello</h1>
+
+            <div id="container-1" style="width:100%; height:400px;"></div>
+
+
+            <figure class="highcharts-figure">
+            <div id="container"></div>
+            <p class="highcharts-description">
+                Using the Highcharts Boost module, it is possible to render large amounts
+                of data on the client side. This chart shows a line series with 500,000
+                data points. Click and drag in the chart to zoom in.
+            </p>
+            </figure>
+
+
+            <figure class="highcharts-figure">
+            <div id="container-2"></div>
+            <p class="highcharts-description">
+                Pie chart where the individual slices can be clicked to expose more
+                detailed data.
+            </p>
+            </figure>
+
+            <figure class="highcharts-figure">
+            <div id="container-3"></div>
+            </figure>
+
+
+            <figure class="highcharts-figure">
+            <div id="container-4"></div>
+            <p class="highcharts-description">
+                A demo showing a stacked area chart, also sometimes referred to as a
+                mountain chart. In a stacked chart, the data series values are added
+                together to make up a total.
+            </p>
+            </figure>
+
+
+            <figure class="highcharts-figure">
+            <div id="container-5"></div>
+            <p class="highcharts-description">
+                Chart showing browser market shares. Clicking on individual columns
+                brings up more detailed data. This chart makes use of the drilldown
+                feature in Highcharts to easily switch between datasets.
+            </p>
+            </figure>
+
+            <figure class="highcharts-figure">
+            <div id="container-6"></div>
+            <p class="highcharts-description">
+                Chart showing use of rotated axis labels and data labels. This can be a
+                way to include more labels in the chart, but note that more labels can
+                sometimes make charts harder to read.
+            </p>
+            </figure>
+
+            <figure class="highcharts-figure">
+            <div id="container-7"></div>
+            <p class="highcharts-description">
+                Chart showing how different series types can be combined in a single
+                chart. The chart is using a set of column series, overlaid by a line and
+                a pie series. The line is illustrating the column averages, while the
+                pie is illustrating the column totals.
+            </p>
+            </figure>
+
+            <figure class="highcharts-figure">
+            <div id="container-8"></div>
+            <p class="highcharts-description">
+                This demo shows how related charts can be synchronized. Hover
+                over one chart to see the effect in the other charts as well.
+                This is a technique that is commonly seen in dashboards,
+                where multiple charts are often used to visualize related
+                information.
+            </p>
+            </figure>
+
+
+            <figure class="highcharts-figure">
+            <div id="container-9"></div>
+            <p class="highcharts-description">
+                Chart showing multiple axes with a gauge series. The axes are positioned
+                to display an outer and inner axis. The chart is dynamically updated
+                every few seconds with a new value.
+            </p>
+            </figure>
+
+
+            <figure class="highcharts-figure">
+            <div id="container1"></div>
+            <div id="container2"></div>
+            <div id="container3"></div>
+            <p class="highcharts-description">
+                A series of bullet charts showing Revenue, Profit, and New Customers.
+                Bullet charts allow readers to quickly compare a single value to a
+                target value. This demo is also using plot bands to separate different
+                ranges on the axes. Bullet charts are popular in dashboards, as they
+                typically take up less space than gauge charts.
+            </p>
+            </figure>
+
+
+            <figure class="highcharts-figure">
+            <div id="container-10"></div>
+            <p class="highcharts-description">
+                This demo shows a large data set visualized with a tree map.
+                Each country of the world has a data point, grouped by
+                continent. Click on a continent to view more detailed data.
+                Clicking on a country breaks the mortality rate further down
+                into different types.
+            </p>
+            </figure>
+
+            <figure class="highcharts-figure">
+            <div id="container-11"></div>
+            <p class="highcharts-description">
+                A Pareto Chart is a chart type based on the Pareto principle, commonly
+                used to maximize business efficiency. Highcharts can calculate the
+                Pareto line automatically based on a series, as shown in this chart.
+            </p>
+            </figure>
+
+            <figure class="highcharts-figure">
+            <div id="container-12"></div>
+            <p class="highcharts-description">
+                In Highcharts, pies can also be hollow, in which case they are commonly
+                referred to as donut charts. This pie also has an inner chart, resulting
+                in a hierarchical type of visualization.
+            </p>
+            </figure>
+
+            <figure class="highcharts-figure">
+            <div id="container-13"></div>
+            <p class="highcharts-description">
+                Chart showing basic use of 3D cylindrical columns. A 3D cylinder chart
+                is similar to a 3D column chart, with a different shape.
+            </p>
+            </figure>
+
+            <figure class="highcharts-figure">
+            <div id="container-14"></div>
+            <p class="highcharts-description">
+                Chart showing use of multiple y-axes, where each series has a separate
+                axis. Multiple axes allows data in different ranges to be visualized
+                together. While this in some cases can cause charts to be hard to read,
+                it can also be a powerful tool to illustrate correlations.
+            </p>
+            </figure>
+
+            <figure class="highcharts-figure">
+            <div id="container-15"></div>
+            <p class="highcharts-description">
+                Heatmap showing employee data per weekday. Heatmaps are commonly used to
+                visualize hot spots within data sets, and to show patterns or correlations.
+                Due to their compact nature, they are often used with large sets of data.
+            </p>
+            </figure>
+
+            <figure class="highcharts-figure">
+            <div id="container-16"></div>
+            <p class="highcharts-description">
+                Sankey charts are used to visualize data flow and volume
+                between nodes. The wider lines indicate larger volumes.
+            </p>
+            </figure>
+
+            <figure class="highcharts-figure">
+            <div id="container-17"></div>
+            <p class="highcharts-description">
+                Demonstrating a basic area chart, also known as a mountain chart.
+                Area charts are similar to line charts, but commonly used to visualize
+                volumes.
+            </p>
+            </figure>
+
+            <figure class="highcharts-figure">
+            <div id="container-18"></div>
+            <p class="highcharts-description">
+                Charts can be styled using CSS, allowing designers and
+                developers to more easily collaborate on chart configuration.
+                This example shows how the base Highcharts styling is imported
+                using CSS, and modified without the need for Javascript.
+            </p>
+            </figure>
+
+            <figure class="highcharts-figure">
+            <div id="container-speed" class="chart-container"></div>
+            <div id="container-rpm" class="chart-container"></div>
+            <p class="highcharts-description">
+                Chart demonstrating solid gauges with dynamic data. Two separate charts
+                are used, and each is updated dynamically every few seconds. Solid
+                gauges are popular charts for dashboards, as they visualize a number
+                in a range at a glance. As demonstrated by these charts, the color of
+                the gauge can change depending on the value of the data shown.
+            </p>
+            </figure>
+
+            <figure class="highcharts-figure">
+            <div id="container-19"></div>
+            <p class="highcharts-description">
+                Scatter charts are often used to visualize the relationships
+                between data in two dimensions. This chart is visualizing
+                height and weight by gender, showing a clear trend where men
+                are on average taller and heavier than women.
+            </p>
+            </figure>
+    <script>
+        var regionP;
+        var regionVal;
+        var i, j, drillDataLen , countryP ,newVal,brightness ,countryI, causeP, causeI, region ,point, country, cause ,inc
+        document.addEventListener('DOMContentLoaded', function () {
+      const chart = Highcharts.chart('container-1', {
+          chart: {
+              type: 'bar',
+              zoomType: 'xy',
+              panning: true,
+              panKey: 'shift'
+          },
+          colors: ['red', 'blue', '#8bbc21', '#910000', '#1aadce',
+        '#492970', '#f28f43', '#77a1e5', '#c42525', '#a6c96a'],
+          title: {
+              text: 'Fruit Consumption'
+          },
+          xAxis: {
+              categories: ['Apples', 'Bananas', 'Oranges']
+          },
+          yAxis: {
+              title: {
+                  text: 'Fruit eaten'
+              }
+          },
+          series: [{
+              name: 'Jane',
+              data: [1, 0, 4],
+              point: {
+                events: {
+                    click: function (event) {
+                        console.log("event ",event);
+                        alert('Category: ' + this.category + ', value: ' + this.y);
+                    }
+                }
+            }
+          }, {
+              name: 'John',
+              data: [5, 7, 3],
+              point: {
+                events: {
+                    click: function () {
+                        alert('Category: ' + this.category + ', value: ' + this.y);
+                    }
+                }
+            }
+              
+          }]
+      });
+
+       n = 200,
+      data = getData(n);
+      click(event)
+
+  console.time('line');
+  Highcharts.chart('container', {
+
+      chart: {
+          zoomType: 'x'
+      },
+
+      title: {
+          text: 'Highcharts drawing ' + n + ' points'
+      },
+
+      subtitle: {
+        text: document.ontouchstart === undefined ?
+            'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
+    },
+
+      tooltip: {
+          valueDecimals: 2,
+
+      },
+
+      xAxis: {
+        type: 'datetime'
+    },
+    yAxis: {
+        title: {
+            text: 'Exchange rate'
+        }
+    },
+
+    plotOptions: {
+      area: {
+          fillColor: {
+              linearGradient: {
+                  x1: 0,
+                  y1: 0,
+                  x2: 0,
+                  y2: 1
+              },
+              stops: [
+                  [0, Highcharts.getOptions().colors[0]],
+                  [1, Highcharts.color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+              ]
+          },
+          marker: {
+              radius: 2
+          },
+          lineWidth: 1,
+          states: {
+              hover: {
+                  lineWidth: 1
+              }
+          },
+          threshold: null
+      }
+  },
+
+
+      series: [{
+          data: data,
+          lineWidth: 5,
+          color: 'red',
+          fillOpacity: 0,
+          name: 'Hourly data points'
+      }]
+
+  });
+  console.timeEnd('line');
+
+
+  Highcharts.chart('container-2', {
+    chart: {
+      type: 'pie'
+    },
+    title: {
+      text: 'Browser market shares. January, 2018'
+    },
+    subtitle: {
+      text: 'Click the slices to view versions. Source: <a href="http://statcounter.com" target="_blank">statcounter.com</a>'
+    },
+
+    accessibility: {
+      announceNewData: {
+        enabled: true
+      },
+      point: {
+        valueSuffix: '%'
+      }
+    },
+
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: '{point.name}: {point.y:.1f}%'
+        }
+      }
+    },
+
+    tooltip: {
+      headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+      pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+    },
+
+    series: [
+      {
+        name: "Browsers",
+        colorByPoint: true,
+        data: [
+          {
+            name: "Chrome",
+            y: 62.74,
+            drilldown: "Chrome"
+          },
+          {
+            name: "Firefox",
+            y: 10.57,
+            drilldown: "Firefox"
+          },
+          {
+            name: "Internet Explorer",
+            y: 7.23,
+            drilldown: "Internet Explorer"
+          },
+          {
+            name: "Safari",
+            y: 5.58,
+            drilldown: "Safari"
+          },
+          {
+            name: "Edge",
+            y: 4.02,
+            drilldown: "Edge"
+          },
+          {
+            name: "Opera",
+            y: 1.92,
+            drilldown: "Opera"
+          },
+          {
+            name: "Other",
+            y: 7.62,
+            drilldown: null
+          }
+        ]
+      }
+    ],
+    drilldown: {
+      series: [
+        {
+          name: "Chrome",
+          id: "Chrome",
+          data: [
+            [
+              "v65.0",
+              0.1
+            ],
+            [
+              "v64.0",
+              1.3
+            ],
+            [
+              "v63.0",
+              53.02
+            ],
+            [
+              "v62.0",
+              1.4
+            ],
+            [
+              "v61.0",
+              0.88
+            ],
+            [
+              "v60.0",
+              0.56
+            ],
+            [
+              "v59.0",
+              0.45
+            ],
+            [
+              "v58.0",
+              0.49
+            ],
+            [
+              "v57.0",
+              0.32
+            ],
+            [
+              "v56.0",
+              0.29
+            ],
+            [
+              "v55.0",
+              0.79
+            ],
+            [
+              "v54.0",
+              0.18
+            ],
+            [
+              "v51.0",
+              0.13
+            ],
+            [
+              "v49.0",
+              2.16
+            ],
+            [
+              "v48.0",
+              0.13
+            ],
+            [
+              "v47.0",
+              0.11
+            ],
+            [
+              "v43.0",
+              0.17
+            ],
+            [
+              "v29.0",
+              0.26
+            ]
+          ]
+        },
+        {
+          name: "Firefox",
+          id: "Firefox",
+          data: [
+            [
+              "v58.0",
+              1.02
+            ],
+            [
+              "v57.0",
+              7.36
+            ],
+            [
+              "v56.0",
+              0.35
+            ],
+            [
+              "v55.0",
+              0.11
+            ],
+            [
+              "v54.0",
+              0.1
+            ],
+            [
+              "v52.0",
+              0.95
+            ],
+            [
+              "v51.0",
+              0.15
+            ],
+            [
+              "v50.0",
+              0.1
+            ],
+            [
+              "v48.0",
+              0.31
+            ],
+            [
+              "v47.0",
+              0.12
+            ]
+          ]
+        },
+        {
+          name: "Internet Explorer",
+          id: "Internet Explorer",
+          data: [
+            [
+              "v11.0",
+              6.2
+            ],
+            [
+              "v10.0",
+              0.29
+            ],
+            [
+              "v9.0",
+              0.27
+            ],
+            [
+              "v8.0",
+              0.47
+            ]
+          ]
+        },
+        {
+          name: "Safari",
+          id: "Safari",
+          data: [
+            [
+              "v11.0",
+              3.39
+            ],
+            [
+              "v10.1",
+              0.96
+            ],
+            [
+              "v10.0",
+              0.36
+            ],
+            [
+              "v9.1",
+              0.54
+            ],
+            [
+              "v9.0",
+              0.13
+            ],
+            [
+              "v5.1",
+              0.2
+            ]
+          ]
+        },
+        {
+          name: "Edge",
+          id: "Edge",
+          data: [
+            [
+              "v16",
+              2.6
+            ],
+            [
+              "v15",
+              0.92
+            ],
+            [
+              "v14",
+              0.4
+            ],
+            [
+              "v13",
+              0.1
+            ]
+          ]
+        },
+        {
+          name: "Opera",
+          id: "Opera",
+          data: [
+            [
+              "v50.0",
+              0.96
+            ],
+            [
+              "v49.0",
+              0.82
+            ],
+            [
+              "v12.1",
+              0.14
+            ]
+          ]
+        }
+      ]
+    }
+  });
+
+    Highcharts.chart('container-3', {
+      chart: {
+          type: 'spline',
+          zoomType: 'xy',
+              panning: true,
+              panKey: 'shift'
+      },
+      title: {
+          text: 'Monthly Average Temperature'
+      },
+      subtitle: {
+          text: 'Source: WorldClimate.com'
+      },
+      xAxis: {
+          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+              'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      },
+      yAxis: {
+          title: {
+              text: 'Temperature'
+          },
+          labels: {
+              formatter: function () {
+                  return this.value + '°';
+              }
+          }
+      },
+      tooltip: {
+          crosshairs: true,
+          shared: true
+      },
+      plotOptions: {
+          spline: {
+              marker: {
+                  radius: 4,
+                  lineColor: '#666666',
+                  lineWidth: 1
+              }
+          }
+      },
+      series: [{
+          name: 'Tokyo',
+          marker: {
+              symbol: 'square'
+          },
+          data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, {
+              y: 26.5,
+              marker: {
+                  symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
+              }
+          }, 23.3, 18.3, 13.9, 9.6]
+
+      }, {
+          name: 'London',
+          marker: {
+              symbol: 'diamond'
+          },
+          data: [{
+              y: 3.9,
+              marker: {
+                  symbol: 'url(https://www.highcharts.com/samples/graphics/snow.png)'
+              }
+          }, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+      }]
+});
+
+    Highcharts.chart('container-4', {
+    chart: {
+      type: 'area',
+      zoomType: 'xy',
+      panning: true,
+      panKey: 'shift'
+    },
+    title: {
+      text: 'Historic and Estimated Worldwide Population Growth by Region'
+    },
+    subtitle: {
+      text: 'Source: Wikipedia.org'
+    },
+    xAxis: {
+      categories: ['1750', '1800', '1850', '1900', '1950', '1999', '2050'],
+      tickmarkPlacement: 'on',
+      title: {
+        enabled: false
+      }
+    },
+    yAxis: {
+      title: {
+        text: 'Billions'
+      },
+      labels: {
+        formatter: function () {
+          return this.value / 1000;
+        }
+      }
+    },
+    tooltip: {
+      split: true,
+      valueSuffix: ' millions'
+    },
+    plotOptions: {
+      area: {
+        stacking: 'normal',
+        lineColor: '#666666',
+        lineWidth: 1,
+        marker: {
+          lineWidth: 1,
+          lineColor: '#666666'
+        }
+      }
+    },
+    series: [{
+      name: 'Asia',
+      data: [502, 635, 809, 947, 1402, 3634, 5268]
+    }, {
+      name: 'Africa',
+      data: [106, 107, 111, 133, 221, 767, 1766]
+    }, {
+      name: 'Europe',
+      data: [163, 203, 276, 408, 547, 729, 628]
+    }, {
+      name: 'America',
+      data: [18, 31, 54, 156, 339, 818, 1201]
+    }, {
+      name: 'Oceania',
+      data: [2, 2, 2, 6, 13, 30, 46]
+    }]
+});
+
+// Create the chart
+Highcharts.chart('container-5', {
+  chart: {
+      type: 'column'
+  },
+  title: {
+      text: 'Browser market shares. January, 2018'
+  },
+  subtitle: {
+      text: 'Click the columns to view versions. Source: <a href="http://statcounter.com" target="_blank">statcounter.com</a>'
+  },
+  accessibility: {
+      announceNewData: {
+          enabled: true
+      }
+  },
+  xAxis: {
+      type: 'category'
+  },
+  yAxis: {
+      title: {
+          text: 'Total percent market share'
+      }
+
+  },
+  legend: {
+      enabled: false
+  },
+  plotOptions: {
+      series: {
+          borderWidth: 0,
+          dataLabels: {
+              enabled: true,
+              format: '{point.y:.1f}%'
+          }
+      }
+  },
+
+  tooltip: {
+      headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+      pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+  },
+
+  series: [
+      {
+          name: "Browsers",
+          colorByPoint: true,
+          data: [
+              {
+                  name: "Chrome",
+                  y: 62.74,
+                  drilldown: "Chrome"
+              },
+              {
+                  name: "Firefox",
+                  y: 10.57,
+                  drilldown: "Firefox"
+              },
+              {
+                  name: "Internet Explorer",
+                  y: 7.23,
+                  drilldown: "Internet Explorer"
+              },
+              {
+                  name: "Safari",
+                  y: 5.58,
+                  drilldown: "Safari"
+              },
+              {
+                  name: "Edge",
+                  y: 4.02,
+                  drilldown: "Edge"
+              },
+              {
+                  name: "Opera",
+                  y: 1.92,
+                  drilldown: "Opera"
+              },
+              {
+                  name: "Other",
+                  y: 7.62,
+                  drilldown: null
+              }
+          ]
+      }
+  ],
+  drilldown: {
+      series: [
+          {
+              name: "Chrome",
+              id: "Chrome",
+              data: [
+                  [
+                      "v65.0",
+                      0.1
+                  ],
+                  [
+                      "v64.0",
+                      1.3
+                  ],
+                  [
+                      "v63.0",
+                      53.02
+                  ],
+                  [
+                      "v62.0",
+                      1.4
+                  ],
+                  [
+                      "v61.0",
+                      0.88
+                  ],
+                  [
+                      "v60.0",
+                      0.56
+                  ],
+                  [
+                      "v59.0",
+                      0.45
+                  ],
+                  [
+                      "v58.0",
+                      0.49
+                  ],
+                  [
+                      "v57.0",
+                      0.32
+                  ],
+                  [
+                      "v56.0",
+                      0.29
+                  ],
+                  [
+                      "v55.0",
+                      0.79
+                  ],
+                  [
+                      "v54.0",
+                      0.18
+                  ],
+                  [
+                      "v51.0",
+                      0.13
+                  ],
+                  [
+                      "v49.0",
+                      2.16
+                  ],
+                  [
+                      "v48.0",
+                      0.13
+                  ],
+                  [
+                      "v47.0",
+                      0.11
+                  ],
+                  [
+                      "v43.0",
+                      0.17
+                  ],
+                  [
+                      "v29.0",
+                      0.26
+                  ]
+              ]
+          },
+          {
+              name: "Firefox",
+              id: "Firefox",
+              data: [
+                  [
+                      "v58.0",
+                      1.02
+                  ],
+                  [
+                      "v57.0",
+                      7.36
+                  ],
+                  [
+                      "v56.0",
+                      0.35
+                  ],
+                  [
+                      "v55.0",
+                      0.11
+                  ],
+                  [
+                      "v54.0",
+                      0.1
+                  ],
+                  [
+                      "v52.0",
+                      0.95
+                  ],
+                  [
+                      "v51.0",
+                      0.15
+                  ],
+                  [
+                      "v50.0",
+                      0.1
+                  ],
+                  [
+                      "v48.0",
+                      0.31
+                  ],
+                  [
+                      "v47.0",
+                      0.12
+                  ]
+              ]
+          },
+          {
+              name: "Internet Explorer",
+              id: "Internet Explorer",
+              data: [
+                  [
+                      "v11.0",
+                      6.2
+                  ],
+                  [
+                      "v10.0",
+                      0.29
+                  ],
+                  [
+                      "v9.0",
+                      0.27
+                  ],
+                  [
+                      "v8.0",
+                      0.47
+                  ]
+              ]
+          },
+          {
+              name: "Safari",
+              id: "Safari",
+              data: [
+                  [
+                      "v11.0",
+                      3.39
+                  ],
+                  [
+                      "v10.1",
+                      0.96
+                  ],
+                  [
+                      "v10.0",
+                      0.36
+                  ],
+                  [
+                      "v9.1",
+                      0.54
+                  ],
+                  [
+                      "v9.0",
+                      0.13
+                  ],
+                  [
+                      "v5.1",
+                      0.2
+                  ]
+              ]
+          },
+          {
+              name: "Edge",
+              id: "Edge",
+              data: [
+                  [
+                      "v16",
+                      2.6
+                  ],
+                  [
+                      "v15",
+                      0.92
+                  ],
+                  [
+                      "v14",
+                      0.4
+                  ],
+                  [
+                      "v13",
+                      0.1
+                  ]
+              ]
+          },
+          {
+              name: "Opera",
+              id: "Opera",
+              data: [
+                  [
+                      "v50.0",
+                      0.96
+                  ],
+                  [
+                      "v49.0",
+                      0.82
+                  ],
+                  [
+                      "v12.1",
+                      0.14
+                  ]
+              ]
+          }
+      ]
+  }
+});
+
+Highcharts.chart('container-6', {
+  chart: {
+      type: 'column'
+  },
+  title: {
+      text: 'World\'s largest cities per 2017'
+  },
+  subtitle: {
+      text: 'Source: <a href="http://en.wikipedia.org/wiki/List_of_cities_proper_by_population">Wikipedia</a>'
+  },
+  xAxis: {
+      type: 'category',
+      labels: {
+          rotation: -45,
+          style: {
+              fontSize: '13px',
+              fontFamily: 'Verdana, sans-serif'
+          }
+      }
+  },
+  yAxis: {
+      min: 0,
+      title: {
+          text: 'Population (millions)'
+      }
+  },
+  legend: {
+      enabled: false
+  },
+  tooltip: {
+      pointFormat: 'Population in 2017: <b>{point.y:.1f} millions</b>'
+  },
+  series: [{
+      name: 'Population',
+      data: [
+          ['Shanghai', 24.2],
+          ['Beijing', 20.8],
+          ['Karachi', 14.9],
+          ['Shenzhen', 13.7],
+          ['Guangzhou', 13.1],
+          ['Istanbul', 12.7],
+          ['Mumbai', 12.4],
+          ['Moscow', 12.2],
+          ['São Paulo', 12.0],
+          ['Delhi', 11.7],
+          ['Kinshasa', 11.5],
+          ['Tianjin', 11.2],
+          ['Lahore', 11.1],
+          ['Jakarta', 10.6],
+          ['Dongguan', 10.6],
+          ['Lagos', 10.6],
+          ['Bengaluru', 10.3],
+          ['Seoul', 9.8],
+          ['Foshan', 9.3],
+          ['Tokyo', 9.3]
+      ],
+      dataLabels: {
+          enabled: true,
+          rotation: -90,
+          color: '#FFFFFF',
+          align: 'right',
+          format: '{point.y:.1f}', // one decimal
+          y: 10, // 10 pixels down from the top
+          style: {
+              fontSize: '13px',
+              fontFamily: 'Verdana, sans-serif'
+          }
+      }
+  }]
+});
+
+Highcharts.chart('container-7', {
+  title: {
+      text: 'Combination chart'
+  },
+  xAxis: {
+      categories: ['Apples', 'Oranges', 'Pears', 'Bananas', 'Plums']
+  },
+  labels: {
+      items: [{
+          html: 'Total fruit consumption',
+          style: {
+              left: '50px',
+              top: '18px',
+              color: ( // theme
+                  Highcharts.defaultOptions.title.style &&
+                  Highcharts.defaultOptions.title.style.color
+              ) || 'black'
+          }
+      }]
+  },
+  series: [{
+      type: 'column',
+      name: 'Jane',
+      data: [3, 2, 1, 3, 4]
+  }, {
+      type: 'column',
+      name: 'John',
+      data: [2, 3, 5, 7, 6]
+  }, {
+      type: 'column',
+      name: 'Joe',
+      data: [4, 3, 3, 9, 0]
+  }, {
+      type: 'spline',
+      name: 'Average',
+      data: [3, 2.67, 3, 6.33, 3.33],
+      marker: {
+          lineWidth: 2,
+          lineColor: Highcharts.getOptions().colors[3],
+          fillColor: 'white'
+      }
+  }, {
+      type: 'pie',
+      name: 'Total consumption',
+      data: [{
+          name: 'Jane',
+          y: 13,
+          color: Highcharts.getOptions().colors[0] // Jane's color
+      }, {
+          name: 'John',
+          y: 23,
+          color: Highcharts.getOptions().colors[1] // John's color
+      }, {
+          name: 'Joe',
+          y: 19,
+          color: Highcharts.getOptions().colors[2] // Joe's color
+      }],
+      center: [100, 80],
+      size: 100,
+      showInLegend: false,
+      dataLabels: {
+          enabled: false
+      }
+  }]
+});
+
+
+
+Highcharts.setOptions({
+  chart: {
+      inverted: false,
+      marginLeft: 135,
+      type: 'bullet'
+  },
+  title: {
+      text: null
+  },
+  legend: {
+      enabled: false
+  },
+  yAxis: {
+      gridLineWidth: 0
+  },
+  plotOptions: {
+      series: {
+          pointPadding: 0.25,
+          borderWidth: 0,
+          color: '#000',
+          targetOptions: {
+              width: '200%'
+          }
+      }
+  },
+  credits: {
+      enabled: false
+  },
+  exporting: {
+      enabled: false
+  }
+});
+
+Highcharts.chart('container1', {
+  chart: {
+      marginTop: 40
+  },
+  title: {
+      text: '2017 YTD'
+  },
+  xAxis: {
+      categories: ['<span class="hc-cat-title">Revenue</span><br/>U.S. $ (1,000s)']
+  },
+  yAxis: {
+      plotBands: [{
+          from: 0,
+          to: 150,
+          color: '#666'
+      }, {
+          from: 150,
+          to: 225,
+          color: '#999'
+      }, {
+          from: 225,
+          to: 9e9,
+          color: '#bbb'
+      }],
+      title: null
+  },
+  series: [{
+      data: [{
+          y: 275,
+          target: 250
+      }]
+  }],
+  tooltip: {
+      pointFormat: '<b>{point.y}</b> (with target at {point.target})'
+  }
+});
+
+Highcharts.chart('container2', {
+  xAxis: {
+      categories: ['<span class="hc-cat-title">Profit</span><br/>%']
+  },
+  yAxis: {
+      plotBands: [{
+          from: 0,
+          to: 20,
+          color: '#666'
+      }, {
+          from: 20,
+          to: 25,
+          color: '#999'
+      }, {
+          from: 25,
+          to: 100,
+          color: '#bbb'
+      }],
+      labels: {
+          format: '{value}%'
+      },
+      title: null
+  },
+  series: [{
+      data: [{
+          y: 22,
+          target: 27
+      }]
+  }],
+  tooltip: {
+      pointFormat: '<b>{point.y}</b> (with target at {point.target})'
+  }
+});
+
+
+Highcharts.chart('container3', {
+  xAxis: {
+      categories: ['<span class="hc-cat-title">New Customers</span><br/>Count']
+  },
+  yAxis: {
+      plotBands: [{
+          from: 0,
+          to: 1400,
+          color: '#666'
+      }, {
+          from: 1400,
+          to: 2000,
+          color: '#999'
+      }, {
+          from: 2000,
+          to: 9e9,
+          color: '#bbb'
+      }],
+      labels: {
+          format: '{value}'
+      },
+      title: null
+  },
+  series: [{
+      data: [{
+          y: 1650,
+          target: 2100
+      }]
+  }],
+  tooltip: {
+      pointFormat: '<b>{point.y}</b> (with target at {point.target})'
+  },
+  credits: {
+      enabled: true
+  }
+});
+
+Highcharts.chart('container-8', {
+
+  chart: {
+      type: 'gauge',
+      alignTicks: false,
+      plotBackgroundColor: null,
+      plotBackgroundImage: null,
+      plotBorderWidth: 0,
+      plotShadow: false
+  },
+
+  title: {
+      text: 'Speedometer with dual axes'
+  },
+
+  pane: {
+      startAngle: -150,
+      endAngle: 150
+  },
+
+  yAxis: [{
+      min: 0,
+      max: 200,
+      lineColor: '#339',
+      tickColor: '#339',
+      minorTickColor: '#339',
+      offset: -25,
+      lineWidth: 2,
+      labels: {
+          distance: -20,
+          rotation: 'auto'
+      },
+      tickLength: 5,
+      minorTickLength: 5,
+      endOnTick: false
+  }, {
+      min: 0,
+      max: 124,
+      tickPosition: 'outside',
+      lineColor: '#933',
+      lineWidth: 2,
+      minorTickPosition: 'outside',
+      tickColor: '#933',
+      minorTickColor: '#933',
+      tickLength: 5,
+      minorTickLength: 5,
+      labels: {
+          distance: 12,
+          rotation: 'auto'
+      },
+      offset: -20,
+      endOnTick: false
+  }],
+
+  series: [{
+      name: 'Speed',
+      data: [80],
+      dataLabels: {
+          formatter: function () {
+               kmh = this.y,
+                  mph = Math.round(kmh * 0.621);
+              return '<span style="color:#339">' + kmh + ' km/h</span><br/>' +
+                  '<span style="color:#933">' + mph + ' mph</span>';
+          },
+          backgroundColor: {
+              linearGradient: {
+                  x1: 0,
+                  y1: 0,
+                  x2: 0,
+                  y2: 1
+              },
+              stops: [
+                  [0, '#DDD'],
+                  [1, '#FFF']
+              ]
+          }
+      },
+      tooltip: {
+          valueSuffix: ' km/h'
+      }
+  }]
+
+},
+// Add some life
+function (chart) {
+  setInterval(function () {
+      if (chart.axes) { // not destroyed
+           point = chart.series[0].points[0],
+              newVal,
+              inc = Math.round((Math.random() - 0.5) * 20);
+
+          newVal = point.y + inc;
+          if (newVal < 0 || newVal > 200) {
+              newVal = point.y - inc;
+          }
+
+          point.update(newVal);
+      }
+  }, 3000);
+
+});
+
+
+Highcharts.getJSON('https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/world-mortality.json', function (data) {
+
+     points = [],
+        regionP,
+        regionVal,
+        regionI = 0,
+        countryP,
+        countryI,
+        causeP,
+        causeI,
+        region,
+        country,
+        cause,
+        causeName = {
+            'Communicable & other Group I': 'Communicable diseases',
+            'Noncommunicable diseases': 'Non-communicable diseases',
+            Injuries: 'Injuries'
+        };
+
+    for (region in data) {
+        if (data.hasOwnProperty(region)) {
+            regionVal = 0;
+            regionP = {
+                id: 'id_' + regionI,
+                name: region,
+                color: Highcharts.getOptions().colors[regionI]
+            };
+            countryI = 0;
+            for (country in data[region]) {
+                if (data[region].hasOwnProperty(country)) {
+                    countryP = {
+                        id: regionP.id + '_' + countryI,
+                        name: country,
+                        parent: regionP.id
+                    };
+                    points.push(countryP);
+                    causeI = 0;
+                    for (cause in data[region][country]) {
+                        if (data[region][country].hasOwnProperty(cause)) {
+                            causeP = {
+                                id: countryP.id + '_' + causeI,
+                                name: causeName[cause],
+                                parent: countryP.id,
+                                value: Math.round(+data[region][country][cause])
+                            };
+                            regionVal += causeP.value;
+                            points.push(causeP);
+                            causeI = causeI + 1;
+                        }
+                    }
+                    countryI = countryI + 1;
+                }
+            }
+            regionP.value = Math.round(regionVal / countryI);
+            points.push(regionP);
+            regionI = regionI + 1;
+        }
+    }
+    Highcharts.chart('container-10', {
+        series: [{
+            type: 'treemap',
+            layoutAlgorithm: 'squarified',
+            allowDrillToNode: true,
+            animationLimit: 1000,
+            dataLabels: {
+                enabled: false
+            },
+            levelIsConstant: false,
+            levels: [{
+                level: 1,
+                dataLabels: {
+                    enabled: true
+                },
+                borderWidth: 3
+            }],
+            data: points
+        }],
+        subtitle: {
+            text: 'Click points to drill down. Source: <a href="http://apps.who.int/gho/data/node.main.12?lang=en">WHO</a>.'
+        },
+        title: {
+            text: 'Global Mortality Rate 2012, per 100 000 population'
+        }
+    });
+
+});
+
+Highcharts.chart('container-11', {
+  chart: {
+      renderTo: 'container-11',
+      type: 'column'
+  },
+  title: {
+      text: 'Restaurants Complaints'
+  },
+  tooltip: {
+      shared: true
+  },
+  xAxis: {
+      categories: [
+          'Overpriced',
+          'Small portions',
+          'Wait time',
+          'Food is tasteless',
+          'No atmosphere',
+          'Not clean',
+          'Too noisy',
+          'Unfriendly staff'
+      ],
+      crosshair: true
+  },
+  yAxis: [{
+      title: {
+          text: ''
+      }
+  }, {
+      title: {
+          text: ''
+      },
+      minPadding: 0,
+      maxPadding: 0,
+      max: 100,
+      min: 0,
+      opposite: true,
+      labels: {
+          format: "{value}%"
+      }
+  }],
+  series: [{
+      type: 'pareto',
+      name: 'Pareto',
+      yAxis: 1,
+      zIndex: 10,
+      baseSeries: 1,
+      tooltip: {
+          valueDecimals: 2,
+          valueSuffix: '%'
+      }
+  }, {
+      name: 'Complaints',
+      type: 'column',
+      zIndex: 2,
+      data: [755, 222, 151, 86, 72, 51, 36, 10]
+  }]
+});
+
+ colors = Highcharts.getOptions().colors,
+    categories = [
+        'Chrome',
+        'Firefox',
+        'Internet Explorer',
+        'Safari',
+        'Edge',
+        'Opera',
+        'Other'
+    ],
+    data = [
+        {
+            y: 62.74,
+            color: colors[2],
+            drilldown: {
+                name: 'Chrome',
+                categories: [
+                    'Chrome v65.0',
+                    'Chrome v64.0',
+                    'Chrome v63.0',
+                    'Chrome v62.0',
+                    'Chrome v61.0',
+                    'Chrome v60.0',
+                    'Chrome v59.0',
+                    'Chrome v58.0',
+                    'Chrome v57.0',
+                    'Chrome v56.0',
+                    'Chrome v55.0',
+                    'Chrome v54.0',
+                    'Chrome v51.0',
+                    'Chrome v49.0',
+                    'Chrome v48.0',
+                    'Chrome v47.0',
+                    'Chrome v43.0',
+                    'Chrome v29.0'
+                ],
+                data: [
+                    0.1,
+                    1.3,
+                    53.02,
+                    1.4,
+                    0.88,
+                    0.56,
+                    0.45,
+                    0.49,
+                    0.32,
+                    0.29,
+                    0.79,
+                    0.18,
+                    0.13,
+                    2.16,
+                    0.13,
+                    0.11,
+                    0.17,
+                    0.26
+                ]
+            }
+        },
+        {
+            y: 10.57,
+            color: colors[1],
+            drilldown: {
+                name: 'Firefox',
+                categories: [
+                    'Firefox v58.0',
+                    'Firefox v57.0',
+                    'Firefox v56.0',
+                    'Firefox v55.0',
+                    'Firefox v54.0',
+                    'Firefox v52.0',
+                    'Firefox v51.0',
+                    'Firefox v50.0',
+                    'Firefox v48.0',
+                    'Firefox v47.0'
+                ],
+                data: [
+                    1.02,
+                    7.36,
+                    0.35,
+                    0.11,
+                    0.1,
+                    0.95,
+                    0.15,
+                    0.1,
+                    0.31,
+                    0.12
+                ]
+            }
+        },
+        {
+            y: 7.23,
+            color: colors[0],
+            drilldown: {
+                name: 'Internet Explorer',
+                categories: [
+                    'Internet Explorer v11.0',
+                    'Internet Explorer v10.0',
+                    'Internet Explorer v9.0',
+                    'Internet Explorer v8.0'
+                ],
+                data: [
+                    6.2,
+                    0.29,
+                    0.27,
+                    0.47
+                ]
+            }
+        },
+        {
+            y: 5.58,
+            color: colors[3],
+            drilldown: {
+                name: 'Safari',
+                categories: [
+                    'Safari v11.0',
+                    'Safari v10.1',
+                    'Safari v10.0',
+                    'Safari v9.1',
+                    'Safari v9.0',
+                    'Safari v5.1'
+                ],
+                data: [
+                    3.39,
+                    0.96,
+                    0.36,
+                    0.54,
+                    0.13,
+                    0.2
+                ]
+            }
+        },
+        {
+            y: 4.02,
+            color: colors[5],
+            drilldown: {
+                name: 'Edge',
+                categories: [
+                    'Edge v16',
+                    'Edge v15',
+                    'Edge v14',
+                    'Edge v13'
+                ],
+                data: [
+                    2.6,
+                    0.92,
+                    0.4,
+                    0.1
+                ]
+            }
+        },
+        {
+            y: 1.92,
+            color: colors[4],
+            drilldown: {
+                name: 'Opera',
+                categories: [
+                    'Opera v50.0',
+                    'Opera v49.0',
+                    'Opera v12.1'
+                ],
+                data: [
+                    0.96,
+                    0.82,
+                    0.14
+                ]
+            }
+        },
+        {
+            y: 7.62,
+            color: colors[6],
+            drilldown: {
+                name: 'Other',
+                categories: [
+                    'Other'
+                ],
+                data: [
+                    7.62
+                ]
+            }
+        }
+    ],
+    browserData = [],
+    versionsData = [],
+     i,
+    j,
+    dataLen = data.length,
+    drillDataLen,
+    brightness;
+
+
+// Build the data arrays
+for (i = 0; i < dataLen; i += 1) {
+
+    // add browser data
+    browserData.push({
+        name: categories[i],
+        y: data[i].y,
+        color: data[i].color
+    });
+
+    // add version data
+    drillDataLen = data[i].drilldown.data.length;
+    for (j = 0; j < drillDataLen; j += 1) {
+        brightness = 0.2 - (j / drillDataLen) / 5;
+        versionsData.push({
+            name: data[i].drilldown.categories[j],
+            y: data[i].drilldown.data[j],
+            color: Highcharts.color(data[i].color).brighten(brightness).get()
+        });
+    }
+}
+
+// Create the chart
+Highcharts.chart('container-12', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: 'Browser market share, January, 2018'
+    },
+    subtitle: {
+        text: 'Source: <a href="http://statcounter.com" target="_blank">statcounter.com</a>'
+    },
+    plotOptions: {
+        pie: {
+            shadow: false,
+            center: ['50%', '50%']
+        }
+    },
+    tooltip: {
+        valueSuffix: '%'
+    },
+    series: [{
+        name: 'Browsers',
+        data: browserData,
+        size: '60%',
+        dataLabels: {
+            formatter: function () {
+                return this.y > 5 ? this.point.name : null;
+            },
+            color: '#ffffff',
+            distance: -30
+        }
+    }, {
+        name: 'Versions',
+        data: versionsData,
+        size: '80%',
+        innerSize: '60%',
+        dataLabels: {
+            formatter: function () {
+                // display only if larger than 1
+                return this.y > 1 ? '<b>' + this.point.name + ':</b> ' +
+                    this.y + '%' : null;
+            }
+        },
+        id: 'versions'
+    }],
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 400
+            },
+            chartOptions: {
+                series: [{
+                }, {
+                    id: 'versions',
+                    dataLabels: {
+                        enabled: false
+                    }
+                }]
+            }
+        }]
+    }
+});
+
+Highcharts.chart('container-13', {
+  chart: {
+      type: 'cylinder',
+      options3d: {
+          enabled: true,
+          alpha: 15,
+          beta: 15,
+          depth: 50,
+          viewDistance: 25
+      }
+  },
+  title: {
+      text: 'Highcharts Cylinder Chart'
+  },
+  plotOptions: {
+      series: {
+          depth: 25,
+          colorByPoint: true
+      }
+  },
+  series: [{
+      data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+      name: 'Cylinders',
+      showInLegend: false
+  }]
+});
+
+Highcharts.chart('container-14', {
+  chart: {
+      zoomType: 'xy'
+  },
+  title: {
+      text: 'Average Monthly Weather Data for Tokyo',
+      align: 'left'
+  },
+  subtitle: {
+      text: 'Source: WorldClimate.com',
+      align: 'left'
+  },
+  xAxis: [{
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+          'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      crosshair: true
+  }],
+  yAxis: [{ // Primary yAxis
+      labels: {
+          format: '{value}°C',
+          style: {
+              color: Highcharts.getOptions().colors[2]
+          }
+      },
+      title: {
+          text: 'Temperature',
+          style: {
+              color: Highcharts.getOptions().colors[2]
+          }
+      },
+      opposite: true
+
+  }, { // Secondary yAxis
+      gridLineWidth: 0,
+      title: {
+          text: 'Rainfall',
+          style: {
+              color: Highcharts.getOptions().colors[0]
+          }
+      },
+      labels: {
+          format: '{value} mm',
+          style: {
+              color: Highcharts.getOptions().colors[0]
+          }
+      }
+
+  }, { // Tertiary yAxis
+      gridLineWidth: 0,
+      title: {
+          text: 'Sea-Level Pressure',
+          style: {
+              color: Highcharts.getOptions().colors[1]
+          }
+      },
+      labels: {
+          format: '{value} mb',
+          style: {
+              color: Highcharts.getOptions().colors[1]
+          }
+      },
+      opposite: true
+  }],
+  tooltip: {
+      shared: true
+  },
+  legend: {
+      layout: 'vertical',
+      align: 'left',
+      x: 80,
+      verticalAlign: 'top',
+      y: 55,
+      floating: true,
+      backgroundColor:
+          Highcharts.defaultOptions.legend.backgroundColor || // theme
+          'rgba(255,255,255,0.25)'
+  },
+  series: [{
+      name: 'Rainfall',
+      type: 'column',
+      yAxis: 1,
+      data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+      tooltip: {
+          valueSuffix: ' mm'
+      },
+      color: 'red'
+
+  }, {
+      name: 'Sea-Level Pressure',
+      type: 'spline',
+      color: 'blue',
+      yAxis: 2,
+      data: [1016, 1016, 1015.9, 1015.5, 1012.3, 1009.5, 1009.6, 1010.2, 1013.1, 1016.9, 1018.2, 1016.7],
+      marker: {
+          enabled: false
+      },
+      dashStyle: 'shortdot',
+      tooltip: {
+          valueSuffix: ' mb'
+      }
+
+  }, {
+      name: 'Temperature',
+      type: 'spline',
+      color:'yellow',
+      data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+      tooltip: {
+          valueSuffix: ' °C'
+      }
+  }],
+  responsive: {
+      rules: [{
+          condition: {
+              maxWidth: 500
+          },
+          chartOptions: {
+              legend: {
+                  floating: false,
+                  layout: 'horizontal',
+                  align: 'center',
+                  verticalAlign: 'bottom',
+                  x: 0,
+                  y: 0,
+              },
+              yAxis: [{
+                  labels: {
+                      align: 'right',
+                      x: 0,
+                      y: -6
+                  },
+                  showLastLabel: false
+              }, {
+                  labels: {
+                      align: 'left',
+                      x: 0,
+                      y: -6
+                  },
+                  showLastLabel: false
+              }, {
+                  visible: false
+              }]
+          }
+      }]
+  }
+});
+
+Highcharts.chart('container-15', {
+
+  chart: {
+      type: 'heatmap',
+      marginTop: 40,
+      marginBottom: 80,
+      plotBorderWidth: 1
+  },
+
+
+  title: {
+      text: 'Sales per employee per weekday'
+  },
+
+  xAxis: {
+      categories: ['Alexander', 'Marie', 'Maximilian', 'Sophia', 'Lukas', 'Maria', 'Leon', 'Anna', 'Tim', 'Laura']
+  },
+
+  yAxis: {
+      categories: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      title: null,
+      reversed: true
+  },
+
+  accessibility: {
+      point: {
+          descriptionFormatter: function (point) {
+               ix = point.index + 1,
+                  xName = getPointCategoryName(point, 'x'),
+                  yName = getPointCategoryName(point, 'y'),
+                  val = point.value;
+              return ix + '. ' + xName + ' sales ' + yName + ', ' + val + '.';
+          }
+      }
+  },
+
+  colorAxis: {
+      min: 0,
+      minColor: '#FFFFFF',
+      maxColor: Highcharts.getOptions().colors[0]
+  },
+
+  legend: {
+      align: 'right',
+      layout: 'vertical',
+      margin: 0,
+      verticalAlign: 'top',
+      y: 25,
+      symbolHeight: 280
+  },
+
+  tooltip: {
+      formatter: function () {
+          return '<b>' + getPointCategoryName(this.point, 'x') + '</b> sold <br><b>' +
+              this.point.value + '</b> items on <br><b>' + getPointCategoryName(this.point, 'y') + '</b>';
+      }
+  },
+
+  series: [{
+      name: 'Sales per employee',
+      borderWidth: 1,
+      data: [[0, 0, 10], [0, 1, 19], [0, 2, 8], [0, 3, 24], [0, 4, 67], [1, 0, 92], [1, 1, 58], [1, 2, 78], [1, 3, 117], [1, 4, 48], [2, 0, 35], [2, 1, 15], [2, 2, 123], [2, 3, 64], [2, 4, 52], [3, 0, 72], [3, 1, 132], [3, 2, 114], [3, 3, 19], [3, 4, 16], [4, 0, 38], [4, 1, 5], [4, 2, 8], [4, 3, 117], [4, 4, 115], [5, 0, 88], [5, 1, 32], [5, 2, 12], [5, 3, 6], [5, 4, 120], [6, 0, 13], [6, 1, 44], [6, 2, 88], [6, 3, 98], [6, 4, 96], [7, 0, 31], [7, 1, 1], [7, 2, 82], [7, 3, 32], [7, 4, 30], [8, 0, 85], [8, 1, 97], [8, 2, 123], [8, 3, 64], [8, 4, 84], [9, 0, 47], [9, 1, 114], [9, 2, 31], [9, 3, 48], [9, 4, 91]],
+      dataLabels: {
+          enabled: true,
+          color: '#000000'
+      }
+  }],
+
+  responsive: {
+      rules: [{
+          condition: {
+              maxWidth: 500
+          },
+          chartOptions: {
+              yAxis: {
+                  labels: {
+                      formatter: function () {
+                          return this.value.charAt(0);
+                      }
+                  }
+              }
+          }
+      }]
+  }
+
+});
+
+
+Highcharts.chart('container-16', {
+
+  title: {
+      text: 'Highcharts Sankey Diagram'
+  },
+  colors: ['#2f7ed8', '#0d233a', '#8bbc21', '#910000', '#1aadce',
+        '#492970', '#f28f43', '#77a1e5', '#c42525', '#a6c96a'],
+  accessibility: {
+      point: {
+          valueDescriptionFormat: '{index}. {point.from} to {point.to}, {point.weight}.'
+      }
+  },
+  series: [{
+      keys: ['from', 'to', 'weight'],
+      data: [
+          ['Brazil', 'Portugal', 5],
+          ['Brazil', 'France', 1],
+          ['Brazil', 'Spain', 1],
+          ['Brazil', 'England', 1],
+          ['Canada', 'Portugal', 1],
+          ['Canada', 'France', 5],
+          ['Canada', 'England', 1],
+          ['Mexico', 'Portugal', 1],
+          ['Mexico', 'France', 1],
+          ['Mexico', 'Spain', 5],
+          ['Mexico', 'England', 1],
+          ['USA', 'Portugal', 1],
+          ['USA', 'France', 1],
+          ['USA', 'Spain', 1],
+          ['USA', 'England', 5],
+          ['Portugal', 'Angola', 2],
+          ['Portugal', 'Senegal', 1],
+          ['Portugal', 'Morocco', 1],
+          ['Portugal', 'South Africa', 3],
+          ['France', 'Angola', 1],
+          ['France', 'Senegal', 3],
+          ['France', 'Mali', 3],
+          ['France', 'Morocco', 3],
+          ['France', 'South Africa', 1],
+          ['Spain', 'Senegal', 1],
+          ['Spain', 'Morocco', 3],
+          ['Spain', 'South Africa', 1],
+          ['England', 'Angola', 1],
+          ['England', 'Senegal', 1],
+          ['England', 'Morocco', 2],
+          ['England', 'South Africa', 7],
+          ['South Africa', 'China', 5],
+          ['South Africa', 'India', 1],
+          ['South Africa', 'Japan', 3],
+          ['Angola', 'China', 5],
+          ['Angola', 'India', 1],
+          ['Angola', 'Japan', 3],
+          ['Senegal', 'China', 5],
+          ['Senegal', 'India', 1],
+          ['Senegal', 'Japan', 3],
+          ['Mali', 'China', 5],
+          ['Mali', 'India', 1],
+          ['Mali', 'Japan', 3],
+          ['Morocco', 'China', 5],
+          ['Morocco', 'India', 1],
+          ['Morocco', 'Japan', 3]
+      ],
+      type: 'sankey',
+      name: 'Sankey demo series'
+  }]
+
+});
+
+Highcharts.chart('container-17', {
+  chart: {
+      type: 'area'
+  },
+  colors: ['red','blue'],
+  accessibility: {
+      description: 'Image description: An area chart compares the nuclear stockpiles of the USA and the USSR/Russia between 1945 and 2017. The number of nuclear weapons is plotted on the Y-axis and the years on the X-axis. The chart is interactive, and the year-on-year stockpile levels can be traced for each country. The US has a stockpile of 6 nuclear weapons at the dawn of the nuclear age in 1945. This number has gradually increased to 369 by 1950 when the USSR enters the arms race with 6 weapons. At this point, the US starts to rapidly build its stockpile culminating in 32,040 warheads by 1966 compared to the USSR’s 7,089. From this peak in 1966, the US stockpile gradually decreases as the USSR’s stockpile expands. By 1978 the USSR has closed the nuclear gap at 25,393. The USSR stockpile continues to grow until it reaches a peak of 45,000 in 1986 compared to the US arsenal of 24,401. From 1986, the nuclear stockpiles of both countries start to fall. By 2000, the numbers have fallen to 10,577 and 21,000 for the US and Russia, respectively. The decreases continue until 2017 at which point the US holds 4,018 weapons compared to Russia’s 4,500.'
+  },
+  title: {
+      text: 'US and USSR nuclear stockpiles'
+  },
+  subtitle: {
+      text: 'Sources: <a href="https://thebulletin.org/2006/july/global-nuclear-stockpiles-1945-2006">' +
+          'thebulletin.org</a> &amp; <a href="https://www.armscontrol.org/factsheets/Nuclearweaponswhohaswhat">' +
+          'armscontrol.org</a>'
+  },
+  xAxis: {
+      allowDecimals: false,
+      labels: {
+          formatter: function () {
+              return this.value; // clean, unformatted number for year
+          }
+      },
+      accessibility: {
+          rangeDescription: 'Range: 1940 to 2017.'
+      }
+  },
+  yAxis: {
+      title: {
+          text: 'Nuclear weapon states'
+      },
+      labels: {
+          formatter: function () {
+              return this.value / 1000 + 'k';
+          }
+      }
+  },
+  tooltip: {
+      pointFormat: '{series.name} had stockpiled <b>{point.y:,.0f}</b><br/>warheads in {point.x}'
+  },
+  plotOptions: {
+      area: {
+          pointStart: 1940,
+          marker: {
+              enabled: false,
+              symbol: 'circle',
+              radius: 2,
+              states: {
+                  hover: {
+                      enabled: true
+                  }
+              }
+          }
+      }
+  },
+  series: [{
+      name: 'USA',
+      data: [
+          null, null, null, null, null, 6, 11, 32, 110, 235,
+          369, 640, 1005, 1436, 2063, 3057, 4618, 6444, 9822, 15468,
+          20434, 24126, 27387, 29459, 31056, 31982, 32040, 31233, 29224, 27342,
+          26662, 26956, 27912, 28999, 28965, 27826, 25579, 25722, 24826, 24605,
+          24304, 23464, 23708, 24099, 24357, 24237, 24401, 24344, 23586, 22380,
+          21004, 17287, 14747, 13076, 12555, 12144, 11009, 10950, 10871, 10824,
+          10577, 10527, 10475, 10421, 10358, 10295, 10104, 9914, 9620, 9326,
+          5113, 5113, 4954, 4804, 4761, 4717, 4368, 4018
+      ],
+      color: 'black',
+  }, {
+      name: 'USSR/Russia',
+      data: [null, null, null, null, null, null, null, null, null, null,
+          5, 25, 50, 120, 150, 200, 426, 660, 869, 1060,
+          1605, 2471, 3322, 4238, 5221, 6129, 7089, 8339, 9399, 10538,
+          11643, 13092, 14478, 15915, 17385, 19055, 21205, 23044, 25393, 27935,
+          30062, 32049, 33952, 35804, 37431, 39197, 45000, 43000, 41000, 39000,
+          37000, 35000, 33000, 31000, 29000, 27000, 25000, 24000, 23000, 22000,
+          21000, 20000, 19000, 18000, 18000, 17000, 16000, 15537, 14162, 12787,
+          12600, 11400, 5500, 4512, 4502, 4502, 4500, 4500
+      ],
+      color: 'red',
+  }]
+});
+
+
+Highcharts.chart('container-18', {
+
+  chart: {
+      type: 'column',
+      // styledMode: true
+  },
+  title: {
+      text: 'Styling axes and columns'
+  },
+
+  yAxis: [{
+      className: 'highcharts-color-0',
+      title: {
+          text: 'Primary axis'
+      }
+  }, {
+      className: 'highcharts-color-1',
+      opposite: true,
+      title: {
+          text: 'Secondary axis'
+      }
+  }],
+
+  plotOptions: {
+      column: {
+          borderRadius: 5
+      }
+  },
+
+  series: [{
+      data: [1, 3, 2, 4],
+      color: '#FF0000'
+  }, {
+      data: [324, 124, 547, 221],
+      yAxis: 1,
+      color: 'yellow'
+  }]
+
+});
+
+ gaugeOptions = {
+  chart: {
+      type: 'solidgauge'
+  },
+
+  title: null,
+
+  pane: {
+      center: ['50%', '85%'],
+      size: '140%',
+      startAngle: -90,
+      endAngle: 90,
+      background: {
+          backgroundColor:
+              Highcharts.defaultOptions.legend.backgroundColor || '#EEE',
+          innerRadius: '60%',
+          outerRadius: '100%',
+          shape: 'arc'
+      }
+  },
+
+  exporting: {
+      enabled: false
+  },
+
+  tooltip: {
+      enabled: false
+  },
+
+  // the value axis
+  yAxis: {
+      stops: [
+          [0.1, '#55BF3B'], // green
+          [0.5, '#DDDF0D'], // yellow
+          [0.9, '#DF5353'] // red
+      ],
+      lineWidth: 0,
+      tickWidth: 0,
+      minorTickInterval: null,
+      tickAmount: 2,
+      title: {
+          y: -70
+      },
+      labels: {
+          y: 16
+      }
+  },
+
+  plotOptions: {
+      solidgauge: {
+          dataLabels: {
+              y: 5,
+              borderWidth: 0,
+              useHTML: true
+          }
+      }
+  }
+};
+
+// The speed gauge
+ chartSpeed = Highcharts.chart('container-speed', Highcharts.merge(gaugeOptions, {
+  yAxis: {
+      min: 0,
+      max: 200,
+      title: {
+          text: 'Speed'
+      }
+  },
+
+  credits: {
+      enabled: false
+  },
+
+  series: [{
+      name: 'Speed',
+      data: [80],
+      dataLabels: {
+          format:
+              '<div style="text-align:center">' +
+              '<span style="font-size:25px">{y}</span><br/>' +
+              '<span style="font-size:12px;opacity:0.4">km/h</span>' +
+              '</div>'
+      },
+      tooltip: {
+          valueSuffix: ' km/h'
+      }
+  }]
+
+}));
+
+// The RPM gauge
+ chartRpm = Highcharts.chart('container-rpm', Highcharts.merge(gaugeOptions, {
+  yAxis: {
+      min: 0,
+      max: 5,
+      title: {
+          text: 'RPM'
+      }
+  },
+
+  series: [{
+      name: 'RPM',
+      data: [1],
+      dataLabels: {
+          format:
+              '<div style="text-align:center">' +
+              '<span style="font-size:25px">{y:.1f}</span><br/>' +
+              '<span style="font-size:12px;opacity:0.4">' +
+              '* 1000 / min' +
+              '</span>' +
+              '</div>'
+      },
+      tooltip: {
+          valueSuffix: ' revolutions/min'
+      }
+  }]
+
+}));
+
+// Bring life to the dials
+setInterval(function () {
+  // Speed
+   point,
+      newVal,
+      inc;
+
+  if (chartSpeed) {
+      point = chartSpeed.series[0].points[0];
+      inc = Math.round((Math.random() - 0.5) * 100);
+      newVal = point.y + inc;
+
+      if (newVal < 0 || newVal > 200) {
+          newVal = point.y - inc;
+      }
+
+      point.update(newVal);
+  }
+
+  // RPM
+  if (chartRpm) {
+      point = chartRpm.series[0].points[0];
+      inc = Math.random() - 0.5;
+      newVal = point.y + inc;
+
+      if (newVal < 0 || newVal > 5) {
+          newVal = point.y - inc;
+      }
+
+      point.update(newVal);
+  }
+}, 2000);
+
+Highcharts.chart('container-19', {
+  chart: {
+      type: 'scatter',
+      zoomType: 'xy'
+  },
+  title: {
+      text: 'Height Versus Weight of 507 Individuals by Gender'
+  },
+  subtitle: {
+      text: 'Source: Heinz  2003'
+  },
+  xAxis: {
+      title: {
+          enabled: true,
+          text: 'Height (cm)'
+      },
+      startOnTick: true,
+      endOnTick: true,
+      showLastLabel: true
+  },
+  yAxis: {
+      title: {
+          text: 'Weight (kg)'
+      }
+  },
+  legend: {
+      layout: 'vertical',
+      align: 'left',
+      verticalAlign: 'top',
+      x: 100,
+      y: 70,
+      floating: true,
+      backgroundColor: Highcharts.defaultOptions.chart.backgroundColor,
+      borderWidth: 1
+  },
+  plotOptions: {
+      scatter: {
+          marker: {
+              radius: 5,
+              states: {
+                  hover: {
+                      enabled: true,
+                      lineColor: 'rgb(100,100,100)'
+                  }
+              }
+          },
+          states: {
+              hover: {
+                  marker: {
+                      enabled: false
+                  }
+              }
+          },
+          tooltip: {
+              headerFormat: '<b>{series.name}</b><br>',
+              pointFormat: '{point.x} cm, {point.y} kg'
+          }
+      }
+  },
+  series: [{
+      name: 'Female',
+      color: 'rgba(223, 83, 83, .5)',
+      data: [[161.2, 51.6], [167.5, 59.0], [159.5, 49.2], [157.0, 63.0], [155.8, 53.6],
+          [170.0, 59.0], [159.1, 47.6], [166.0, 69.8], [176.2, 66.8], [160.2, 75.2],
+          [172.5, 55.2], [170.9, 54.2], [172.9, 62.5], [153.4, 42.0], [160.0, 50.0],
+          [147.2, 49.8], [168.2, 49.2], [175.0, 73.2], [157.0, 47.8], [167.6, 68.8],
+          [159.5, 50.6], [175.0, 82.5], [166.8, 57.2], [176.5, 87.8], [170.2, 72.8],
+          [174.0, 54.5], [173.0, 59.8], [179.9, 67.3], [170.5, 67.8], [160.0, 47.0],
+          [154.4, 46.2], [162.0, 55.0], [176.5, 83.0], [160.0, 54.4], [152.0, 45.8],
+          [162.1, 53.6], [170.0, 73.2], [160.2, 52.1], [161.3, 67.9], [166.4, 56.6],
+          [168.9, 62.3], [163.8, 58.5], [167.6, 54.5], [160.0, 50.2], [161.3, 60.3],
+          [167.6, 58.3], [165.1, 56.2], [160.0, 50.2], [170.0, 72.9], [157.5, 59.8],
+          [167.6, 61.0], [160.7, 69.1], [163.2, 55.9], [152.4, 46.5], [157.5, 54.3],
+          [168.3, 54.8], [180.3, 60.7], [165.5, 60.0], [165.0, 62.0], [164.5, 60.3],
+          [156.0, 52.7], [160.0, 74.3], [163.0, 62.0], [165.7, 73.1], [161.0, 80.0],
+          [162.0, 54.7], [166.0, 53.2], [174.0, 75.7], [172.7, 61.1], [167.6, 55.7],
+          [151.1, 48.7], [164.5, 52.3], [163.5, 50.0], [152.0, 59.3], [169.0, 62.5],
+          [164.0, 55.7], [161.2, 54.8], [155.0, 45.9], [170.0, 70.6], [176.2, 67.2],
+          [170.0, 69.4], [162.5, 58.2], [170.3, 64.8], [164.1, 71.6], [169.5, 52.8],
+          [163.2, 59.8], [154.5, 49.0], [159.8, 50.0], [173.2, 69.2], [170.0, 55.9],
+          [161.4, 63.4], [169.0, 58.2], [166.2, 58.6], [159.4, 45.7], [162.5, 52.2],
+          [159.0, 48.6], [162.8, 57.8], [159.0, 55.6], [179.8, 66.8], [162.9, 59.4],
+          [161.0, 53.6], [151.1, 73.2], [168.2, 53.4], [168.9, 69.0], [173.2, 58.4],
+          [171.8, 56.2], [178.0, 70.6], [164.3, 59.8], [163.0, 72.0], [168.5, 65.2],
+          [166.8, 56.6], [172.7, 105.2], [163.5, 51.8], [169.4, 63.4], [167.8, 59.0],
+          [159.5, 47.6], [167.6, 63.0], [161.2, 55.2], [160.0, 45.0], [163.2, 54.0],
+          [162.2, 50.2], [161.3, 60.2], [149.5, 44.8], [157.5, 58.8], [163.2, 56.4],
+          [172.7, 62.0], [155.0, 49.2], [156.5, 67.2], [164.0, 53.8], [160.9, 54.4],
+          [162.8, 58.0], [167.0, 59.8], [160.0, 54.8], [160.0, 43.2], [168.9, 60.5],
+          [158.2, 46.4], [156.0, 64.4], [160.0, 48.8], [167.1, 62.2], [158.0, 55.5],
+          [167.6, 57.8], [156.0, 54.6], [162.1, 59.2], [173.4, 52.7], [159.8, 53.2],
+          [170.5, 64.5], [159.2, 51.8], [157.5, 56.0], [161.3, 63.6], [162.6, 63.2],
+          [160.0, 59.5], [168.9, 56.8], [165.1, 64.1], [162.6, 50.0], [165.1, 72.3],
+          [166.4, 55.0], [160.0, 55.9], [152.4, 60.4], [170.2, 69.1], [162.6, 84.5],
+          [170.2, 55.9], [158.8, 55.5], [172.7, 69.5], [167.6, 76.4], [162.6, 61.4],
+          [167.6, 65.9], [156.2, 58.6], [175.2, 66.8], [172.1, 56.6], [162.6, 58.6],
+          [160.0, 55.9], [165.1, 59.1], [182.9, 81.8], [166.4, 70.7], [165.1, 56.8],
+          [177.8, 60.0], [165.1, 58.2], [175.3, 72.7], [154.9, 54.1], [158.8, 49.1],
+          [172.7, 75.9], [168.9, 55.0], [161.3, 57.3], [167.6, 55.0], [165.1, 65.5],
+          [175.3, 65.5], [157.5, 48.6], [163.8, 58.6], [167.6, 63.6], [165.1, 55.2],
+          [165.1, 62.7], [168.9, 56.6], [162.6, 53.9], [164.5, 63.2], [176.5, 73.6],
+          [168.9, 62.0], [175.3, 63.6], [159.4, 53.2], [160.0, 53.4], [170.2, 55.0],
+          [162.6, 70.5], [167.6, 54.5], [162.6, 54.5], [160.7, 55.9], [160.0, 59.0],
+          [157.5, 63.6], [162.6, 54.5], [152.4, 47.3], [170.2, 67.7], [165.1, 80.9],
+          [172.7, 70.5], [165.1, 60.9], [170.2, 63.6], [170.2, 54.5], [170.2, 59.1],
+          [161.3, 70.5], [167.6, 52.7], [167.6, 62.7], [165.1, 86.3], [162.6, 66.4],
+          [152.4, 67.3], [168.9, 63.0], [170.2, 73.6], [175.2, 62.3], [175.2, 57.7],
+          [160.0, 55.4], [165.1, 104.1], [174.0, 55.5], [170.2, 77.3], [160.0, 80.5],
+          [167.6, 64.5], [167.6, 72.3], [167.6, 61.4], [154.9, 58.2], [162.6, 81.8],
+          [175.3, 63.6], [171.4, 53.4], [157.5, 54.5], [165.1, 53.6], [160.0, 60.0],
+          [174.0, 73.6], [162.6, 61.4], [174.0, 55.5], [162.6, 63.6], [161.3, 60.9],
+          [156.2, 60.0], [149.9, 46.8], [169.5, 57.3], [160.0, 64.1], [175.3, 63.6],
+          [169.5, 67.3], [160.0, 75.5], [172.7, 68.2], [162.6, 61.4], [157.5, 76.8],
+          [176.5, 71.8], [164.4, 55.5], [160.7, 48.6], [174.0, 66.4], [163.8, 67.3]]
+
+  }, {
+      name: 'Male',
+      color: 'rgba(119, 152, 191, .5)',
+      data: [[174.0, 65.6], [175.3, 71.8], [193.5, 80.7], [186.5, 72.6], [187.2, 78.8],
+          [181.5, 74.8], [184.0, 86.4], [184.5, 78.4], [175.0, 62.0], [184.0, 81.6],
+          [180.0, 76.6], [177.8, 83.6], [192.0, 90.0], [176.0, 74.6], [174.0, 71.0],
+          [184.0, 79.6], [192.7, 93.8], [171.5, 70.0], [173.0, 72.4], [176.0, 85.9],
+          [176.0, 78.8], [180.5, 77.8], [172.7, 66.2], [176.0, 86.4], [173.5, 81.8],
+          [178.0, 89.6], [180.3, 82.8], [180.3, 76.4], [164.5, 63.2], [173.0, 60.9],
+          [183.5, 74.8], [175.5, 70.0], [188.0, 72.4], [189.2, 84.1], [172.8, 69.1],
+          [170.0, 59.5], [182.0, 67.2], [170.0, 61.3], [177.8, 68.6], [184.2, 80.1],
+          [186.7, 87.8], [171.4, 84.7], [172.7, 73.4], [175.3, 72.1], [180.3, 82.6],
+          [182.9, 88.7], [188.0, 84.1], [177.2, 94.1], [172.1, 74.9], [167.0, 59.1],
+          [169.5, 75.6], [174.0, 86.2], [172.7, 75.3], [182.2, 87.1], [164.1, 55.2],
+          [163.0, 57.0], [171.5, 61.4], [184.2, 76.8], [174.0, 86.8], [174.0, 72.2],
+          [177.0, 71.6], [186.0, 84.8], [167.0, 68.2], [171.8, 66.1], [182.0, 72.0],
+          [167.0, 64.6], [177.8, 74.8], [164.5, 70.0], [192.0, 101.6], [175.5, 63.2],
+          [171.2, 79.1], [181.6, 78.9], [167.4, 67.7], [181.1, 66.0], [177.0, 68.2],
+          [174.5, 63.9], [177.5, 72.0], [170.5, 56.8], [182.4, 74.5], [197.1, 90.9],
+          [180.1, 93.0], [175.5, 80.9], [180.6, 72.7], [184.4, 68.0], [175.5, 70.9],
+          [180.6, 72.5], [177.0, 72.5], [177.1, 83.4], [181.6, 75.5], [176.5, 73.0],
+          [175.0, 70.2], [174.0, 73.4], [165.1, 70.5], [177.0, 68.9], [192.0, 102.3],
+          [176.5, 68.4], [169.4, 65.9], [182.1, 75.7], [179.8, 84.5], [175.3, 87.7],
+          [184.9, 86.4], [177.3, 73.2], [167.4, 53.9], [178.1, 72.0], [168.9, 55.5],
+          [157.2, 58.4], [180.3, 83.2], [170.2, 72.7], [177.8, 64.1], [172.7, 72.3],
+          [165.1, 65.0], [186.7, 86.4], [165.1, 65.0], [174.0, 88.6], [175.3, 84.1],
+          [185.4, 66.8], [177.8, 75.5], [180.3, 93.2], [180.3, 82.7], [177.8, 58.0],
+          [177.8, 79.5], [177.8, 78.6], [177.8, 71.8], [177.8, 116.4], [163.8, 72.2],
+          [188.0, 83.6], [198.1, 85.5], [175.3, 90.9], [166.4, 85.9], [190.5, 89.1],
+          [166.4, 75.0], [177.8, 77.7], [179.7, 86.4], [172.7, 90.9], [190.5, 73.6],
+          [185.4, 76.4], [168.9, 69.1], [167.6, 84.5], [175.3, 64.5], [170.2, 69.1],
+          [190.5, 108.6], [177.8, 86.4], [190.5, 80.9], [177.8, 87.7], [184.2, 94.5],
+          [176.5, 80.2], [177.8, 72.0], [180.3, 71.4], [171.4, 72.7], [172.7, 84.1],
+          [172.7, 76.8], [177.8, 63.6], [177.8, 80.9], [182.9, 80.9], [170.2, 85.5],
+          [167.6, 68.6], [175.3, 67.7], [165.1, 66.4], [185.4, 102.3], [181.6, 70.5],
+          [172.7, 95.9], [190.5, 84.1], [179.1, 87.3], [175.3, 71.8], [170.2, 65.9],
+          [193.0, 95.9], [171.4, 91.4], [177.8, 81.8], [177.8, 96.8], [167.6, 69.1],
+          [167.6, 82.7], [180.3, 75.5], [182.9, 79.5], [176.5, 73.6], [186.7, 91.8],
+          [188.0, 84.1], [188.0, 85.9], [177.8, 81.8], [174.0, 82.5], [177.8, 80.5],
+          [171.4, 70.0], [185.4, 81.8], [185.4, 84.1], [188.0, 90.5], [188.0, 91.4],
+          [182.9, 89.1], [176.5, 85.0], [175.3, 69.1], [175.3, 73.6], [188.0, 80.5],
+          [188.0, 82.7], [175.3, 86.4], [170.5, 67.7], [179.1, 92.7], [177.8, 93.6],
+          [175.3, 70.9], [182.9, 75.0], [170.8, 93.2], [188.0, 93.2], [180.3, 77.7],
+          [177.8, 61.4], [185.4, 94.1], [168.9, 75.0], [185.4, 83.6], [180.3, 85.5],
+          [174.0, 73.9], [167.6, 66.8], [182.9, 87.3], [160.0, 72.3], [180.3, 88.6],
+          [167.6, 75.5], [186.7, 101.4], [175.3, 91.1], [175.3, 67.3], [175.9, 77.7],
+          [175.3, 81.8], [179.1, 75.5], [181.6, 84.5], [177.8, 76.6], [182.9, 85.0],
+          [177.8, 102.5], [184.2, 77.3], [179.1, 71.8], [176.5, 87.9], [188.0, 94.3],
+          [174.0, 70.9], [167.6, 64.5], [170.2, 77.3], [167.6, 72.3], [188.0, 87.3],
+          [174.0, 80.0], [176.5, 82.3], [180.3, 73.6], [167.6, 74.1], [188.0, 85.9],
+          [180.3, 73.2], [167.6, 76.3], [183.0, 65.9], [183.0, 90.9], [179.1, 89.1],
+          [170.2, 62.3], [177.8, 82.7], [179.1, 79.1], [190.5, 98.2], [177.8, 84.1],
+          [180.3, 83.2], [180.3, 83.2]]
+  }]
+});
+
+function getData(n) {
+      var arr = [],
+          i,
+          x,
+          a,
+          b,
+          c,
+          spike;
+      for (
+          i = 0, x = Date.UTC(new Date().getUTCFullYear(), 0, 1) - n * 36e5;
+          i < n;
+          i = i + 1, x = x + 36e5
+      ) {
+          if (i % 100 === 0) {
+              a = 2 * Math.random();
+          }
+          if (i % 1000 === 0) {
+              b = 2 * Math.random();
+          }
+          if (i % 10000 === 0) {
+              c = 2 * Math.random();
+          }
+          if (i % 50000 === 0) {
+              spike = 10;
+          } else {
+              spike = 0;
+          }
+          arr.push([
+              x,
+              2 * Math.sin(i / 100) + a + b + c + spike + Math.random()
+          ]);
+      }
+      return arr;
+  }
+
+   function getPointCategoryName(point, dimension) {
+    var series = point.series,
+        isY = dimension === 'y',
+        axis = series[isY ? 'yAxis' : 'xAxis'];
+    return axis.categories[point[isY ? 'y' : 'x']];
+}   
+    function click(e) {
+        console.log(e)
+    }
+
+});
+    </script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
+  <script src="https://code.highcharts.com/modules/heatmap.js"></script>
+<script src="https://code.highcharts.com/modules/treemap.js"></script>
+  <script src="https://code.highcharts.com/modules/bullet.js"></script>
+  <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="https://code.highcharts.com/modules/pareto.js"></script>
+  <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+  <script src="https://code.highcharts.com/modules/cylinder.js"></script>
+  <script src="https://code.highcharts.com/modules/series-label.js"></script>
+  <script src="https://code.highcharts.com/modules/sankey.js"></script>
+  <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    </body>
+</html>
