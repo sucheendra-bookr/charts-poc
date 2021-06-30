@@ -637,12 +637,12 @@ option && myChart.setOption(option);
             ],
         };
 
-        setInterval(function() {
-            let random = (Math.random() * 60).toFixed(2) - 0;
-            option.series[0].data[0].value = random;
-            option.series[1].data[0].value = random;
-            myChart.setOption(option, true);
-        }, 2000);
+        // setInterval(function() {
+        //     let random = (Math.random() * 60).toFixed(2) - 0;
+        //     option.series[0].data[0].value = random;
+        //     option.series[1].data[0].value = random;
+        //     myChart.setOption(option, true);
+        // }, 2000);
 
         option && myChart.setOption(option);
 
