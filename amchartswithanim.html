@@ -56,7 +56,8 @@
         
         var chart = am4core.create('chartdiv-1', am4charts.XYChart)
         
-
+        chart.exporting.menu = new am4core.ExportMenu();
+        
         chart.colors.step = 2;
           
         chart.cursor = new am4charts.XYCursor();
